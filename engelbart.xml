@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+
+<!--
+  https://github.com/gabrielelana/engelbart/
+-->
+
+<root>
+  <item>
+    <name>Engelbart inspired two key chords</name>
+    <appendix>documentation to come...</appendix>
+
+    <item>
+      <name>Visit https://github.com/gabrielelana/engelbart/ for more information.</name>
+    </item>
+
+    <item>
+      <name>CONTROL</name>
+      <appendix>Simultaneous home keys presses to CONTROL</appendix>
+      <appendix>(D+F to CONTROL_L)</appendix>
+      <appendix>(J+K to CONTROL_R)</appendix>
+      <identifier>private.engelbart_control</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::D, KeyCode::F, KeyCode::CONTROL_L</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::J, KeyCode::K, KeyCode::CONTROL_R</autogen>
+    </item>
+
+    <item>
+      <name>Disable control</name>
+      <identifier>private.disable_control</identifier>
+      <autogen>__KeyToKey__ KeyCode::CONTROL_L, KeyCode::VK_NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::CONTROL_R, KeyCode::VK_NONE</autogen>
+    </item>
+    
+    <item>
+      <name>OPTION</name>
+      <appendix>Simultaneous home keys presses to OPTION</appendix>
+      <appendix>(S+D to OPTION_L)</appendix>
+      <appendix>(K+L to OPTION_R)</appendix>
+      <identifier>private.engelbart_option</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::S, KeyCode::D, KeyCode::OPTION_L</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::K, KeyCode::L, KeyCode::OPTION_R</autogen>
+    </item>
+
+    <item>
+      <name>HYPER</name>
+      <appendix>Simultaneous home keys presses to HYPER.</appendix>
+      <appendix>(S+F to HYPER)</appendix>
+      <appendix>(J+L to HYPER)</appendix>
+      <identifier>private.engelbart_hyper</identifier>
+      <autogen>
+        __SimultaneousKeyPresses__
+        KeyCode::S, KeyCode::F,
+        KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE
+      </autogen>
+      <autogen>
+        __SimultaneousKeyPresses__
+        KeyCode::J, KeyCode::L,
+        KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE
+      </autogen>
+    </item>
+
+    <item>
+      <name>SUPER</name>
+      <appendix>Simultaneous home keys presses to SUPER. SUPER doesn't exists as KeyCode so we will map those combo to KEYPAD_3 and KEYPAD_4</appendix>
+      <appendix>This is designed to work in an XOrg environment (maybe in a virtual machine) where you have xmodmap</appendix>
+      <appendix>(A+F to KEYPAD_3 and then (with xmodmap) to SUPER_L)</appendix>
+      <appendix>(J+; to KEYPAD_4 and then (with xmodmap) to SUPER_R)</appendix>
+      <identifier>private.engelbart_super</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::A, KeyCode::F, KeyCode::KEYPAD_3</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::J, KeyCode::SEMICOLON, KeyCode::KEYPAD_4</autogen>
+    </item>
+
+    <!-- HOME ROW CROSS ABOVE ROW -->
+    <item>
+      <name>ESCAPE</name>
+      <appendix>Simultaneous keys presses to ESCAPE</appendix>
+      <appendix>(E+F to ESCAPE)</appendix>
+      <appendix>(J+I to ESCAPE)</appendix>
+      <identifier>private.engelbart_escape</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::E, KeyCode::F, KeyCode::ESCAPE</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::J, KeyCode::I, KeyCode::ESCAPE</autogen>
+    </item>
+
+    <item>
+      <name>Disable Escape</name>
+      <identifier>private.disable.escape</identifier>
+      <autogen>__KeyToKey__ KeyCode::ESCAPE, KeyCode::VK_NONE</autogen>_
+    </item>
+
+    <item>
+      <name>DELETE (Backspace)</name>
+      <appendix>Simultaneous keys presses to DELETE (Backspace)</appendix>
+      <appendix>(W+F to DELETE (Backspace))</appendix>
+      <appendix>(J+O to DELETE (Backspace))</appendix>
+      <identifier>private.engelbart_delete</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::W, KeyCode::F, KeyCode::DELETE</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::J, KeyCode::O, KeyCode::DELETE</autogen>
+    </item>
+
+    <item>
+      <name>Unlearn Backspace</name>
+      <appendix>Learn to use Delete combo instead of the real Delete key</appendix>
+      <identifier>private.no_backspace</identifier>
+      <autogen>__KeyToKey__ KeyCode::DELETE, KeyCode::VK_NONE</autogen>
+    </item>
+      
+    <!-- ABOVE ROW -->
+    <item>
+      <name>LEADER</name>
+      <appendix>Simultaneous keys presses to Vim LEADER aka NO_BREAK_SPACE</appendix>
+      <appendix>(E+R to LEADER)</appendix>
+      <appendix>(U+I to LEADER)</appendix>
+      <identifier>private.engelbart_leader</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::E, KeyCode::R, KeyCode::KEYPAD_5</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::U, KeyCode::I, KeyCode::KEYPAD_6</autogen>
+    </item>
+
+    <!-- BELOW ROW -->
+    <item>
+      <name>COMMAND+OPTION</name>
+      <appendix>Simultaneous keys presses to COMMAND+OPTION</appendix>
+      <appendix>(C+V to COMMAND_L+OPTION_L)</appendix>
+      <appendix>(M+, to COMMAND_R+OPTION_R)</appendix>
+      <identifier>private.engelbart_command_plus_option</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::C, KeyCode::V, KeyCode::COMMAND_L, ModifierFlag::OPTION_L</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::M, KeyCode::COMMA, KeyCode::COMMAND_R, ModifierFlag::OPTION_R</autogen>
+    </item>
+
+    <item>
+      <name>COMMAND+SHIFT</name>
+      <appendix>Simultaneous keys presses to COMMAND+SHIFT</appendix>
+      <appendix>(X+V to COMMAND_L+SHIFT_L)</appendix>
+      <appendix>(M+. to COMMAND_R+SHIFT_R)</appendix>
+      <identifier>private.engelbart_command_plus_shift</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::X, KeyCode::V, KeyCode::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::M, KeyCode::DOT, KeyCode::COMMAND_R, ModifierFlag::SHIFT_R</autogen>
+    </item>
+
+    <item>
+      <name>OPTION+SHIFT</name>
+      <appendix>Simultaneous keys presses to OPTION+SHIFT</appendix>
+      <appendix>(X+C to OPTION_L+SHIFT_L)</appendix>
+      <appendix>(,+. to OPTION_R+SHIFT_R)</appendix>
+      <identifier>private.engelbart_option_plus_shift</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::X, KeyCode::C, KeyCode::OPTION_L, ModifierFlag::SHIFT_L</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::COMMA, KeyCode::DOT, KeyCode::OPTION_R, ModifierFlag::SHIFT_R</autogen>
+    </item>
+
+    <item>
+      <name>CONTROL+OPTION+SHIFT</name>
+      <appendix>Simultaneous keys presses to CONTROL+OPTION+SHIFT</appendix>
+      <appendix>(Z+V to CONTROL_L+OPTION_L+SHIFT_L)</appendix>
+      <appendix>(M+/ to CONTROL_R+OPTION_R+SHIFT_R)</appendix>
+      <identifier>private.engelbart_control_plug_option_plus_shift</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::Z, KeyCode::V, KeyCode::CONTROL_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::M, KeyCode::SLASH, KeyCode::CONTROL_R, ModifierFlag::OPTION_R | ModifierFlag::SHIFT_R</autogen>
+    </item>
+
+    <item>
+      <name>COLON</name>
+      <appendix>Simultaneous key presses to g+h mapped to :</appendix>
+      <identifier>private.engelbart_colon</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::G, KeyCode::H, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen>
+    </item>
+
+    <item>
+      <name>Disable Colon</name>
+      <identifier>private.disable_colon</identifier>
+      <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+    </item>
+    
+    <item>
+      <name>RETURN</name>
+      <appendix>Simultanenous key presses to f+j</appendix>
+      <identifier>private.engelbart_return</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::F, KeyCode::J, KeyCode::RETURN</autogen>
+    </item> 
+      
+    <item>
+      <name>Disable RETURN</name>
+      <identifier>private.disable_enter</identifier>
+      <autogen>__KeyToKey__ KeyCode::RETURN, KeyCode::VK_NONE</autogen>
+    </item>
+    
+  </item>
+</root>

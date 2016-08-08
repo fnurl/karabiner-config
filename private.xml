@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<root>
+
+  <item>
+    <name>Modifier configs and ISO keyboard fixes</name>
+    
+    <item>
+      <name>Double Right Shift to Caps Lock</name>
+      <appendix>(double tap right shift to enable caps lock</appendix>
+      <identifier>private.dbl_shift_to_caps</identifier>
+      <autogen>
+        __DoublePressModifier__
+        KeyCode::SHIFT_R,
+        KeyCode::SHIFT_R,
+        KeyCode::CAPSLOCK
+      </autogen>
+    </item>
+
+    <item>
+      <name>ISO Keyboard: Enter to '\'</name>
+      <identifier>private.enter_to_backslash</identifier>
+      <autogen>__KeyToKey__ KeyCode::ENTER, ModifierFlag::NONE, KeyCode::BACKSLASH</autogen>
+    </item>
+
+    <item>
+      <name>F19 to CTRL and ESC</name>
+      <appendix>(F19 to Ctrl, F19 only to Esc)</appendix>
+      <identifier>private.f19_to_ctrl_escape</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::F19,
+        KeyCode::CONTROL_L | ModifierFlag::NONE,
+        KeyCode::ESCAPE
+      </autogen>
+    </item>
+
+    <item>
+      <name>Map _unmodified_ left Shift to Escape</name>
+      <appendix>Since SHIFT_L has moved one step up we are free to use the original SHIFT key for something else...</appendix>
+      <autogen>__KeyToKey__
+        KeyCode::SHIFT_L, ModifierFlag::NONE,
+        KeyCode::ESCAPE
+      </autogen>
+    </item>
+
+    <item>
+      <name>Right Cmd to Left Ctrl</name>
+      <appendix>(Right Command key as Control key for better ergonomics)</appendix>
+      <identifier>private.cmdr_to_ctrll</identifier>
+      <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::CONTROL_L</autogen>
+    </item>
+
+    <item>
+      <name>Right Ctrl to Right Cmd</name>
+      <appendix>(use e.g. when remapping right cmd)</appendix>
+      <identifier>private.ctrlr_to_cmdr</identifier>
+      <autogen>__KeyToKey__ KeyCode::CONTROL_R, KeyCode::COMMAND_R</autogen>
+    </item>
+
+    <item>
+      <name>Right Ctrl to F16</name>
+      <appendix>(use e.g. when remapping Right Ctrl to some other key)</appendix>
+      <identifier>private.ctrlr_to_f16</identifier>
+      <autogen>__KeyToKey__ KeyCode::CONTROL_R, KeyCode::F16</autogen>
+    </item>
+    
+    <item>
+      <name>F16 (Menu/Application Key) to Right Cmd</name>
+      <appendix>Use when remapping Right Cmd</appendix>
+      <identifier>private.f16_to_cmdr</identifier>
+      <autogen>__KeyToKey__ KeyCode::F16, KeyCode::COMMAND_R</autogen>
+    </item>
+
+    <item>
+      <name>Scroll Lock is the new Caps Lock</name>
+      <appendix>Scroll Lock to Caps Lock</appendix>
+      <identifier>private.scroll2caps</identifier>
+      <autogen>__KeyToKey__ KeyCode::F14, KeyCode::CAPSLOCK</autogen>
+    </item>
+
+    <item>
+      <name>Tab to Ctrl</name>
+      <appendix>Map Tab key to left control key</appendix>
+      <identifier>private.tab_to_ctrl</identifier>
+      <autogen>__KeyToKey__ KeyCode::TAB, KeyCode::CONTROL_L</autogen>
+    </item>
+
+    <item>
+      <name>Escape to F16 (change input source)</name>
+      <appendix>Escape key becomes F16</appendix>
+      <identifier>private.esc_to_F16</identifier>
+      <autogen>__KeyToKey__  KeyCode::ESCAPE, KeyCode::F16</autogen>
+    </item>
+
+  </item>
+
+  <item>
+    <name>Move leftmost keys down one step</name>
+
+    <item>
+       <name>`~  to ESC</name>
+      <appendix>Escape key moves one step down</appendix>
+      <identifier>private.backquote_to_esc</identifier>
+      <autogen>__KeyToKey__  KeyCode::BACKQUOTE, KeyCode::ESCAPE</autogen>
+    </item>
+
+    <item>
+       <name>§± to Esc</name>
+      <appendix>Escape key moves one step down (on an ISO kb)</appendix>
+      <identifier>private.danish_dollar_to_esc</identifier>
+      <autogen>__KeyToKey__  KeyCode::DANISH_DOLLAR, KeyCode::ESCAPE</autogen>
+    </item>
+
+    <item>
+      <name>Tab to `~</name>
+      <appendix>Backtick/tilde key moves one step down</appendix>
+      <identifier>private.tab_to_backquote</identifier>
+      <autogen>__KeyToKey__ KeyCode::TAB, KeyCode::BACKQUOTE</autogen>
+    </item>
+
+    <item>
+      <name>Disable Tab</name>
+      <appendix>No tab.</appendix>
+      <identifier>private.disable_tab</identifier>
+      <autogen>__KeyToKey__ KeyCode::TAB, KeyCode::VK_NONE</autogen>
+    </item>
+
+    <item>
+      <name>F19 to TAB</name>
+      <appendix>I seem to hit caps when I want to tab, so lets try that.</appendix>
+      <identifier>private.f19_to_tab</identifier>
+      <autogen>__KeyToKey__ KeyCode::F19, KeyCode::TAB</autogen>
+    </item>
+
+    <item>
+      <name>F19 to Tab and Left Shift</name>
+      <appendix>(Press F19 (CapsLock) for Tab. Hold for Left Shift)</appendix>
+      <identifier>private.f19_to_tab_and_shift</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::F19,
+        KeyCode::SHIFT_L | ModifierFlag::NONE,
+        KeyCode::TAB
+      </autogen>
+    </item>
+
+  </item>
+
+
+  <include path="chordy-us.xml" /> 
+  <!-- <include path="chordy-sv.xml" />  -->
+  <!-- <include path="swe_mod.xml" /> -->
+  <!-- <include path="hyper.xml" /> -->
+  <!-- <include path="engelbart.xml" /> -->
+  <include path="wasd.xml" />
+  <!-- <include path="aula_keyboard.xml" /> -->
+  <include path="rapoo_v500_keyboard.xml" />
+
+  
+  <item>
+    <name>Learn to type</name>
+    
+    <item>
+      <name>Use the correct shift keys (send F17 if you do something wrong).</name>
+      <identifier>private.correct_shift_keys</identifier>
+
+      <autogen>__KeyToKey__ KeyCode::Q, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::W, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::R, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::T, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::A, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::S, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::D, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::F, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::G, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::Z, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::X, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+
+      <autogen>__KeyToKey__ KeyCode::Y,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::U,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::I,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::O,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::P,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::H,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::J,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::K,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::L,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::N,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::M,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::COMMA,     ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::DOT,       ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::QUOTE,     ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::SLASH,     ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+    </item>
+
+
+    <item>
+      <name>ESC to F18</name>
+      <identifier>private.esc_to_f18</identifier>
+      <autogen>__KeyToKey__ KeyCode::ESCAPE, ModifierFlag::NONE, KeyCode::F18</autogen>
+    </item>
+
+  </item> <!-- learn to type -->
+
+  <item><name>──────────────────────────────</name></item>
+  
+</root>

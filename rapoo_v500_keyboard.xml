@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<root>
+
+  <item>
+    <name>Rapoo V500</name>
+    <item>
+      <name>Rapoo V500 left cmd/opt swap</name>
+      <appendix>(swap left cmd/opt on Rapoo V500 keyboard)</appendix>
+      <identifier>private.v500.cmdopt.l_swap</identifier>
+
+      <device_only>
+        DeviceVendor::RawValue::0x24ae,
+        DeviceProduct::RawValue::0x4005
+      </device_only>
+
+      <!-- left side -->
+      <autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
+    </item>
+
+
+    <item>
+      <name>Rapoo V500 right cmd/opt swap</name>
+      <appendix>(swap right cmd/opt on Rapoo V500 keyboard)</appendix>
+      <identifier>private.v500.cmdopt.r_swap</identifier>
+
+      <device_only>
+        DeviceVendor::RawValue::0x24ae,
+        DeviceProduct::RawValue::0x4005
+      </device_only>
+
+      <!-- right side -->
+      <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::COMMAND_R</autogen>
+      <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
+    </item>
+  </item>
+</root>
