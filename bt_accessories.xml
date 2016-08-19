@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<root>
+
+<item>
+  <name>BT accessories</name>
+ 
+  <item>
+    <name>Red shutter</name>
+    <item>
+      <name>iOS Shutter to keypad 1, Andriod Shutter to keypad 0</name>
+      <identifier>private.redshutter.iosbutton</identifier>
+      <device_only>
+        DeviceVendor::RawValue::0x04e8,
+        DeviceProduct::RawValue::0x7021
+      </device_only>
+
+      <autogen>__KeyToKey__ ConsumerKeyCode::VOLUME_UP, KeyCode::KEYPAD_1</autogen>
+      <autogen>__KeyToKey__ KeyCode::RETURN, KeyCode::KEYPAD_0</autogen>
+
+    </item>
+
+  </item>
+
+  <item>
+    <name>Game controller</name>
+    <appendix>Consumer key mode mappings.</appendix> 
+    <identifier>private.gamecontroller.keymode</identifier>
+    <!-- 
+    <device_only>
+      DeviceVendor::RawValue::0x04d9,
+      DeviceProduct::RawValue::0x0141
+    </device_only>
+    -->
+    
+    <autogen>__KeyToKey__ ConsumerKeyCode::MUSIC_PREV_18, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ ConsumerKeyCode::MUSIC_PREV_18, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ ConsumerKeyCode::MUSIC_PREV_18, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ ConsumerKeyCode::MUSIC_PREV_18, KeyCode::VK_NONE</autogen>
+
+    <autogen>__KeyToKey__ ConsumerKeyCode::VOLUME_MUTE, KeyCode::X</autogen>
+
+    <autogen>__KeyToKey__ ConsumerKeyCode::VOLUME_MUTE, KeyCode::X</autogen>
+    <autogen>__KeyToKey__ ConsumerKeyCode::VOLUME_MUTE, KeyCode::X</autogen>
+    <autogen>__KeyToKey__ ConsumerKeyCode::VOLUME_MUTE, KeyCode::X</autogen>
+    <autogen>__KeyToKey__ ConsumerKeyCode::VOLUME_MUTE, KeyCode::X</autogen>
+  </item>
+
+  </item>
+
+</root>

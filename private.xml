@@ -1,6 +1,21 @@
 <?xml version="1.0"?>
 <root>
 
+  <!-- For Vim emulation mode -->
+  <replacementdef>
+    <replacementname>VIM_EMU_CUSTOMIZE_KEY</replacementname>
+    <replacementvalue>KeyCode::BACKSLASH</replacementvalue>
+  </replacementdef>
+
+  <item>
+    <appendix>Keybord specific fixes</appendix>
+    <include path="daskeyboard4c.xml" />
+    <include path="rapoo_v500_keyboard.xml" />
+    <include path="apple_iso.xml" />
+    <include path="bt_accessories.xml" />
+  </item> 
+
+
   <item>
     <name>Modifier configs and ISO keyboard fixes</name>
     
@@ -17,48 +32,18 @@
     </item>
 
     <item>
-      <name>ISO Keyboard: Enter to '\'</name>
-      <identifier>private.enter_to_backslash</identifier>
-      <autogen>__KeyToKey__ KeyCode::ENTER, ModifierFlag::NONE, KeyCode::BACKSLASH</autogen>
-    </item>
-
-    <item>
-      <name>F19 to CTRL and ESC</name>
-      <appendix>(F19 to Ctrl, F19 only to Esc)</appendix>
-      <identifier>private.f19_to_ctrl_escape</identifier>
-      <autogen>
-        __KeyOverlaidModifier__
-        KeyCode::F19,
-        KeyCode::CONTROL_L | ModifierFlag::NONE,
-        KeyCode::ESCAPE
-      </autogen>
-    </item>
-
-    <item>
-      <name>Map _unmodified_ left Shift to Escape</name>
+      <name>Map _unmodified_ SHIFT to ESCAPE</name>
       <appendix>Since SHIFT_L has moved one step up we are free to use the original SHIFT key for something else...</appendix>
-      <autogen>__KeyToKey__
+      <identifier>private.shift_to_shift_escape</identifier>
+      <autogen>__KeyOverlaidModifier__
+        KeyCode::SHIFT_L, ModifierFlag::NONE,
         KeyCode::SHIFT_L, ModifierFlag::NONE,
         KeyCode::ESCAPE
       </autogen>
     </item>
 
     <item>
-      <name>Right Cmd to Left Ctrl</name>
-      <appendix>(Right Command key as Control key for better ergonomics)</appendix>
-      <identifier>private.cmdr_to_ctrll</identifier>
-      <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::CONTROL_L</autogen>
-    </item>
-
-    <item>
-      <name>Right Ctrl to Right Cmd</name>
-      <appendix>(use e.g. when remapping right cmd)</appendix>
-      <identifier>private.ctrlr_to_cmdr</identifier>
-      <autogen>__KeyToKey__ KeyCode::CONTROL_R, KeyCode::COMMAND_R</autogen>
-    </item>
-
-    <item>
-      <name>Right Ctrl to F16</name>
+      <name>Right CTRL to F16</name>
       <appendix>(use e.g. when remapping Right Ctrl to some other key)</appendix>
       <identifier>private.ctrlr_to_f16</identifier>
       <autogen>__KeyToKey__ KeyCode::CONTROL_R, KeyCode::F16</autogen>
@@ -72,17 +57,34 @@
     </item>
 
     <item>
-      <name>Scroll Lock is the new Caps Lock</name>
-      <appendix>Scroll Lock to Caps Lock</appendix>
-      <identifier>private.scroll2caps</identifier>
-      <autogen>__KeyToKey__ KeyCode::F14, KeyCode::CAPSLOCK</autogen>
-    </item>
-
-    <item>
       <name>Tab to Ctrl</name>
       <appendix>Map Tab key to left control key</appendix>
       <identifier>private.tab_to_ctrl</identifier>
       <autogen>__KeyToKey__ KeyCode::TAB, KeyCode::CONTROL_L</autogen>
+    </item>
+
+    <item>
+      <name>Tab to Tab and control</name>
+      <appendix>Tab to Tab. Hold tab for Left control)</appendix>
+      <identifier>private.tab_to_tab_and_ctrll</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::TAB,
+        KeyCode::CONTROL_L,
+        KeyCode::TAB
+      </autogen>
+    </item>
+
+    <item>
+      <name>Tab to Tab and FN</name>
+      <appendix>Tab to Tab. Hold tab for FN)</appendix>
+      <identifier>private.tab_to_tab_and_fn</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::TAB,
+        KeyCode::FN,
+        KeyCode::TAB
+      </autogen>
     </item>
 
     <item>
@@ -146,15 +148,13 @@
 
   </item>
 
-
   <include path="chordy-us.xml" /> 
   <!-- <include path="chordy-sv.xml" />  -->
   <!-- <include path="swe_mod.xml" /> -->
-  <!-- <include path="hyper.xml" /> -->
+  <include path="hyper.xml" />
   <!-- <include path="engelbart.xml" /> -->
   <include path="wasd.xml" />
   <!-- <include path="aula_keyboard.xml" /> -->
-  <include path="rapoo_v500_keyboard.xml" />
 
   
   <item>

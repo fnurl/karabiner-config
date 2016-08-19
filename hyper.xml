@@ -3,8 +3,9 @@
 <root>
 
   <item>
-    <name>Hyper</name>
-    
+    <name>Hyper and meh</name>
+    <appendix>HYPER is cmd+ctrl+shift+opt. meh is ctrl+shift+opt</appendix>
+
     <item>
       <name>SPACE to HYPER and SPACE</name>
       <appendix>SPACE to HYPER and SPACE</appendix>
@@ -83,6 +84,19 @@
         KeyCode::ESCAPE
       </autogen>
     </item>
+
+    <item>
+      <name>RETURN to meh and RETURN</name>
+      <appendix>(RETURN to meh (ctrl+shift+opt), RETURN only to RETURN)</appendix>
+      <identifier>private.return_to_meh_return</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::RETURN,
+        KeyCode::CONTROL_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+        KeyCode::RETURN
+      </autogen>
+    </item>
+
   </item>
 
 </root>
