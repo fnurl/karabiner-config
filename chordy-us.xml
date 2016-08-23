@@ -1,11 +1,6 @@
 <?xml version="1.0"?>
 <root>
   
-  <modifierdef>NUMBER_MOD</modifierdef>
-  <modifierdef>SYMBOL_MOD</modifierdef>
-  <modifierdef>PAREN_MOD</modifierdef>
-  <modifierdef notify="true">SUBSPACE_MOD</modifierdef>
-  
   <replacementdef>
     <replacementname>HYPER_MOD</replacementname>
     <replacementvalue>KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L</replacementvalue>
@@ -65,7 +60,7 @@
       <item>
         <name>Backslash is BACKSPACE</name>
         <identifier>chordy.backslash_to_backspace</identifier>
-        <autogen>__KeyToKey__ KeyCode::BACKSLASH, KeyCode::DELETE</autogen>
+        <autogen>__KeyToKey__ KeyCode::BACKSLASH, ModifierFlag::NONE, KeyCode::DELETE</autogen>
       </item>
 
       <item>
@@ -92,6 +87,38 @@
       </item>
       
       <item>
+        <name>Return DOT COMMA</name>
+        <identifier>chordy.single_key.backspace_dotcomma</identifier>
+        <autogen>
+          __SimultaneousKeyPresses__ KeyCode::COMMA, KeyCode::DOT, KeyCode::RETURN
+        </autogen>
+      </item>
+      
+      <item>
+        <name>Backspace IO</name>
+        <identifier>chordy.single_key.backspace_io</identifier>
+        <autogen>
+          __SimultaneousKeyPresses__ KeyCode::I, KeyCode::O, KeyCode::DELETE
+        </autogen>
+      </item>
+      
+      <item>
+        <name>Return IO</name>
+        <identifier>chordy.single_key.return_io</identifier>
+        <autogen>
+          __SimultaneousKeyPresses__ KeyCode::I, KeyCode::O, KeyCode::RETURN
+        </autogen>
+      </item>
+      
+      <item>
+        <name>Return UI</name>
+        <identifier>chordy.single_key.return_ui</identifier>
+        <autogen>
+          __SimultaneousKeyPresses__ KeyCode::U, KeyCode::I, KeyCode::RETURN
+        </autogen>
+      </item>
+      
+      <item>
         <name>Return FJ</name>
         <identifier>chordy.single_key.return_fj</identifier>
         <autogen>
@@ -108,8 +135,15 @@
       </item>
       
       <item>
+        <name>Delete (Backspace) ER</name>
+        <identifier>chordy.single_key.delete_er</identifier>
+        <autogen>
+          __SimultaneousKeyPresses__ KeyCode::E, KeyCode::R, KeyCode::DELETE
+        </autogen>
+      </item>
+
+      <item>
         <name>Delete (Backspace) DK</name>
-        <appendix>Delete: DK</appendix>
         <identifier>chordy.single_key.delete_dk</identifier>
         <autogen>
           __SimultaneousKeyPresses__ KeyCode::D, KeyCode::K, KeyCode::DELETE
@@ -118,7 +152,6 @@
 
       <item>
         <name>Delete (Backspace) FJ</name>
-        <appendix>Delete: FJ</appendix>
         <identifier>chordy.single_key.delete_fj</identifier>
         <autogen>
           __SimultaneousKeyPresses__ KeyCode::F, KeyCode::J, KeyCode::DELETE
@@ -245,20 +278,6 @@
       </item>
       
       <item>
-        <name>Symbol: SF and JL</name>
-        <identifier>private.chordy.symbol3</identifier>
-        <autogen>__SimultaneousKeyPresses__ KeyCode::S, KeyCode::F, KeyCode::VK_MODIFIER_SYMBOL_MOD</autogen>
-        <autogen>__SimultaneousKeyPresses__ KeyCode::J, KeyCode::L, KeyCode::VK_MODIFIER_SYMBOL_MOD</autogen>
-      </item>
-      
-      <item>
-        <name>Number: SD and KL</name>
-        <identifier>private.chordy.number2</identifier>
-        <autogen>__SimultaneousKeyPresses__ KeyCode::S, KeyCode::D, KeyCode::VK_MODIFIER_NUMBER_MOD</autogen>
-        <autogen>__SimultaneousKeyPresses__ KeyCode::K, KeyCode::L, KeyCode::VK_MODIFIER_NUMBER_MOD</autogen>
-      </item>
-      
-      <item>
         <name>CMD+CTRL</name>
         <appendix>use R/F or J/I to</appendix>
         <identifier>chordy.cmd_ctrl</identifier>
@@ -267,180 +286,6 @@
 
     </item>
     
-    <item>
-      <name>Numbers and symbols</name>
-      
-      <item>
-        <name>NUMBER_MOD 1</name>
-        <appendix>Press BACKSPACE for NUMBER_MOD Lock. Hold BACKSPACE for NUMBER_MOD</appendix>
-        <identifier>chordy.numbermod1</identifier>
-        <autogen>
-          __KeyOverlaidModifier__
-          KeyCode::DELETE,
-          KeyCode::VK_MODIFIER_NUMBER_MOD,
-          KeyCode::VK_LOCK_NUMBER_MOD
-        </autogen>
-      </item>
-      
-      <item>
-        <name>NUMBER_MOD 2</name>
-        <appendix>Press BACKSLASH for NUMBER_MOD Lock. Hold BACKSLASH for NUMBER_MOD</appendix>
-        <identifier>chordy.numbermod2</identifier>
-        <autogen>
-          __KeyOverlaidModifier__
-          KeyCode::BACKSLASH,
-          KeyCode::VK_MODIFIER_NUMBER_MOD,
-          KeyCode::VK_LOCK_NUMBER_MOD
-        </autogen>
-      </item>
-
-      <item>
-        <name>Home Row [Numbers]</name>
-        <appendix>Activate NUMBER_MOD followed by a home row key for numbers.</appendix>
-        <identifier>private.chordy.homerow_numbers</identifier>
-        <autogen> __KeyToKey__ KeyCode::A, ModifierFlag::NUMBER_MOD, KeyCode::1 </autogen>
-        <autogen> __KeyToKey__ KeyCode::S, ModifierFlag::NUMBER_MOD, KeyCode::2 </autogen>
-        <autogen> __KeyToKey__ KeyCode::D, ModifierFlag::NUMBER_MOD, KeyCode::3 </autogen>
-        <autogen> __KeyToKey__ KeyCode::F, ModifierFlag::NUMBER_MOD, KeyCode::4 </autogen>
-        <autogen> __KeyToKey__ KeyCode::G, ModifierFlag::NUMBER_MOD, KeyCode::5 </autogen>
-        <autogen> __KeyToKey__ KeyCode::H, ModifierFlag::NUMBER_MOD, KeyCode::6 </autogen>
-        <autogen> __KeyToKey__ KeyCode::J, ModifierFlag::NUMBER_MOD, KeyCode::7 </autogen>
-        <autogen> __KeyToKey__ KeyCode::K, ModifierFlag::NUMBER_MOD, KeyCode::8 </autogen>
-        <autogen> __KeyToKey__ KeyCode::L, ModifierFlag::NUMBER_MOD, KeyCode::9 </autogen>
-        <autogen> __KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::NUMBER_MOD, KeyCode::0 </autogen>
-      </item>item>
-      
-      <item>
-        <name>SYMBOL_MOD 1</name>
-        <appendix>Press left CTRL for SYMBOL Lock. Hold CTRL for Symbol mod</appendix>
-        <identifier>chordy.symbolmod_ctrll</identifier>
-        <autogen>
-          __KeyOverlaidModifier__
-          KeyCode::CONTROL_L,
-          KeyCode::VK_MODIFIER_SYMBOL_MOD,
-          KeyCode::VK_LOCK_SYMBOL_MOD
-        </autogen>
-      </item>
-
-      <item>
-        <name>SYMBOL_MOD 2</name>
-        <appendix>Press RETURN for ordinary RETURN. Hold and release RETURN for SYMBOL modifier.</appendix> 
-        <identifier>chordy.symbolmod_return</identifier>
-        <autogen>
-          __KeyOverlaidModifier__
-          KeyCode::RETURN,
-          KeyCode::VK_MODIFIER_SYMBOL_MOD,
-          KeyCode::RETURN
-        </autogen>
-      </item>
-
-    </item>
-
-    <item>
-      <name>Subspace</name>
-      
-      <item>
-        <name>Hold space for SUBSPACE</name>
-        <appendix>Hold space to for SUBSPACE modifier: symbols, numbers, app switching, window switching, tab navigation.</appendix>
-        <identifier>chordy.subspace1</identifier>
-        <autogen>
-          __KeyOverlaidModifier__
-          KeyCode::SPACE,
-          KeyCode::VK_MODIFIER_SUBSPACE_MOD,
-          KeyCode::SPACE
-        </autogen>
-      </item>
-
-      <item>
-        <name>QWERTY Row [Numbers]</name>
-        <appendix>Activate SUBSPACE modifier followed by a QWERTY row key for numbers.</appendix>
-        <identifier>private.chordy.qwerty_numbers</identifier>
-        <autogen>__KeyToKey__ KeyCode::Q, ModifierFlag::SUBSPACE_MOD, KeyCode::1 </autogen>
-        <autogen>__KeyToKey__ KeyCode::W, ModifierFlag::SUBSPACE_MOD, KeyCode::2 </autogen>
-        <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::SUBSPACE_MOD, KeyCode::3 </autogen>
-        <autogen>__KeyToKey__ KeyCode::R, ModifierFlag::SUBSPACE_MOD, KeyCode::4 </autogen>
-        <autogen>__KeyToKey__ KeyCode::T, ModifierFlag::SUBSPACE_MOD, KeyCode::5 </autogen>
-        <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::SUBSPACE_MOD, KeyCode::6 </autogen>
-        <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::SUBSPACE_MOD, KeyCode::7 </autogen>
-        <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::SUBSPACE_MOD, KeyCode::8 </autogen>
-        <autogen>__KeyToKey__ KeyCode::O, ModifierFlag::SUBSPACE_MOD, KeyCode::9 </autogen>
-        <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::SUBSPACE_MOD, KeyCode::0 </autogen>
-      </item>
-      
-      <item>
-        <name>Symbols (usually found on shifted number keys)</name>
-        <identifier>chordy.symbols</identifier>
-        <appendix>Activate SUBSPACE to activate symbols on home row: asdfghjklö to !@#^+*$=% .</appendix>
-        <autogen>__KeyToKey__ KeyCode::A, ModifierFlag::SUBSPACE_MOD, KeyCode::1, ModifierFlag::SHIFT_L</autogen>
-        <autogen>__KeyToKey__ KeyCode::S, ModifierFlag::SUBSPACE_MOD, KeyCode::2, ModifierFlag::SHIFT_L</autogen>
-        <autogen>__KeyToKey__ KeyCode::D, ModifierFlag::SUBSPACE_MOD, KeyCode::3, ModifierFlag::SHIFT_L</autogen>
-        <autogen>__KeyToKey__ KeyCode::F, ModifierFlag::SUBSPACE_MOD, KeyCode::6, ModifierFlag::SHIFT_L</autogen>
-        <autogen>__KeyToKey__ KeyCode::G, ModifierFlag::SUBSPACE_MOD, KeyCode::EQUAL, ModifierFlag::SHIFT_L</autogen>
-        <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::SUBSPACE_MOD, KeyCode::8, ModifierFlag::SHIFT_L</autogen>
-        <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::SUBSPACE_MOD, KeyCode::4, ModifierFlag::SHIFT_L</autogen>
-        <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::SUBSPACE_MOD, KeyCode::7, ModifierFlag::SHIFT_L</autogen>
-        <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::SUBSPACE_MOD, KeyCode::EQUAL</autogen>
-        <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::SUBSPACE_MOD, KeyCode::5, ModifierFlag::SHIFT_L</autogen>
-      </item>
-
-      <item>
-        <name>App, window  and tab switching</name>
-        <appendix>Use SUBSPACE with c,v for switching apps. Use n,m for switching windows. Use Å and Ä to switch active tab i current application</appendix>
-        <identifier>chordy.subspace.switching</identifier>
-        <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::SUBSPACE_MOD, KeyCode::TAB, ModifierFlag::COMMAND_L</autogen>
-        <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::SUBSPACE_MOD, KeyCode::TAB, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
-        <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::SUBSPACE_MOD, KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L</autogen>
-        <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::SUBSPACE_MOD, KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
-        <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, ModifierFlag::SUBSPACE_MOD, KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L</autogen>
-        <autogen>__KeyToKey__ KeyCode::QUOTE, ModifierFlag::SUBSPACE_MOD, KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L</autogen>
-      </item>
-
-    </item>
-
-
-    <item>
-      <name>Parens on home row using PAREN_MOD</name>
-
-      <item>
-        <name>Hold F or J for PAREN_MOD</name>
-        <identifier>private.chordy.paren_mod_fj</identifier>
-
-        <autogen>
-          __KeyOverlaidModifier__
-          KeyCode::F,
-          KeyCode::VK_MODIFIER_PAREN_MOD,
-          KeyCode::F
-        </autogen>
-
-        <autogen>
-          __KeyOverlaidModifier__
-          KeyCode::J,
-          KeyCode::VK_MODIFIER_PAREN_MOD,
-          KeyCode::J
-        </autogen>
-      </item>
-
-      <item>
-        <name>Parens on homerow</name>
-        <identifier>chordy.parens</identifier>
-        <autogen>__KeyToKey__ KeyCode::G, ModifierFlag::PAREN_MOD, KeyCode::BRACKET_LEFT</autogen> 
-        <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::PAREN_MOD, KeyCode::BRACKET_RIGHT</autogen>
-
-        <autogen>__KeyToKey__ KeyCode::F, ModifierFlag::PAREN_MOD, KeyCode::9, ModifierFlag::SHIFT_L</autogen> 
-        <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::PAREN_MOD, KeyCode::0, ModifierFlag::SHIFT_L</autogen>
-
-        <autogen>__KeyToKey__ KeyCode::D, ModifierFlag::PAREN_MOD, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L</autogen>
-        <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::PAREN_MOD, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L</autogen>
-
-        <autogen>__KeyToKey__ KeyCode::S, ModifierFlag::PAREN_MOD, KeyCode::COMMA, ModifierFlag::SHIFT_L</autogen> 
-        <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::PAREN_MOD, KeyCode::DOT, ModifierFlag::SHIFT_L</autogen>
-
-        <autogen>__KeyToKey__ KeyCode::A, ModifierFlag::PAREN_MOD, KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L</autogen> 
-        <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::PAREN_MOD, KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L</autogen> 
-      </item>
-
-    </item>
-
     <item>
       <name>Swedish characters mapped from keypad</name>
       <identifier>chordy.swe_keypad</identifier>
@@ -452,10 +297,6 @@
       <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::KEYPAD_9, ModifierFlag::SHIFT_L | ModifierFlag::NONE</autogen>
     </item>
     
-    <item>
-      <name>Disable keys</name>
-    </item>
-
   </item>
     
 </root>

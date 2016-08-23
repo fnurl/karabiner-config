@@ -15,7 +15,6 @@
     <include path="bt_accessories.xml" />
   </item> 
 
-
   <item>
     <name>Modifier configs and ISO keyboard fixes</name>
     
@@ -69,7 +68,7 @@
       <identifier>private.tab_to_tab_and_ctrll</identifier>
       <autogen>
         __KeyOverlaidModifier__
-        KeyCode::TAB,
+        KeyCode::TAB, ModifierFlag::NONE,
         KeyCode::CONTROL_L,
         KeyCode::TAB
       </autogen>
@@ -148,7 +147,9 @@
 
   </item>
 
+  <include path="subspace.xml" />
   <include path="chordy-us.xml" /> 
+  <include path="parens.xml" />
   <!-- <include path="chordy-sv.xml" />  -->
   <!-- <include path="swe_mod.xml" /> -->
   <include path="hyper.xml" />

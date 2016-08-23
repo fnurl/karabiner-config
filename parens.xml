@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<root>
+  
+  <modifierdef>PAREN_MOD</modifierdef>
+
+  <item>
+    <name>Paren remappings using paren modifier</name>
+
+    <item>
+      <name>Right command as paren modifier</name>
+      <identifier>parenmod.commandr_as_mod</identifier>
+      <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::VK_MODIFIER_PAREN_MOD</autogen>
+    </item>
+    
+    <item>
+      <name>Hold F or J for PAREN_MOD</name>
+      <identifier>private.chordy.paren_mod_fj</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::F, ModifierFlag:: NONE,
+        KeyCode::VK_MODIFIER_PAREN_MOD,
+        KeyCode::F
+      </autogen>
+      
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::J, ModifierFlag::NONE,
+        KeyCode::VK_MODIFIER_PAREN_MOD,
+        KeyCode::J, ModifierFlag::NONE
+      </autogen>
+    </item>
+    
+    <item>
+      <name>Parens on homerow</name>
+      <identifier>chordy.parens</identifier>
+      <autogen>__KeyToKey__ KeyCode::G, ModifierFlag::PAREN_MOD, KeyCode::BRACKET_LEFT</autogen>> 
+      <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::PAREN_MOD, KeyCode::BRACKET_RIGHT</autogen>n>
+      
+      <autogen>__KeyToKey__ KeyCode::F, ModifierFlag::PAREN_MOD, KeyCode::9, ModifierFlag::SHIFT_L</autogen> 
+      <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::PAREN_MOD, KeyCode::0, ModifierFlag::SHIFT_L</autogen>
+      
+      <autogen>__KeyToKey__ KeyCode::D, ModifierFlag::PAREN_MOD, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::PAREN_MOD, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L</autogen>
+      
+      <autogen>__KeyToKey__ KeyCode::S, ModifierFlag::PAREN_MOD, KeyCode::COMMA, ModifierFlag::SHIFT_L</autogen> 
+      <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::PAREN_MOD, KeyCode::DOT, ModifierFlag::SHIFT_L</autogen>
+      
+      <autogen>__KeyToKey__ KeyCode::A, ModifierFlag::PAREN_MOD, KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L</autogen> 
+      <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::PAREN_MOD, KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L</autogen> 
+    </item>
+    
+  </item>
+  
+</root>

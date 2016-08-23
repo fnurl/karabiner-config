@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<root>
+  
+  <modifierdef notify="true">SUBSPACE_MOD</modifierdef>
+  
+    <item>
+      <name>SUBSPACE</name>
+      
+      <item>
+        <name>Hold SPACE for SUBSPACE</name>
+        <appendix>Hold space to for SUBSPACE modifier: symbols, numbers, app switching, window switching, tab navigation.</appendix>
+        <identifier>chordy.subspace1</identifier>
+        <autogen>
+          __KeyOverlaidModifier__
+          KeyCode::SPACE,
+          KeyCode::VK_MODIFIER_SUBSPACE_MOD,
+          KeyCode::SPACE
+        </autogen>
+      </item>
+
+      <item>
+        <name>QWERTY Row [Numbers]</name>
+        <appendix>Activate SUBSPACE modifier followed by a QWERTY row key for numbers.</appendix>
+        <identifier>private.chordy.qwerty_numbers</identifier>
+        <autogen>__KeyToKey__ KeyCode::Q, ModifierFlag::SUBSPACE_MOD, KeyCode::1 </autogen>
+        <autogen>__KeyToKey__ KeyCode::W, ModifierFlag::SUBSPACE_MOD, KeyCode::2 </autogen>
+        <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::SUBSPACE_MOD, KeyCode::3 </autogen>
+        <autogen>__KeyToKey__ KeyCode::R, ModifierFlag::SUBSPACE_MOD, KeyCode::4 </autogen>
+        <autogen>__KeyToKey__ KeyCode::T, ModifierFlag::SUBSPACE_MOD, KeyCode::5 </autogen>
+        <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::SUBSPACE_MOD, KeyCode::6 </autogen>
+        <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::SUBSPACE_MOD, KeyCode::7 </autogen>
+        <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::SUBSPACE_MOD, KeyCode::8 </autogen>
+        <autogen>__KeyToKey__ KeyCode::O, ModifierFlag::SUBSPACE_MOD, KeyCode::9 </autogen>
+        <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::SUBSPACE_MOD, KeyCode::0 </autogen>
+      </item>
+      
+      <item>
+        <name>Symbols (usually found on shifted number keys) + backslash and pipe</name>
+        <identifier>chordy.symbols</identifier>
+        <appendix>Activate SUBSPACE to activate symbols on home row: asdfghjklö to !@#^+*$=% and </appendix>
+        <autogen>__KeyToKey__ KeyCode::A, ModifierFlag::SUBSPACE_MOD, KeyCode::1, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::S, ModifierFlag::SUBSPACE_MOD, KeyCode::2, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::D, ModifierFlag::SUBSPACE_MOD, KeyCode::3, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::F, ModifierFlag::SUBSPACE_MOD, KeyCode::6, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::G, ModifierFlag::SUBSPACE_MOD, KeyCode::EQUAL, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::SUBSPACE_MOD, KeyCode::8, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::SUBSPACE_MOD, KeyCode::4, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::SUBSPACE_MOD, KeyCode::7, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::SUBSPACE_MOD, KeyCode::EQUAL</autogen>
+        <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::SUBSPACE_MOD, KeyCode::5, ModifierFlag::SHIFT_L</autogen>
+
+        <!-- backslash and pipe -->
+        <autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::SUBSPACE_MOD, KeyCode::BACKSLASH</autogen>
+        <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::SUBSPACE_MOD, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
+
+      </item>
+
+      <item>
+        <name>cv for _- and nm for '"</name>
+        <identifier>subspace.dashes_and_quotes</identifier>
+        <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::SUBSPACE_MOD, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::SUBSPACE_MOD, KeyCode::MINUS</autogen>
+        <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::SUBSPACE_MOD, KeyCode::QUOTE</autogen>
+        <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::SUBSPACE_MOD, KeyCode::QUOTE, ModifierFlag::SHIFT_L</autogen>
+      </item>
+
+      <item>
+        <name>App, window  and tab switching</name>
+        <appendix>Use SUBSPACE with c,v for switching apps. Use n,m for switching windows. Use Å and Ä to switch active tab i current application</appendix>
+        <identifier>chordy.subspace.switching1</identifier>
+        <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::SUBSPACE_MOD, KeyCode::TAB, ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::SUBSPACE_MOD, KeyCode::TAB, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::SUBSPACE_MOD, KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::SUBSPACE_MOD, KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, ModifierFlag::SUBSPACE_MOD, KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::QUOTE, ModifierFlag::SUBSPACE_MOD, KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L</autogen>
+      </item>
+
+      <item>
+        <name>Window and tab switching</name>
+        <appendix>Use SUBSPACE with opt-tab/opt-shift tab for switching windows. Use Å and Ä to switch active tab i current application</appendix>
+        <appendix>SUBSPACE with COMMA or DOT produces opt+left and opt+right for cursor navigation in insert mode</appendix>
+        <identifier>chordy.subspace.switching2</identifier>
+
+        <autogen>__KeyToKey__ KeyCode::TAB, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::TAB, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
+
+        <!-- SUBSPACE bracket left (å)/quote (ä) to my tab switch shortcut (cmd opt left arrow) -->
+        <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, ModifierFlag::SUBSPACE_MOD, KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::QUOTE, ModifierFlag::SUBSPACE_MOD, KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L</autogen>
+
+        <!-- SUBSPACE bracket right/backslash to OPT left/right arrow for insert mode navigation -->
+        <autogen>__KeyToKey__ KeyCode::BRACKET_RIGHT, ModifierFlag::SUBSPACE_MOD | ModifierFlag::NONE, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::BACKSLASH, ModifierFlag::SUBSPACE_MOD | ModifierFlag::NONE, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L</autogen>
+
+      </item>
+
+      <item>
+        <name>SUBSPACE b to tmux leader (C-b)</name>
+        <identifier>subspace.tmux_leader.cb</identifier>
+        <autogen>__KeyToKey__ KeyCode::B, ModifierFlag::SUBSPACE_MOD, KeyCode::B, ModifierFlag::CONTROL_L</autogen>
+      </item>
+
+    </item>
+
+  </root>
