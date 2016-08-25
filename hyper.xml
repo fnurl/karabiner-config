@@ -75,6 +75,17 @@
     </item>
 
     <item>
+      <name>Tab to Hyper and Tab</name>
+      <identifier>private.tab_to_hyper_and_tab</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::TAB,
+        KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+        KeyCode::TAB
+      </autogen>
+    </item>
+
+    <item>
       <name>Left Control to Hyper and Escape</name>
       <identifier>private.ctrl_to_hyper_and_esc</identifier>
       <autogen>

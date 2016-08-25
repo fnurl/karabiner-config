@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<root>
+
+  <item>
+    <name>Learn to type</name>
+    
+    <item>
+      <name>Use the correct shift keys (send F17 if you do something wrong).</name>
+      <identifier>private.correct_shift_keys</identifier>
+
+      <autogen>__KeyToKey__ KeyCode::Q, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::W, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::R, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::T, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::A, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::S, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::D, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::F, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::G, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::Z, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::X, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::F17</autogen>
+
+      <autogen>__KeyToKey__ KeyCode::Y,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::U,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::I,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::O,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::P,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::H,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::J,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::K,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::L,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::N,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::M,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::COMMA,     ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::DOT,       ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::QUOTE,     ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+      <autogen>__KeyToKey__ KeyCode::SLASH,     ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::F17</autogen>
+    </item>
+
+
+    <item>
+      <name>ESC to F18</name>
+      <identifier>private.esc_to_f18</identifier>
+      <autogen>__KeyToKey__ KeyCode::ESCAPE, ModifierFlag::NONE, KeyCode::F18</autogen>
+    </item>
+
+  </item> <!-- learn to type -->
+  
+</root>
