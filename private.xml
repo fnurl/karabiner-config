@@ -15,155 +15,27 @@
     <include path="bt_accessories.xml" />
   </item> 
 
-  <item>
-    <name>Modifier configs and ISO keyboard fixes</name>
-    
-    <item>
-      <name>Double Right Shift to Caps Lock</name>
-      <appendix>(double tap right shift to enable caps lock</appendix>
-      <identifier>private.dbl_shift_to_caps</identifier>
-      <autogen>
-        __DoublePressModifier__
-        KeyCode::SHIFT_R,
-        KeyCode::SHIFT_R,
-        KeyCode::CAPSLOCK
-      </autogen>
-    </item>
-
-    <item>
-      <name>Map _unmodified_ SHIFT to ESCAPE</name>
-      <appendix>Since SHIFT_L has moved one step up we are free to use the original SHIFT key for something else...</appendix>
-      <identifier>private.shift_to_shift_escape</identifier>
-      <autogen>__KeyOverlaidModifier__
-        KeyCode::SHIFT_L, ModifierFlag::NONE,
-        KeyCode::SHIFT_L, ModifierFlag::NONE,
-        KeyCode::ESCAPE
-      </autogen>
-    </item>
-
-    <item>
-      <name>F19 to CTRL and Escape</name>
-      <identifier>private.f19_to_ctrl_and_esc</identifier>
-      <autogen>
-        __KeyOverlaidModifier__
-        KeyCode::F19,
-        KeyCode::CONTROL_L | ModifierFlag::NONE,
-        KeyCode::ESCAPE
-      </autogen>
-    </item>
-
-    <item>
-      <name>Right CTRL to F16</name>
-      <appendix>(use e.g. when remapping Right Ctrl to some other key)</appendix>
-      <identifier>private.ctrlr_to_f16</identifier>
-      <autogen>__KeyToKey__ KeyCode::CONTROL_R, KeyCode::F16</autogen>
-    </item>
-    
-    <item>
-      <name>F16 (Menu/Application Key) to Right Cmd</name>
-      <appendix>Use when remapping Right Cmd</appendix>
-      <identifier>private.f16_to_cmdr</identifier>
-      <autogen>__KeyToKey__ KeyCode::F16, KeyCode::COMMAND_R</autogen>
-    </item>
-
-    <item>
-      <name>Tab to Ctrl</name>
-      <appendix>Map Tab key to left control key</appendix>
-      <identifier>private.tab_to_ctrl</identifier>
-      <autogen>__KeyToKey__ KeyCode::TAB, KeyCode::CONTROL_L</autogen>
-    </item>
-
-    <item>
-      <name>Tab to Tab and control</name>
-      <appendix>Tab to Tab. Hold tab for Left control)</appendix>
-      <identifier>private.tab_to_tab_and_ctrll</identifier>
-      <autogen>
-        __KeyOverlaidModifier__
-        KeyCode::TAB, ModifierFlag::NONE,
-        KeyCode::CONTROL_L,
-        KeyCode::TAB
-      </autogen>
-    </item>
-
-    <item>
-      <name>Tab to Tab and FN</name>
-      <appendix>Tab to Tab. Hold tab for FN)</appendix>
-      <identifier>private.tab_to_tab_and_fn</identifier>
-      <autogen>
-        __KeyOverlaidModifier__
-        KeyCode::TAB,
-        KeyCode::FN,
-        KeyCode::TAB
-      </autogen>
-    </item>
-
-    <item>
-      <name>Escape to F16 (change input source)</name>
-      <appendix>Escape key becomes F16</appendix>
-      <identifier>private.esc_to_F16</identifier>
-      <autogen>__KeyToKey__  KeyCode::ESCAPE, KeyCode::F16</autogen>
-    </item>
-
-  </item>
-
-  <item>
-    <name>Move leftmost keys down one step</name>
-
-    <item>
-       <name>`~  to ESC</name>
-      <appendix>Escape key moves one step down</appendix>
-      <identifier>private.backquote_to_esc</identifier>
-      <autogen>__KeyToKey__  KeyCode::BACKQUOTE, KeyCode::ESCAPE</autogen>
-    </item>
-
-    <item>
-       <name>§± to Esc</name>
-      <appendix>Escape key moves one step down (on an ISO kb)</appendix>
-      <identifier>private.danish_dollar_to_esc</identifier>
-      <autogen>__KeyToKey__  KeyCode::DANISH_DOLLAR, KeyCode::ESCAPE</autogen>
-    </item>
-
-    <item>
-      <name>Tab to `~</name>
-      <appendix>Backtick/tilde key moves one step down</appendix>
-      <identifier>private.tab_to_backquote</identifier>
-      <autogen>__KeyToKey__ KeyCode::TAB, KeyCode::BACKQUOTE</autogen>
-    </item>
-
-    <item>
-      <name>Disable Tab</name>
-      <appendix>No tab.</appendix>
-      <identifier>private.disable_tab</identifier>
-      <autogen>__KeyToKey__ KeyCode::TAB, KeyCode::VK_NONE</autogen>
-    </item>
-
-    <item>
-      <name>F19 to TAB</name>
-      <appendix>I seem to hit caps when I want to tab, so lets try that.</appendix>
-      <identifier>private.f19_to_tab</identifier>
-      <autogen>__KeyToKey__ KeyCode::F19, KeyCode::TAB</autogen>
-    </item>
-
-    <item>
-      <name>F19 to Tab and Left Shift</name>
-      <appendix>(Press F19 (CapsLock) for Tab. Hold for Left Shift)</appendix>
-      <identifier>private.f19_to_tab_and_shift</identifier>
-      <autogen>
-        __KeyOverlaidModifier__
-        KeyCode::F19,
-        KeyCode::SHIFT_L | ModifierFlag::NONE,
-        KeyCode::TAB
-      </autogen>
-    </item>
-
-  </item>
-
-  <include path="hyper.xml" />
+  <include path="chordy-us.xml" /> 
   <include path="subspace.xml" />
   <include path="parens.xml" />
-  <include path="chordy-us.xml" /> 
   <include path="learn.xml" />
-  
+  <include path="basic.xml" />
+  <include path="hyper.xml" />
+
+  <item>
+    <name>roblox okl; swapped with wasd </name>
+    <identifier>private.roblox</identifier>
+    <autogen>__KeyToKey__ KeyCode::O, KeyCode::W</autogen>
+    <autogen>__KeyToKey__ KeyCode::K, KeyCode::A</autogen>
+    <autogen>__KeyToKey__ KeyCode::L, KeyCode::S</autogen>
+    <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::D</autogen>
+
+    <autogen>__KeyToKey__ KeyCode::W, KeyCode::O</autogen>
+    <autogen>__KeyToKey__ KeyCode::A, KeyCode::K</autogen>
+    <autogen>__KeyToKey__ KeyCode::S, KeyCode::L</autogen>
+    <autogen>__KeyToKey__ KeyCode::D, KeyCode::SEMICOLON</autogen>
+  </item>
+
   <item><name>──────────────────────────────</name></item>
   
 </root>

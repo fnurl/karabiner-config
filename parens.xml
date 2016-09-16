@@ -7,14 +7,14 @@
     <name>Paren remappings using paren modifier</name>
 
     <item>
-      <name>Right command as paren modifier</name>
-      <identifier>parenmod.commandr_as_mod</identifier>
+      <name>Right command as PAREN_MOD</name>
+      <identifier>parenmod.paren_mod.commandr</identifier>
       <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::VK_MODIFIER_PAREN_MOD</autogen>
     </item>
     
     <item>
-      <name>Hold F or J for PAREN_MOD</name>
-      <identifier>private.chordy.paren_mod_fj</identifier>
+      <name>Hold F or J as PAREN_MOD</name>
+      <identifier>private.parenmod.paren_mod.f_j</identifier>
       <autogen>
         __KeyOverlaidModifier__
         KeyCode::F, ModifierFlag:: NONE,
@@ -29,10 +29,19 @@
         KeyCode::J, ModifierFlag::NONE
       </autogen>
     </item>
+
+    <item>
+      <name>FD and JK chords as PAREN_MOD</name>
+      <appendix>Use chord as modifier as not to block keyrepeat</appendix>
+      <identifier>private.parenmod.paren_mod.fd_jk</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::F, KeyCode::D, KeyCode::VK_MODIFIER_PAREN_MOD</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::J, KeyCode::K, KeyCode::VK_MODIFIER_PAREN_MOD</autogen>
+    </item>
+
     
     <item>
-      <name>Parens on homerow</name>
-      <identifier>chordy.parens</identifier>
+      <name>Parens on homerow: [](){}&lt;&gt;</name>
+      <identifier>private.parenmod.parens</identifier>
       <autogen>__KeyToKey__ KeyCode::G, ModifierFlag::PAREN_MOD, KeyCode::BRACKET_LEFT</autogen>> 
       <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::PAREN_MOD, KeyCode::BRACKET_RIGHT</autogen>n>
       
@@ -44,9 +53,40 @@
       
       <autogen>__KeyToKey__ KeyCode::S, ModifierFlag::PAREN_MOD, KeyCode::COMMA, ModifierFlag::SHIFT_L</autogen> 
       <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::PAREN_MOD, KeyCode::DOT, ModifierFlag::SHIFT_L</autogen>
+    </item>
+
+    <item>
+      <name>Tilde, quotes, colons on QWERTY row</name>
+      <identifier>private.parenmod.tilde_quotes_colons</identifier>
+      <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::PAREN_MOD, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>> 
+      <autogen>__KeyToKey__ KeyCode::R, ModifierFlag::PAREN_MOD, KeyCode::BACKQUOTE</autogen>
       
+      <autogen>__KeyToKey__ KeyCode::T, ModifierFlag::PAREN_MOD, KeyCode::QUOTE</autogen> 
+      <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::PAREN_MOD, KeyCode::QUOTE, ModifierFlag::SHIFT_L</autogen>
+      
+      <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::PAREN_MOD, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::PAREN_MOD, KeyCode::SEMICOLON</autogen>
+    </item>
+
+    <item>
+      <name>ZXCVB row: slashes</name>
+      <identifier>private.parenmod.qmark</identifier>
+      <autogen>__KeyToKey__ KeyCode::B, ModifierFlag::PAREN_MOD, KeyCode::SLASH</autogen>> 
+      <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH</autogen>> 
+    </item>
+
+    <item>
+      <name>Change tab with F/J + A/Ö</name>
+      <appendix>
+        Turned out that this was not very good when typing fast since there are
+        words such as "jag" and "för" which could accidently trigger
+        left/right+cmd+opt
+      </appendix>
+      <identifier>private.parenmod.prev_next_aö</identifier>
+
       <autogen>__KeyToKey__ KeyCode::A, ModifierFlag::PAREN_MOD, KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L</autogen> 
-      <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::PAREN_MOD, KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L</autogen> 
+      <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::PAREN_MOD, KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L</autogen>
+
     </item>
     
   </item>

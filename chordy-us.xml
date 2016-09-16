@@ -1,104 +1,21 @@
 <?xml version="1.0"?>
 <root>
   
-  <replacementdef>
-    <replacementname>HYPER_MOD</replacementname>
-    <replacementvalue>KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L</replacementvalue>
-  </replacementdef>
-  
   <item>
-    <name>Chordy US ANSI</name>
+    <name>Chordy</name>
 
     <item>
-      <name>Basic layout changes</name>
-      
-      <item>
-        <name>SPACE to HYPER and SPACE</name>
-        <identifier>chordy.hyperspace</identifier>
-        <autogen>
-          __KeyOverlaidModifier__
-          KeyCode::SPACE,
-          {{ HYPER_MOD }}, 
-          KeyCode::SPACE
-        </autogen>
-      </item>
- 
-      <item>
-        <name>Tab to `~</name>
-        <appendix>Backtick/tilde key moves one step down</appendix>
-        <identifier>chordy.tab_to_backquote</identifier>
-        <autogen>__KeyToKey__ KeyCode::TAB, KeyCode::BACKQUOTE</autogen>
-      </item>
-    
-      <item>
-        <name>F19 (CAPS LOCK) to TAB</name>
-        <identifier>private.chordy.f19_to_tab</identifier>
-        <autogen>__KeyToKey__ KeyCode::F19, KeyCode::TAB</autogen>
-      </item>
-      
-      <item>
-        <name>Backslash is CTRL and vim mode toggle</name>
-        <appendix>(+ When you type BACKSLASH only, toggles Normal Mode)</appendix>
-        <identifier>chordy.vimnormal_toggle_controlR</identifier>
-        <not>{{UBIQUITOUS_VIM_BINDINGS_IGNORE_APPS}}</not>
-        <autogen>
-          __KeyOverlaidModifier__
-          KeyCode::BACKSLASH,
-          KeyCode::CONTROL_R,
-          KeyCode::VK_LOCK_ALL_FORCE_OFF,
-          KeyCode::VK_CONFIG_TOGGLE_notsave_ubiq_vimnormal,
-          {{ UBIQUITOUS_VIM_BINDINGS_CANCEL_OPERATOR_PENDING }}
-        </autogen>
-      </item>
+      <name>Non-symmetric chords for single keys</name>
+      <appendix>Non-symmetric chords are two finger chords that are</appendix>
+      <appendix>mapped to a single keypress. They are not modifier</appendix>
+      <appendix>mappings, nor overloaded mappings.</appendix>
+      <appendix>The motivation for having non-symmetrical chords is that they can be performed one-handed</appendix>
 
       <item>
-        <name>Right bracket to Backslash</name>
-        <identifier>chordy.bracketl_to_backslash</identifier>
-        <autogen>__KeyToKey__ KeyCode::BRACKET_RIGHT, KeyCode::BACKSLASH</autogen>
-      </item>
-
-      <item>
-        <name>Backslash is BACKSPACE</name>
-        <identifier>chordy.backslash_to_backspace</identifier>
-        <autogen>__KeyToKey__ KeyCode::BACKSLASH, ModifierFlag::NONE, KeyCode::DELETE</autogen>
-      </item>
-
-      <item>
-        <name>CTRL_R to F16</name>
-        <identifier>chordy.ctrlr_to_f16</identifier>
-        <autogen>__KeyToKey__ KeyCode::CONTROL_R, KeyCode::F16</autogen>
-      </item>
-
-    </item>
-    
-    <item>
-      <name>Chords for single keys</name>
-      <appendix>Single key chords are symmetric, two hand, two finger chords.</appendix>
-      <appendix>Every chord uses two fingers, one from each hand.</appendix>
-      <appendix>The fingers are used symmetrically, e.g. left index finger with right index finger</appendix>
-      
-      <item>
-        <name>Escape</name>
-        <appendix>Escape: GH</appendix>
-        <identifier>chordy.single_key.escape</identifier>
+        <name>Return UI</name>
+        <identifier>chordy.single_key.return_ui</identifier>
         <autogen>
-          __SimultaneousKeyPresses__ KeyCode::G, KeyCode::H, KeyCode::ESCAPE
-        </autogen>
-      </item>
-      
-      <item>
-        <name>Return DOT COMMA</name>
-        <identifier>chordy.single_key.backspace_dotcomma</identifier>
-        <autogen>
-          __SimultaneousKeyPresses__ KeyCode::COMMA, KeyCode::DOT, KeyCode::RETURN
-        </autogen>
-      </item>
-      
-      <item>
-        <name>Backspace IO</name>
-        <identifier>chordy.single_key.backspace_io</identifier>
-        <autogen>
-          __SimultaneousKeyPresses__ KeyCode::I, KeyCode::O, KeyCode::DELETE
+          __SimultaneousKeyPresses__ KeyCode::U, KeyCode::I, KeyCode::RETURN
         </autogen>
       </item>
       
@@ -111,26 +28,18 @@
       </item>
       
       <item>
-        <name>Return UI</name>
-        <identifier>chordy.single_key.return_ui</identifier>
+        <name>Return KL</name>
+        <identifier>chordy.single_key.return_kl</identifier>
         <autogen>
-          __SimultaneousKeyPresses__ KeyCode::U, KeyCode::I, KeyCode::RETURN
+          __SimultaneousKeyPresses__ KeyCode::K, KeyCode::L, KeyCode::RETURN
         </autogen>
       </item>
       
       <item>
-        <name>Return FJ</name>
-        <identifier>chordy.single_key.return_fj</identifier>
+        <name>Return DOT COMMA</name>
+        <identifier>chordy.single_key.backspace_dotcomma</identifier>
         <autogen>
-          __SimultaneousKeyPresses__ KeyCode::F, KeyCode::J, KeyCode::RETURN
-        </autogen>
-      </item>
-      
-      <item>
-        <name>Return GH</name>
-        <identifier>chordy.single_key.return_gh</identifier>
-        <autogen>
-          __SimultaneousKeyPresses__ KeyCode::G, KeyCode::H, KeyCode::RETURN
+          __SimultaneousKeyPresses__ KeyCode::COMMA, KeyCode::DOT, KeyCode::RETURN
         </autogen>
       </item>
       
@@ -143,13 +52,80 @@
       </item>
 
       <item>
-        <name>Delete (Backspace) DK</name>
-        <identifier>chordy.single_key.delete_dk</identifier>
+        <name>Delete (Backspace) SD</name>
+        <identifier>chordy.single_key.delete_sd</identifier>
         <autogen>
-          __SimultaneousKeyPresses__ KeyCode::D, KeyCode::K, KeyCode::DELETE
+          __SimultaneousKeyPresses__ KeyCode::S, KeyCode::D, KeyCode::DELETE
         </autogen>
       </item>
 
+      <item>
+        <name>Delete (Backspace) IO</name>
+        <identifier>chordy.single_key.backspace_io</identifier>
+        <autogen>
+          __SimultaneousKeyPresses__ KeyCode::I, KeyCode::O, KeyCode::DELETE
+        </autogen>
+      </item>
+      
+      <item>
+        <name>Backquote: EF</name>
+        <identifier>chordy.single_key.backquote</identifier>
+        <autogen>
+          __SimultaneousKeyPresses__ KeyCode::E, KeyCode::F, KeyCode::BACKQUOTE 
+        </autogen>
+      </item>
+
+      <item>
+        <name>Tilde: JI</name>
+        <identifier>chordy.single_key.tilde</identifier>
+        <autogen>
+          __SimultaneousKeyPresses__ KeyCode::I, KeyCode::J, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L 
+        </autogen>
+      </item>
+
+      <item>
+        <name>TAB: WE</name>
+        <identifier>chordy.tab_we</identifier>
+        <autogen>
+          __SimultaneousKeyPresses__ KeyCode::W, KeyCode::E, KeyCode::TAB  
+        </autogen>
+      </item>
+
+    </item>
+
+    <item>
+      <name>Symmetric Chords for single keys</name>
+      <appendix>Single key chords are symmetric, two hand, two finger chords.</appendix>
+      <appendix>Every chord uses two fingers, one from each hand.</appendix>
+      <appendix>The fingers are used symmetrically, e.g. left index finger with right index finger</appendix>
+      <appendix>What is good about symmetric chords is that they promote returning your fingers to the homerow.</appendix>
+      <appendix>One con I have discovered is that it is easier to sync two fingers on the same hand (non-symmetric chords) than two fingers on two different hands (symmetric chords)</appendix>
+      
+      <item>
+        <name>Escape</name>
+        <appendix>Escape: GH</appendix>
+        <identifier>chordy.single_key.escape</identifier>
+        <autogen>
+          __SimultaneousKeyPresses__ KeyCode::G, KeyCode::H, KeyCode::ESCAPE
+        </autogen>
+      </item>
+      
+      <item>
+        <name>Return GH</name>
+        <identifier>chordy.single_key.return_gh</identifier>
+        <autogen>
+          __SimultaneousKeyPresses__ KeyCode::G, KeyCode::H, KeyCode::RETURN
+        </autogen>
+      </item>
+      
+      <item>
+        <name>Return FJ</name>
+        <identifier>chordy.single_key.return_fj</identifier>
+        <autogen>
+          __SimultaneousKeyPresses__ KeyCode::F, KeyCode::J, KeyCode::RETURN
+        </autogen>
+      </item>
+      
       <item>
         <name>Delete (Backspace) FJ</name>
         <identifier>chordy.single_key.delete_fj</identifier>
@@ -159,10 +135,10 @@
       </item>
 
       <item>
-        <name>Colon SL</name>
-        <identifier>chordy.single_key.colon_sl</identifier>
+        <name>Delete (Backspace) DK</name>
+        <identifier>chordy.single_key.delete_dk</identifier>
         <autogen>
-          __SimultaneousKeyPresses__ KeyCode::S, KeyCode::L, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L 
+          __SimultaneousKeyPresses__ KeyCode::D, KeyCode::K, KeyCode::DELETE
         </autogen>
       </item>
 
@@ -171,6 +147,14 @@
         <identifier>chordy.single_key.colon_dk</identifier>
         <autogen>
           __SimultaneousKeyPresses__ KeyCode::D, KeyCode::K, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L 
+        </autogen>
+      </item>
+
+      <item>
+        <name>Colon SL</name>
+        <identifier>chordy.single_key.colon_sl</identifier>
+        <autogen>
+          __SimultaneousKeyPresses__ KeyCode::S, KeyCode::L, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L 
         </autogen>
       </item>
 
@@ -211,30 +195,6 @@
         <autogen> __SimultaneousKeyPresses__ KeyCode::E, KeyCode::I, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
       </item>
       
-      <item>
-        <name>Backquote: EF</name>
-        <identifier>chordy.single_key.backquote</identifier>
-        <autogen>
-          __SimultaneousKeyPresses__ KeyCode::E, KeyCode::F, KeyCode::BACKQUOTE 
-        </autogen>
-      </item>
-
-      <item>
-        <name>Tilde: JI</name>
-        <identifier>chordy.single_key.tilde</identifier>
-        <autogen>
-          __SimultaneousKeyPresses__ KeyCode::I, KeyCode::J, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L 
-        </autogen>
-      </item>
-
-      <item>
-        <name>TAB: WE</name>
-        <identifier>chordy.tab_we</identifier>
-        <autogen>
-          __SimultaneousKeyPresses__ KeyCode::W, KeyCode::E, KeyCode::TAB  
-        </autogen>
-      </item>
-
     </item>
 
 
@@ -271,30 +231,12 @@
       </item>
       
       <item>
-        <name>Hyper: SF and JL</name>
-        <identifier>private.chordy.hyper</identifier>
-        <autogen>__SimultaneousKeyPresses__ KeyCode::S, KeyCode::F, {{ HYPER_MOD }}</autogen>
-        <autogen>__SimultaneousKeyPresses__ KeyCode::J, KeyCode::L, {{ HYPER_MOD }}</autogen>
-      </item>
-      
-      <item>
         <name>CMD+CTRL</name>
         <appendix>use R/F or J/I to</appendix>
         <identifier>chordy.cmd_ctrl</identifier>
         <autogen>__SimultaneousKeyPresses__ KeyCode::M, KeyCode::COMMA, KeyCode::OPTION_L</autogen>
       </item>
 
-    </item>
-    
-    <item>
-      <name>Swedish characters mapped from keypad</name>
-      <identifier>chordy.swe_keypad</identifier>
-      <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, ModifierFlag::NONE, KeyCode::KEYPAD_7, ModifierFlag::NONE</autogen>
-      <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::KEYPAD_7, ModifierFlag::SHIFT_L | ModifierFlag::NONE</autogen>
-      <autogen>__KeyToKey__ KeyCode::QUOTE, ModifierFlag::NONE, KeyCode::KEYPAD_8, ModifierFlag::NONE</autogen>
-      <autogen>__KeyToKey__ KeyCode::QUOTE, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::KEYPAD_8, ModifierFlag::SHIFT_L | ModifierFlag::NONE</autogen>
-      <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::NONE, KeyCode::KEYPAD_9, ModifierFlag::NONE</autogen>
-      <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::KEYPAD_9, ModifierFlag::SHIFT_L | ModifierFlag::NONE</autogen>
     </item>
     
   </item>

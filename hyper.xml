@@ -2,6 +2,11 @@
 
 <root>
 
+  <replacementdef>
+    <replacementname>HYPER_MOD</replacementname>
+    <replacementvalue>KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L</replacementvalue>
+  </replacementdef>
+  
   <item>
     <name>Hyper and meh</name>
     <appendix>HYPER is cmd+ctrl+shift+opt. meh is ctrl+shift+opt</appendix>
@@ -9,11 +14,11 @@
     <item>
       <name>SPACE to HYPER and SPACE</name>
       <appendix>SPACE to HYPER and SPACE</appendix>
-      <identifier>private.space_to_hyper_space</identifier>
+      <identifier>private.hyper.space_to_hyper_space</identifier>
       <autogen>
         __KeyOverlaidModifier__
         KeyCode::SPACE, ModifierFlag::NONE,
-        KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        {{ HYPER_MOD }},
         KeyCode::SPACE
       </autogen>
     </item>
@@ -21,7 +26,7 @@
     <item>
       <name>Esc to Hyper and F18</name>
       <appendix>Esc to Hyper (ctrl+shift+cmd+opt), Esc only to F18 (for notification)</appendix>
-      <identifier>private.esc_to_hyper_f18</identifier>
+      <identifier>private.hyper.esc_to_hyper_f18</identifier>
       <autogen>
         __KeyOverlaidModifier__
         KeyCode::ESCAPE,
@@ -33,7 +38,7 @@
     <item>
       <name>F19 to Hyper and Esc</name>
       <appendix>(F19 to Hyper (ctrl+shift+cmd+opt), F19 Only to Escape)</appendix>
-      <identifier>private.f19_to_hyper_escape</identifier>
+      <identifier>private.hyper.f19_to_hyper_escape</identifier>
       <autogen>
         __KeyOverlaidModifier__
         KeyCode::F19,
@@ -45,7 +50,7 @@
     <item>
       <name>F19 to only Hyper</name>
       <appendix>Just Hyper, no overlaid modifier</appendix>
-      <identifier>private.f19_to_only_hyper</identifier>
+      <identifier>private.hyper.f19_to_only_hyper</identifier>
       <autogen>
         __KeyToKey__
         KeyCode::F19,
@@ -56,7 +61,7 @@
     <item>
       <name>ISO Backquote to only Hyper</name>
       <appendix>Just Hyper, no overlaid modifier</appendix>
-      <identifier>private.backquote_to_only_hyper</identifier>
+      <identifier>private.hyper.backquote_to_only_hyper</identifier>
       <autogen>
         __KeyToKey__
         KeyCode::BACKQUOTE,
@@ -66,7 +71,7 @@
 
     <item>
       <name>Left Control to Hyper</name>
-      <identifier>private.ctrl_to_hyper</identifier>
+      <identifier>private.hyper.ctrl_to_hyper</identifier>
       <autogen>
         __KeyToKey__
         KeyCode::CONTROL_L,
@@ -76,7 +81,7 @@
 
     <item>
       <name>Tab to Hyper and Tab</name>
-      <identifier>private.tab_to_hyper_and_tab</identifier>
+      <identifier>private.hyper.tab_to_hyper_and_tab</identifier>
       <autogen>
         __KeyOverlaidModifier__
         KeyCode::TAB,
@@ -86,8 +91,19 @@
     </item>
 
     <item>
+      <name>SPACE to HYPER and SPACE</name>
+      <identifier>chordy.hyperspace</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::SPACE,
+        {{ HYPER_MOD }}, 
+        KeyCode::SPACE
+      </autogen>
+    </item>
+    
+    <item>
       <name>Left Control to Hyper and Escape</name>
-      <identifier>private.ctrl_to_hyper_and_esc</identifier>
+      <identifier>private.hyper.ctrl_to_hyper_and_esc</identifier>
       <autogen>
         __KeyOverlaidModifier__
         KeyCode::CONTROL_L,
@@ -99,7 +115,7 @@
     <item>
       <name>RETURN to meh and RETURN</name>
       <appendix>(RETURN to meh (ctrl+shift+opt), RETURN only to RETURN)</appendix>
-      <identifier>private.return_to_meh_return</identifier>
+      <identifier>private.hyper.return_to_meh_return</identifier>
       <autogen>
         __KeyOverlaidModifier__
         KeyCode::RETURN,
