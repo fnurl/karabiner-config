@@ -3,10 +3,6 @@
 <root>
 
   <item>
-    <name>ISO keyboard fixes</name>
-  </item>
-
-  <item>
     <name>Move leftmost keys down one step</name>
     
     <item>
@@ -61,6 +57,10 @@
   <item>
     <name>Basic layout changes</name>
     
+    <item>
+      <name>ISO keyboard fixes</name>
+    </item>
+
     <item>
       <name>Double Right Shift to Caps Lock</name>
       <appendix>(double tap right shift to enable caps lock</appendix>
