@@ -60,8 +60,20 @@
         <autogen>__KeyToKey__ KeyCode::B, ModifierFlag::SUBSPACE_MOD, KeyCode::SLASH, ModifierFlag::SHIFT_L</autogen>
         <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::SUBSPACE_MOD, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
         <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::SUBSPACE_MOD, KeyCode::DOT</autogen>
-        <!-- <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::SUBSPACE_MOD, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen> -->
-        <!-- <autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::SUBSPACE_MOD, KeyCode::BACKSLASH</autogen> -->
+        <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::SUBSPACE_MOD, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::SUBSPACE_MOD, KeyCode::BACKSLASH</autogen>
+      </item>
+
+      <item>
+        <name>ZXCVB Row:  cvnm/ to _-|\\ (underscore, dash, backslash, pipe, and backslash)</name>
+        <identifier>private.subspace.underscore_dash_pipe_backslash</identifier>
+        
+        <!-- c to underscore, v to dash, n to pipe, m to backslash, / to backslash -->
+        <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::SUBSPACE_MOD, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::SUBSPACE_MOD, KeyCode::MINUS</autogen>
+        <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::SUBSPACE_MOD, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::SUBSPACE_MOD, KeyCode::BACKSLASH</autogen>
+        <autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::SUBSPACE_MOD, KeyCode::BACKSLASH</autogen>
       </item>
 
       <item>

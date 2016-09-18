@@ -182,7 +182,18 @@
     </item>
 
     <item>
-      <name>Period and slash to BACKSPACE and RETURN</name>
+      <name>Left SHIFT to DELETE and SHIFT</name>
+      <identifier>private.shiftl_to_shiftl_and_delete</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::SHIFT_L,
+        KeyCode::SHIFT_L,
+        KeyCode::DELETE
+      </autogen>
+    </item>
+    
+    <item>
+      <name>Period BACKSPACE and SLASH to RETURN</name>
       <identifier>private.basic.return_and_backspace</identifier>
       <autogen>__KeyToKey__ KeyCode::DOT, KeyCode::DELETE</autogen>
       <autogen>__KeyToKey__ KeyCode::SLASH, KeyCode::RETURN</autogen>
@@ -207,9 +218,8 @@
     </item>
     
     <item>
-      <name>Disable number row and rightmost row (40% prep)</name>
-      <identifier>private.basic.40percent.prep</identifier>
-      <autogen>__KeyToKey__ KeyCode::ESCAPE, KeyCode::VK_NONE</autogen>
+      <name>(40% prep) Disable number row and rightmost row (except RETURN and DELETE)</name>
+      <identifier>private.basic.40percent.disable_number_keys</identifier>
       <autogen>__KeyToKey__ KeyCode::1, KeyCode::VK_NONE</autogen>
       <autogen>__KeyToKey__ KeyCode::2, KeyCode::VK_NONE</autogen>
       <autogen>__KeyToKey__ KeyCode::3, KeyCode::VK_NONE</autogen>
@@ -222,11 +232,28 @@
       <autogen>__KeyToKey__ KeyCode::0, KeyCode::VK_NONE</autogen>
       <autogen>__KeyToKey__ KeyCode::MINUS, KeyCode::VK_NONE</autogen>
       <autogen>__KeyToKey__ KeyCode::EQUAL, KeyCode::VK_NONE</autogen>
-      <autogen>__KeyToKey__ KeyCode::DELETE, KeyCode::VK_NONE</autogen>
       <autogen>__KeyToKey__ KeyCode::BACKSLASH, KeyCode::VK_NONE</autogen>
-      <autogen>__KeyToKey__ KeyCode::RETURN, KeyCode::VK_NONE</autogen>
     </item>
 
+    <item>
+      <name>Disable function key row</name>
+      <identifier>private.basic.40percent.disable_f_keys</identifier>
+      <autogen>__KeyToKey__ KeyCode::ESCAPE, KeyCode::VK_NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::F1, KeyCode::VK_NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::F2, KeyCode::VK_NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::F3, KeyCode::VK_NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::F4, KeyCode::VK_NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::F5, KeyCode::VK_NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::F6, KeyCode::VK_NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::F7, KeyCode::VK_NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::F8, KeyCode::VK_NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::F9, KeyCode::VK_NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::F10, KeyCode::VK_NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::F11, KeyCode::VK_NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::F12, KeyCode::VK_NONE</autogen>
+    </item>
+
+    
   </item>
 
 </root> 

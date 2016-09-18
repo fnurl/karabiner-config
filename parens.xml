@@ -13,6 +13,17 @@
     </item>
     
     <item>
+      <name>RETURN to PAREN_MOD and RETURN</name>
+      <identifier>private.parenmod.paren_mod.return</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::RETURN, ModifierFlag:: NONE,
+        KeyCode::VK_MODIFIER_PAREN_MOD,
+        KeyCode::RETURN
+      </autogen>
+    </item>
+
+    <item>
       <name>Hold F or J as PAREN_MOD</name>
       <identifier>private.parenmod.paren_mod.f_j</identifier>
       <autogen>
@@ -56,7 +67,7 @@
     </item>
 
     <item>
-      <name>Tilde, quotes, colons on QWERTY row</name>
+      <name>QWERTY row: Tilde, quotes, colons</name>
       <identifier>private.parenmod.tilde_quotes_colons</identifier>
       <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::PAREN_MOD, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>> 
       <autogen>__KeyToKey__ KeyCode::R, ModifierFlag::PAREN_MOD, KeyCode::BACKQUOTE</autogen>
@@ -68,6 +79,13 @@
       <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::PAREN_MOD, KeyCode::SEMICOLON</autogen>
     </item>
 
+    <item>
+      <name>QWERTY row: Slash and Backslash on W and O</name>
+      <identifier>private.parenmod.slashes</identifier>
+      <autogen>__KeyToKey__ KeyCode::W, ModifierFlag::PAREN_MOD, KeyCode::SLASH</autogen>
+      <autogen>__KeyToKey__ KeyCode::O, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH</autogen>
+    </item>
+    
     <item>
       <name>ZXCVB row: slashes</name>
       <identifier>private.parenmod.qmark</identifier>
