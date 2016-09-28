@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<root>
+
+  <item>
+    <name>apple_external_iso.xml: Apple External ISO Keyboard</name>
+    <device_only>DeviceVendor::RawValue::0x05ac, DeviceProduct::RawValue::0x020c</device_only>
+
+    <item>
+      <name>ANSIfy all: § to ` \ to Return, &lt;&gt; to DELETE</name>
+      <identifier>private.apple.external.iso.all</identifier>
+
+      <autogen>__KeyToKey__ KeyCode::DANISH_DOLLAR, KeyCode::BACKQUOTE</autogen>
+      <!-- <autogen>__KeyToKey__ KeyCode::BACKQUOTE, KeyCode::DANISH_DOLLAR</autogen> -->
+
+      <autogen>__KeyToKey__ KeyCode::BACKSLASH, KeyCode::RETURN</autogen>
+
+      <autogen>__KeyToKey__ KeyCode::BACKQUOTE, KeyCode::DELETE</autogen>
+
+    </item>
+
+  </item>
+</root>

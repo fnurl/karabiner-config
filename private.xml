@@ -7,35 +7,54 @@
     <replacementvalue>KeyCode::BACKSLASH</replacementvalue>
   </replacementdef>
 
-  <item>
-    <appendix>Keybord specific fixes</appendix>
-    <include path="daskeyboard4c.xml" />
-    <include path="rapoo_v500_keyboard.xml" />
-    <include path="apple_iso.xml" />
-    <include path="bt_accessories.xml" />
-  </item> 
-
-  <include path="chordy-us.xml" /> 
-  <include path="subspace.xml" />
-  <include path="parens.xml" />
-  <include path="learn.xml" />
-  <include path="basic.xml" />
-  <include path="hyper.xml" />
+  <item><name>──────────────────────────────</name></item>
 
   <item>
-    <name>roblox okl; swapped with wasd </name>
-    <identifier>private.roblox</identifier>
-    <autogen>__KeyToKey__ KeyCode::O, KeyCode::W</autogen>
-    <autogen>__KeyToKey__ KeyCode::K, KeyCode::A</autogen>
-    <autogen>__KeyToKey__ KeyCode::L, KeyCode::S</autogen>
-    <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::D</autogen>
+    <name>private.xml</name>
 
-    <autogen>__KeyToKey__ KeyCode::W, KeyCode::O</autogen>
-    <autogen>__KeyToKey__ KeyCode::A, KeyCode::K</autogen>
-    <autogen>__KeyToKey__ KeyCode::S, KeyCode::L</autogen>
-    <autogen>__KeyToKey__ KeyCode::D, KeyCode::SEMICOLON</autogen>
+    <item>
+      <appendix>Keybord specific fixes</appendix>
+      <include path="apple_internal_iso.xml" />
+      <include path="apple_external_iso.xml" />
+      <include path="rapoo_v500.xml" />
+      <include path="daskeyboard4c.xml" />
+      <include path="falcon8.xml" />
+      <include path="bt_accessories.xml" />
+    </item> 
+    
+    <item><name>──────────────────────────────</name></item>
+    
+    <include path="basic.xml" />
+    <include path="learn.xml" />
+    <include path="chordy-us.xml" /> 
+    <include path="subspace.xml" />
+    <include path="parens.xml" />
+    
+    <item><name>──────────────────────────────</name></item>
+    
+    <item>
+      <name>Non-general mappings and configs</name>
+      
+      <item>
+        <name>roblox okl; swapped with wasd </name>
+        <identifier>private.roblox</identifier>
+        <autogen>__KeyToKey__ KeyCode::O, KeyCode::W</autogen>
+        <autogen>__KeyToKey__ KeyCode::K, KeyCode::A</autogen>
+        <autogen>__KeyToKey__ KeyCode::L, KeyCode::S</autogen>
+        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::D</autogen>
+        
+        <autogen>__KeyToKey__ KeyCode::W, KeyCode::O</autogen>
+        <autogen>__KeyToKey__ KeyCode::A, KeyCode::K</autogen>
+        <autogen>__KeyToKey__ KeyCode::S, KeyCode::L</autogen>
+        <autogen>__KeyToKey__ KeyCode::D, KeyCode::SEMICOLON</autogen>
+        
+        <autogen>__KeyToKey__ KeyCode::SHIFT_R, KeyCode::SHIFT_L</autogen>
+      </item>
+      
+    </item>
+
   </item>
 
   <item><name>──────────────────────────────</name></item>
-  
+
 </root>

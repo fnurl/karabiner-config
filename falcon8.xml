@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>falcon8.xml: MaxKeyboards Falcon-8</name>
+    <device_only>DeviceVendor::RawValue::0xc251, DeviceProduct::RawValue::0x1fa6</device_only>
+
+    <item>
+      <name>Arrow keys and modifiers</name>
+      <appendix>Map buttons (set to F1-F8 via ControllerMate) to arrows and modifiers.</appendix>
+      <appendix>Arrows on right side. Top right is SHIFT_L, bottom left is OPT, top left is COMMAND_L</appendix>
+      <identifier>private.falcon8.arrows_and_modifiers</identifier>
+
+      <autogen>__KeyToKey__ KeyCode::F1, KeyCode::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::F2, KeyCode::VK_NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::F3, KeyCode::CURSOR_UP</autogen>
+      <autogen>__KeyToKey__ KeyCode::F4, KeyCode::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::F5, KeyCode::OPTION_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::F6, KeyCode::CURSOR_LEFT</autogen>
+      <autogen>__KeyToKey__ KeyCode::F7, KeyCode::CURSOR_DOWN</autogen>
+      <autogen>__KeyToKey__ KeyCode::F8, KeyCode::CURSOR_RIGHT</autogen>
+    </item>>
+    
+    <item>
+      <name>Arrow keys, navigate by word, switch tabs </name>
+      <appendix>Map buttons (set to F1-F8 via ControllerMate) to arrows, OPT+L/R and tab switching.</appendix>
+      <identifier>private.falcon8.arrows_words_tabs</identifier>
+
+      <autogen>__KeyToKey__ KeyCode::F1, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::F2, KeyCode::CURSOR_UP</autogen>
+      <autogen>__KeyToKey__ KeyCode::F3, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::F4, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::F5, KeyCode::CURSOR_LEFT</autogen>
+      <autogen>__KeyToKey__ KeyCode::F6, KeyCode::CURSOR_DOWN</autogen>
+      <autogen>__KeyToKey__ KeyCode::F7, KeyCode::CURSOR_RIGHT</autogen>
+      <autogen>__KeyToKey__ KeyCode::F8, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
+    </item>>
+    
+  </item>
+</root>

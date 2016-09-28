@@ -8,8 +8,7 @@
   </replacementdef>
   
   <item>
-    <name>Hyper and meh</name>
-    <appendix>HYPER is cmd+ctrl+shift+opt. meh is ctrl+shift+opt</appendix>
+    <name>hyper.xml: Hyper and meh</name>
 
     <item>
       <name>SPACE to HYPER and SPACE</name>

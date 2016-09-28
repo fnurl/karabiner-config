@@ -2,38 +2,47 @@
 <?xml version="1.0"?>
 
 <root>
+
   <item>
-    <name>wasd to pl;'</name>
-    <appendix>remap wasd to okl; for lefty</appendix>
-    <identifier>private.wasd_for_lefty</identifier>
-    <autogen>
-      __KeyToKey__ KeyCode::O, ModifierFlag::NONE, KeyCode::W, ModifierFlag::NONE
-    </autogen>
-    <autogen>
-      __KeyToKey__ KeyCode::O, ModifierFlag::SHIFT_R, KeyCode::W, ModifierFlag::SHIFT_R
-    </autogen>
+    <name>wasd.xml</name>
 
-    <autogen>
-      __KeyToKey__ KeyCode::K, ModifierFlag::NONE, KeyCode::A, ModifierFlag::NONE
-    </autogen>
-    <autogen>
-      __KeyToKey__ KeyCode::K, ModifierFlag::SHIFT_R, KeyCode::A, ModifierFlag::SHIFT_R
-    </autogen>
+    <item>
+      <name>wasd to pl;'</name>
+      <appendix>remap wasd to okl; for lefty</appendix>
+      <identifier>private.wasd_for_lefty</identifier>
 
-    <autogen>
-      __KeyToKey__ KeyCode::L, ModifierFlag::NONE, KeyCode::S, ModifierFlag::NONE
-    </autogen>
-    <autogen>
-      __KeyToKey__ KeyCode::L, ModifierFlag::SHIFT_R, KeyCode::S, ModifierFlag::SHIFT_R
-    </autogen>
+      <autogen>
+        __KeyToKey__ KeyCode::O, ModifierFlag::NONE, KeyCode::W, ModifierFlag::NONE
+      </autogen>
+      <autogen>
+        __KeyToKey__ KeyCode::O, ModifierFlag::SHIFT_R, KeyCode::W, ModifierFlag::SHIFT_R
+      </autogen>
+      
+      <autogen>
+        __KeyToKey__ KeyCode::K, ModifierFlag::NONE, KeyCode::A, ModifierFlag::NONE
+      </autogen>autogen>
+      <autogen>
+        __KeyToKey__ KeyCode::K, ModifierFlag::SHIFT_R, KeyCode::A, ModifierFlag::SHIFT_R
+      </autogen>n>
+      
+      <autogen>
+        __KeyToKey__ KeyCode::L, ModifierFlag::NONE, KeyCode::S, ModifierFlag::NONE
+      </autogen>
+      <autogen>
+        __KeyToKey__ KeyCode::L, ModifierFlag::SHIFT_R, KeyCode::S, ModifierFlag::SHIFT_R
+      </autogen>
+      
+      <autogen>
+        __KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::NONE, KeyCode::D, ModifierFlag::NONE
+      </autogen>
+      <autogen>
+        __KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::SHIFT_R, KeyCode::D, ModifierFlag::SHIFT_R
+      </autogen>
 
-    <autogen>
-      __KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::NONE, KeyCode::D, ModifierFlag::NONE
-    </autogen>
-    <autogen>
-      __KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::SHIFT_R, KeyCode::D, ModifierFlag::SHIFT_R
-    </autogen>
+    </item>
+
   </item>
+
 </root>
     
     

@@ -2,7 +2,7 @@
 <root>
   
   <item>
-    <name>Chordy</name>
+    <name>chordy-us.xml: Chordy</name>
 
     <item>
       <name>Non-symmetric chords for single keys</name>
@@ -199,7 +199,7 @@
 
 
     <item>
-      <name>Modfifier chords</name>
+      <name>Mirrored, two-finger, modfifier chords</name>
       <appendix>Modifier chords are mirrored, one hand, two finger chords (every chord has a twin for each hand)</appendix>
 
       <item>

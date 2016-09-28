@@ -2,10 +2,10 @@
 <root>
 
   <item>
-    <name>Apple ISO Keyboard</name>
+    <name>apple_internal_iso.xml: Apple internal ISO Keyboard</name>
     <item>
       <name>§ to `</name>
-      <identifier>private.appleiso.paragraph_backtick</identifier>
+      <identifier>private.apple.internal.iso.paragraph_backtick</identifier>
       <device_only>DeviceVendor::RawValue::0x05ac, DeviceProduct::RawValue::0x0263</device_only>
       <autogen>__KeyToKey__ KeyCode::DANISH_DOLLAR, KeyCode::BACKQUOTE</autogen>
       <autogen>__KeyToKey__ KeyCode::BACKQUOTE, KeyCode::DANISH_DOLLAR</autogen>

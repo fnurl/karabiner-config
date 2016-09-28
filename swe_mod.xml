@@ -1,217 +1,219 @@
 <?xml version="1.0"?>
 <root>
 
-  <modifierdef>SWEDISH_MOD</modifierdef>
-
-  <inputsourcedef>
-    <name>ANSI_SE_PATCH</name>
-    <inputsourceid_prefix>org.sil.ukelele.keyboardlayout.ansiåäöpatch.ansiåäöpatch</inputsourceid_prefix>
-  </inputsourcedef>
-  <vkchangeinputsourcedef>
-    <name>KeyCode::VK_CHANGE_INPUTSOURCE_ANSI_SE_PATCH</name>
-    <inputsourceid_equal>org.sil.ukelele.keyboardlayout.ansiåäöpatch.ansiåäöpatch</inputsourceid_equal>
-  </vkchangeinputsourcedef>
-
-  <inputsourcedef>
-    <name>APPLE_US</name>
-    <inputsourceid_prefix>com.apple.keylayout.US</inputsourceid_prefix>
-  </inputsourcedef>
-  <vkchangeinputsourcedef>
-    <name>KeyCode::VK_CHANGE_INPUTSOURCE_APPLE_US</name>
-    <inputsourceid_equal>com.apple.keylayout.US</inputsourceid_equal>
-  </vkchangeinputsourcedef>
-
-
   <item>
-    <name>Swedish modifier for US layout</name>
-   
-    <item>
-      <!-- SWE_MOD lock: help -->
-      <name>Swedish char modifier lock: help key</name>
-      <appendix>Use the Help Key as a modifier lock for Swedish characters ÅÄÖ</appendix>
-      <identifier>private.swed_mod_lock_help</identifier>
-      <autogen>__KeyToKey__ KeyCode::HELP, KeyCode::VK_LOCK_SWEDISH_MOD</autogen>
-    </item>
+    <name>swe_mod.xml</name>
+
+    <modifierdef>SWEDISH_MOD</modifierdef>
+
+    <inputsourcedef>
+      <name>ANSI_SE_PATCH</name>
+      <inputsourceid_prefix>org.sil.ukelele.keyboardlayout.ansiåäöpatch.ansiåäöpatch</inputsourceid_prefix>
+    </inputsourcedef>
+    <vkchangeinputsourcedef>
+      <name>KeyCode::VK_CHANGE_INPUTSOURCE_ANSI_SE_PATCH</name>
+      <inputsourceid_equal>org.sil.ukelele.keyboardlayout.ansiåäöpatch.ansiåäöpatch</inputsourceid_equal>
+    </vkchangeinputsourcedef>
+    
+    <inputsourcedef>
+      <name>APPLE_US</name>
+      <inputsourceid_prefix>com.apple.keylayout.US</inputsourceid_prefix>
+    </inputsourcedef>
+    <vkchangeinputsourcedef>
+      <name>KeyCode::VK_CHANGE_INPUTSOURCE_APPLE_US</name>
+      <inputsourceid_equal>com.apple.keylayout.US</inputsourceid_equal>
+    </vkchangeinputsourcedef>
 
     <item>
-      <!-- SWE_MOD lock: opt+opt -->
-      <name>Swedish char modifier lock: opt+opt</name>
-      <appendix>Use left opt+right opt as a modifier lock for Swedish characters ÅÄÖ</appendix>
-      <identifier>private.swed_mod_lock_opt</identifier>
-      <autogen>
-        __SimultaneousKeyPresses__
-        KeyCode::OPTION_L, KeyCode::OPTION_R,
-        KeyCode::VK_LOCK_SWEDISH_MOD
-      </autogen>
-    </item>
-
-    <item>
-      <!-- SWE_MOD lock: tap fn -->
-      <name>Swedish char modifier lock: fn</name>
-      <appendix>Tap Fn Key as a modifier lock for Swedish characters ÅÄÖ</appendix>
-      <appendix>When held, Fn Key behaves as usual.</appendix>
-      <identifier>private.swed_mod_lock_fn</identifier>
-      <autogen>
-        __KeyOverlaidModifier__
-        KeyCode::FN,
-        KeyCode::FN,
-        KeyCode::VK_LOCK_SWEDISH_MOD
-      </autogen>
-    </item>
-
-    <item>
-      <!-- SWE_MOD lock: double esc -->
-      <name>Swedish char modifier lock: esc</name>
-      <appendix>Use the double tap escape as a modifier lock for Swedish characters ÅÄÖ</appendix>
-      <identifier>private.swed_mod_lock_esc</identifier>
-      <autogen>
-        __DoublePressModifier__
-        KeyCode::ESCAPE,
-        KeyCode::ESCAPE,
-        KeyCode::VK_LOCK_SWEDISH_MOD
-      </autogen>
-    </item>
-
-    <!-- For PATCHED keyboard layout -->
-    <item>
-      <name>SWEDISH_MOD for patched US layout </name>
-      <appendix>For writing swedish characters with a US keyboard layout (using patched keyboard layout</appendix>
-      <appendix>with äö instead of æø on opt-' and opt-o  when pressing opt/alt)</appendix>
-      <identifier>private.swed_patched_us</identifier>
-
-      <!-- Å -->
-      <autogen>
-        __KeyToKey__
-        KeyCode::BRACKET_LEFT, ModifierFlag::SWEDISH_MOD | ModifierFlag::NONE,
-        KeyCode::A, ModifierFlag::OPTION_L
-      </autogen>
-      <autogen>
-        __KeyToKey__
-        KeyCode::BRACKET_LEFT, ModifierFlag::SWEDISH_MOD | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
-        KeyCode::A, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L
-      </autogen>
-
-      <!-- Ä -->
-      <autogen>
-        __KeyToKey__
-        KeyCode::QUOTE, ModifierFlag::SWEDISH_MOD | ModifierFlag::NONE,
-        KeyCode::QUOTE, ModifierFlag::OPTION_L
-      </autogen>
-      <autogen>
-        __KeyToKey__
-        KeyCode::QUOTE, ModifierFlag::SWEDISH_MOD | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
-        KeyCode::QUOTE, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L
-      </autogen>
-
-      <!-- Ö -->
-      <autogen>
-        __KeyToKey__
-        KeyCode::SEMICOLON, ModifierFlag::SWEDISH_MOD | ModifierFlag::NONE,
-        KeyCode::O, ModifierFlag::OPTION_L
-      </autogen>
-      <autogen>
-        __KeyToKey__
-        KeyCode::SEMICOLON, ModifierFlag::SWEDISH_MOD | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
-        KeyCode::O, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L
-      </autogen>
-    </item>
-
-
-    <item>
-      <name>SWEDISH_MOD for non-patched US layout</name>
-      <appendix>For writing swedish characters with a US keyboard layout (using umlauts in deadkey mode)</appendix>
-      <identifier>private.swed_us</identifier>
-
-      <!-- Å -->
-      <autogen>
-        __KeyToKey__
-        KeyCode::BRACKET_LEFT, ModifierFlag::SWEDISH_MOD | ModifierFlag::NONE,
-        KeyCode::A, ModifierFlag::OPTION_L
-      </autogen>
-      <autogen>
-        __KeyToKey__
-        KeyCode::BRACKET_LEFT, ModifierFlag::SWEDISH_MOD | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
-        KeyCode::A, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L
-      </autogen>
-
-      <!-- Ä -->
-      <autogen>
-        __KeyToKey__
-        KeyCode::QUOTE, ModifierFlag::SWEDISH_MOD | ModifierFlag::NONE,
-        KeyCode::U, ModifierFlag::OPTION_L, KeyCode::A
-      </autogen>
-      <autogen>
-        __KeyToKey__
-        KeyCode::QUOTE, ModifierFlag::SWEDISH_MOD | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
-        KeyCode::U, ModifierFlag::OPTION_L, KeyCode::A,  ModifierFlag::SHIFT_L
-      </autogen>
-
-      <!-- Ö -->
-      <autogen>
-        __KeyToKey__
-        KeyCode::SEMICOLON, ModifierFlag::SWEDISH_MOD | ModifierFlag::NONE,
-        KeyCode::U, ModifierFlag::OPTION_L, KeyCode::O
-      </autogen>
-      <autogen>
-        __KeyToKey__
-        KeyCode::SEMICOLON, ModifierFlag::SWEDISH_MOD | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
-        KeyCode::U, ModifierFlag::OPTION_L, KeyCode::O, ModifierFlag::SHIFT_L
-      </autogen>
-    </item>
-
-    <item>
-      <name>Always umaut using deadkey for non-patched US layout</name>
-      <appendix>For writing swedish characters with a US keyboard layout (using umlauts in deadkey mode)</appendix>
-      <identifier>private.swed_us_always</identifier>
-
-      <!-- Å -->
-      <autogen>
-        __KeyToKey__ KeyCode::BRACKET_LEFT, ModifierFlag::NONE, KeyCode::A, ModifierFlag::OPTION_L
-      </autogen>
-      <autogen>
-        __KeyToKey__
-        KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L | ModifierFlag::NONE,
-        KeyCode::A, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L
-      </autogen>
-
-      <!-- Ä -->
-      <autogen>
-        __KeyToKey__ KeyCode::QUOTE, ModifierFlag::NONE, KeyCode::U, ModifierFlag::OPTION_L, KeyCode::A
-      </autogen>
-      <autogen>
-        __KeyToKey__
-        KeyCode::QUOTE, ModifierFlag::SHIFT_L | ModifierFlag::NONE,
-        KeyCode::U, ModifierFlag::OPTION_L, KeyCode::A,  ModifierFlag::SHIFT_L
-      </autogen>
-
-      <!-- Ö -->
-      <autogen>
-        __KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::NONE, KeyCode::U, ModifierFlag::OPTION_L, KeyCode::O
-      </autogen>
-      <autogen>
-        __KeyToKey__
+      <name>Swedish modifier for US layout</name>
+      
+      <item>
+        <!-- SWE_MOD lock: help -->
+        <name>Swedish char modifier lock: help key</name>
+        <appendix>Use the Help Key as a modifier lock for Swedish characters ÅÄÖ</appendix>
+        <identifier>private.swed_mod_lock_help</identifier>
+        <autogen>__KeyToKey__ KeyCode::HELP, KeyCode::VK_LOCK_SWEDISH_MOD</autogen>
+      </item>
+      
+      <item>
+        <!-- SWE_MOD lock: opt+opt -->
+        <name>Swedish char modifier lock: opt+opt</name>
+        <appendix>Use left opt+right opt as a modifier lock for Swedish characters ÅÄÖ</appendix>
+        <identifier>private.swed_mod_lock_opt</identifier>
+        <autogen>
+          __SimultaneousKeyPresses__
+          KeyCode::OPTION_L, KeyCode::OPTION_R,
+          KeyCode::VK_LOCK_SWEDISH_MOD
+        </autogen>
+      </item>
+      
+      <item>
+        <!-- SWE_MOD lock: tap fn -->
+        <name>Swedish char modifier lock: fn</name>
+        <appendix>Tap Fn Key as a modifier lock for Swedish characters ÅÄÖ</appendix>
+        <appendix>When held, Fn Key behaves as usual.</appendix>
+        <identifier>private.swed_mod_lock_fn</identifier>
+        <autogen>
+          __KeyOverlaidModifier__
+          KeyCode::FN,
+          KeyCode::FN,
+          KeyCode::VK_LOCK_SWEDISH_MOD
+        </autogen>
+      </item>
+      
+      <item>
+        <!-- SWE_MOD lock: double esc -->
+        <name>Swedish char modifier lock: esc</name>
+        <appendix>Use the double tap escape as a modifier lock for Swedish characters ÅÄÖ</appendix>
+        <identifier>private.swed_mod_lock_esc</identifier>
+        <autogen>
+          __DoublePressModifier__
+          KeyCode::ESCAPE,
+          KeyCode::ESCAPE,
+          KeyCode::VK_LOCK_SWEDISH_MOD
+        </autogen>
+      </item>
+      
+      <!-- For PATCHED keyboard layout -->
+      <item>
+        <name>SWEDISH_MOD for patched US layout </name>
+        <appendix>For writing swedish characters with a US keyboard layout (using patched keyboard layout</appendix>
+        <appendix>with äö instead of æø on opt-' and opt-o  when pressing opt/alt)</appendix>
+        <identifier>private.swed_patched_us</identifier>
+        
+        <!-- Å -->
+        <autogen>
+          __KeyToKey__
+          KeyCode::BRACKET_LEFT, ModifierFlag::SWEDISH_MOD | ModifierFlag::NONE,
+          KeyCode::A, ModifierFlag::OPTION_L
+        </autogen>
+        <autogen>
+          __KeyToKey__
+          KeyCode::BRACKET_LEFT, ModifierFlag::SWEDISH_MOD | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+          KeyCode::A, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L
+        </autogen>
+        
+        <!-- Ä -->
+        <autogen>
+          __KeyToKey__
+          KeyCode::QUOTE, ModifierFlag::SWEDISH_MOD | ModifierFlag::NONE,
+          KeyCode::QUOTE, ModifierFlag::OPTION_L
+        </autogen>
+        <autogen>
+          __KeyToKey__
+          KeyCode::QUOTE, ModifierFlag::SWEDISH_MOD | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+          KeyCode::QUOTE, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L
+        </autogen>
+        
+        <!-- Ö -->
+        <autogen>
+          __KeyToKey__
+          KeyCode::SEMICOLON, ModifierFlag::SWEDISH_MOD | ModifierFlag::NONE,
+          KeyCode::O, ModifierFlag::OPTION_L
+        </autogen>
+        <autogen>
+          __KeyToKey__
+          KeyCode::SEMICOLON, ModifierFlag::SWEDISH_MOD | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+          KeyCode::O, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L
+        </autogen>
+      </item>
+      
+      
+      <item>
+        <name>SWEDISH_MOD for non-patched US layout</name>
+        <appendix>For writing swedish characters with a US keyboard layout (using umlauts in deadkey mode)</appendix>
+        <identifier>private.swed_us</identifier>
+        
+        <!-- Å -->
+        <autogen>
+          __KeyToKey__
+          KeyCode::BRACKET_LEFT, ModifierFlag::SWEDISH_MOD | ModifierFlag::NONE,
+          KeyCode::A, ModifierFlag::OPTION_L
+        </autogen>
+        <autogen>
+          __KeyToKey__
+          KeyCode::BRACKET_LEFT, ModifierFlag::SWEDISH_MOD | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+          KeyCode::A, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L
+        </autogen>
+        
+        <!-- Ä -->
+        <autogen>
+          __KeyToKey__
+          KeyCode::QUOTE, ModifierFlag::SWEDISH_MOD | ModifierFlag::NONE,
+          KeyCode::U, ModifierFlag::OPTION_L, KeyCode::A
+        </autogen>
+        <autogen>
+          __KeyToKey__
+          KeyCode::QUOTE, ModifierFlag::SWEDISH_MOD | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+          KeyCode::U, ModifierFlag::OPTION_L, KeyCode::A,  ModifierFlag::SHIFT_L
+        </autogen>
+        
+        <!-- Ö -->
+        <autogen>
+          __KeyToKey__
+          KeyCode::SEMICOLON, ModifierFlag::SWEDISH_MOD | ModifierFlag::NONE,
+          KeyCode::U, ModifierFlag::OPTION_L, KeyCode::O
+        </autogen>
+        <autogen>
+          __KeyToKey__
+          KeyCode::SEMICOLON, ModifierFlag::SWEDISH_MOD | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+          KeyCode::U, ModifierFlag::OPTION_L, KeyCode::O, ModifierFlag::SHIFT_L
+        </autogen>
+      </item>
+      
+      <item>
+        <name>Always umaut using deadkey for non-patched US layout</name>
+        <appendix>For writing swedish characters with a US keyboard layout (using umlauts in deadkey mode)</appendix>
+        <identifier>private.swed_us_always</identifier>
+        
+        <!-- Å -->
+        <autogen>
+          __KeyToKey__ KeyCode::BRACKET_LEFT, ModifierFlag::NONE, KeyCode::A, ModifierFlag::OPTION_L
+        </autogen>
+        <autogen>
+          __KeyToKey__
+          KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+          KeyCode::A, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L
+        </autogen>
+        
+        <!-- Ä -->
+        <autogen>
+          __KeyToKey__ KeyCode::QUOTE, ModifierFlag::NONE, KeyCode::U, ModifierFlag::OPTION_L, KeyCode::A
+        </autogen>
+        <autogen>
+          __KeyToKey__
+          KeyCode::QUOTE, ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+          KeyCode::U, ModifierFlag::OPTION_L, KeyCode::A,  ModifierFlag::SHIFT_L
+        </autogen>
+        
+        <!-- Ö -->
+        <autogen>
+          __KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::NONE, KeyCode::U, ModifierFlag::OPTION_L, KeyCode::O
+        </autogen>
+        <autogen>
+          __KeyToKey__
         KeyCode::SEMICOLON, KeyCode::U, ModifierFlag::OPTION_L, KeyCode::O, ModifierFlag::SHIFT_L </autogen>
-    </item>
-
-  </item> <!-- end SWE_MOD group -->
-
-
-  <item>
-    <name>Toggle US patched ANSI layout</name>
-    <appendix>Toggles between US and ANSI Patched keyboard layout</appendix>
-
+      </item>
+      
+    </item> <!-- end SWE_MOD group -->
+    
+    
     <item>
-      <name>Enable Toggle to ANSI SE Patch</name>
-      <identifier>private.us_se_layout_toggle</identifier>
-      <autogen>__KeyToKey__ KeyCode::F16, KeyCode::VK_CHANGE_INPUTSOURCE_ANSI_SE_PATCH</autogen>
+      <name>Toggle US patched ANSI layout</name>
+      <appendix>Toggles between US and ANSI Patched keyboard layout</appendix>
+      
+      <item>
+        <name>Enable Toggle to ANSI SE Patch</name>
+        <identifier>private.us_se_layout_toggle</identifier>
+        <autogen>__KeyToKey__ KeyCode::F16, KeyCode::VK_CHANGE_INPUTSOURCE_ANSI_SE_PATCH</autogen>
+      </item>
+      <item>
+        <name>Enable Toggle to Apple US</name>
+        <identifier>private.se_us_layout_toggle</identifier>
+        <autogen>__KeyToKey__ KeyCode::F16, ModifierFlag::SHIFT_L, KeyCode::VK_CHANGE_INPUTSOURCE_APPLE_US</autogen>
+      </item>
     </item>
-    <item>
-      <name>Enable Toggle to Apple US</name>
-      <identifier>private.se_us_layout_toggle</identifier>
-      <autogen>__KeyToKey__ KeyCode::F16, ModifierFlag::SHIFT_L, KeyCode::VK_CHANGE_INPUTSOURCE_APPLE_US</autogen>
-    </item>
-  </item>
-
-
+    
+  </item> 
 
 </root>

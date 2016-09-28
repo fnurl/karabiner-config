@@ -2,7 +2,7 @@
 <root>
 
   <item>
-    <name>AULA keyboard</name>
+    <name>aula_keyboard.xml: AULA keyboard</name>
     <item>
       <name>AULA keyboard fixes</name>
       <appendix>(fix backtick and cmd/opt keys for the AULA keyboard)</appendix>

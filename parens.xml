@@ -4,54 +4,59 @@
   <modifierdef>PAREN_MOD</modifierdef>
 
   <item>
-    <name>Paren remappings using paren modifier</name>
+    <name>parens.xml: Paren layer (using PAREN modifier)</name>
 
     <item>
-      <name>Right command as PAREN_MOD</name>
-      <identifier>parenmod.paren_mod.commandr</identifier>
-      <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::VK_MODIFIER_PAREN_MOD</autogen>
-    </item>
-    
-    <item>
-      <name>RETURN to PAREN_MOD and RETURN</name>
-      <identifier>private.parenmod.paren_mod.return</identifier>
-      <autogen>
-        __KeyOverlaidModifier__
-        KeyCode::RETURN, ModifierFlag:: NONE,
-        KeyCode::VK_MODIFIER_PAREN_MOD,
-        KeyCode::RETURN
-      </autogen>
-    </item>
+      <name>Paren modifier</name>
 
-    <item>
-      <name>Hold F or J as PAREN_MOD</name>
-      <identifier>private.parenmod.paren_mod.f_j</identifier>
-      <autogen>
-        __KeyOverlaidModifier__
-        KeyCode::F, ModifierFlag:: NONE,
-        KeyCode::VK_MODIFIER_PAREN_MOD,
-        KeyCode::F
-      </autogen>
+      <item>
+        <name>FD and JK chords as PAREN_MOD</name>
+        <appendix>Use chord as modifier as not to block keyrepeat</appendix>
+        <identifier>private.parenmod.paren_mod.fd_jk</identifier>
+        <autogen>__SimultaneousKeyPresses__ KeyCode::F, KeyCode::D, KeyCode::VK_MODIFIER_PAREN_MOD</autogen>
+        <autogen>__SimultaneousKeyPresses__ KeyCode::J, KeyCode::K, KeyCode::VK_MODIFIER_PAREN_MOD</autogen>
+      </item>
+
+      <item>
+        <name>Hold F or J as PAREN_MOD</name>
+        <identifier>private.parenmod.paren_mod.f_j</identifier>
+        <autogen>
+          __KeyOverlaidModifier__
+          KeyCode::F, ModifierFlag:: NONE,
+          KeyCode::VK_MODIFIER_PAREN_MOD,
+          KeyCode::F
+        </autogen>
+        
+        <autogen>
+          __KeyOverlaidModifier__
+          KeyCode::J, ModifierFlag::NONE,
+          KeyCode::VK_MODIFIER_PAREN_MOD,
+          KeyCode::J, ModifierFlag::NONE
+        </autogen>
+      </item>
       
-      <autogen>
-        __KeyOverlaidModifier__
-        KeyCode::J, ModifierFlag::NONE,
-        KeyCode::VK_MODIFIER_PAREN_MOD,
-        KeyCode::J, ModifierFlag::NONE
-      </autogen>
+      <item>
+        <name>RETURN to PAREN_MOD and RETURN</name>
+        <identifier>private.parenmod.paren_mod.return</identifier>
+        <autogen>
+          __KeyOverlaidModifier__
+          KeyCode::RETURN, ModifierFlag:: NONE,
+          KeyCode::VK_MODIFIER_PAREN_MOD,
+          KeyCode::RETURN
+        </autogen>
+      </item>
+      
+      <item>
+        <name>Right command as PAREN_MOD</name>
+        <identifier>parenmod.paren_mod.commandr</identifier>
+        <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::VK_MODIFIER_PAREN_MOD</autogen>
+      </item>
+      
     </item>
-
+      
     <item>
-      <name>FD and JK chords as PAREN_MOD</name>
-      <appendix>Use chord as modifier as not to block keyrepeat</appendix>
-      <identifier>private.parenmod.paren_mod.fd_jk</identifier>
-      <autogen>__SimultaneousKeyPresses__ KeyCode::F, KeyCode::D, KeyCode::VK_MODIFIER_PAREN_MOD</autogen>
-      <autogen>__SimultaneousKeyPresses__ KeyCode::J, KeyCode::K, KeyCode::VK_MODIFIER_PAREN_MOD</autogen>
-    </item>
-
-    
-    <item>
-      <name>Parens on homerow: [](){}&lt;&gt;</name>
+      <name>ASDF row: Main parens</name>
+      <appendix>sdfghjkl to  &lt;{([])}&gt;</appendix>
       <identifier>private.parenmod.parens</identifier>
       <autogen>__KeyToKey__ KeyCode::G, ModifierFlag::PAREN_MOD, KeyCode::BRACKET_LEFT</autogen>> 
       <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::PAREN_MOD, KeyCode::BRACKET_RIGHT</autogen>n>
@@ -67,14 +72,22 @@
     </item>
 
     <item>
-      <name>QWERTY row: Tilde, quotes, colons</name>
-      <identifier>private.parenmod.tilde_quotes_colons</identifier>
+      <name>QWERTY row: er to ~` (tilde, backtick)</name>
+      <identifier>private.parenmod.tilde_backtick</identifier>
       <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::PAREN_MOD, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>> 
       <autogen>__KeyToKey__ KeyCode::R, ModifierFlag::PAREN_MOD, KeyCode::BACKQUOTE</autogen>
-      
+    </item>
+
+    <item>
+      <name>QWERTY row: ty to '" (tilde, backtick)</name>
+      <identifier>private.parenmod.quotes</identifier>
       <autogen>__KeyToKey__ KeyCode::T, ModifierFlag::PAREN_MOD, KeyCode::QUOTE</autogen> 
       <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::PAREN_MOD, KeyCode::QUOTE, ModifierFlag::SHIFT_L</autogen>
-      
+    </item>
+
+    <item>
+      <name>QWERTY row: ui to :; (colon, semicolon)</name>
+      <identifier>private.parenmod.colons</identifier>
       <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::PAREN_MOD, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen>
       <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::PAREN_MOD, KeyCode::SEMICOLON</autogen>
     </item>
