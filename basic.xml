@@ -6,16 +6,15 @@
     <name>basic.xml: Basic layout changes</name>
     
     <item>
-      <name>OPT-TAB window switching. Use shift to change direction.</name>
-      <identifier>private.opttab_for_window_switching</identifier>
-      <autogen>__KeyToKey__ KeyCode::TAB, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L</autogen>
-      <autogen>__KeyToKey__ KeyCode::TAB, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
-    </item>
-    
-    <include path="hyper.xml" />
-
-    <item>
       <name>General remappings</name>
+
+      <!-- needs to be first so it takes precedence over other tab key modification -->
+      <item>
+        <name>OPT-TAB window switching. Use shift to change direction.</name>
+        <identifier>private.opttab_for_window_switching</identifier>
+        <autogen>__KeyToKey__ KeyCode::TAB, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::TAB, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
+      </item>
     
       <item>
         <name>Map _unmodified_ SHIFT to ESCAPE</name>
@@ -100,7 +99,14 @@
           {{ UBIQUITOUS_VIM_BINDINGS_CANCEL_OPERATOR_PENDING }}
         </autogen>
       </item>
-    
+
+      <item>
+        <name>BACKSLASH to BRACKET_RIGHT and BRACKET_RIGHT to BRACKET_LEFT.</name>
+        <identifier>private.move_brackets_right</identifier>
+        <autogen>__KeyToKey__ KeyCode::BACKSLASH, KeyCode::BRACKET_RIGHT</autogen>
+        <autogen>__KeyToKey__ KeyCode::BRACKET_RIGHT, KeyCode::BRACKET_LEFT</autogen>
+      </item>
+
       <item>
         <name>Right bracket to Backslash</name>
         <identifier>private.bracketl_to_backslash</identifier>
@@ -118,6 +124,7 @@
       <item>
         <name>BACKSLASH to DELETE</name>
         <identifier>private.backslash_to_backspace</identifier>
+        <autogen>__KeyToKey__ KeyCode::BACKSLASH, ModifierFlag::SHIFT, KeyCode::FORWARD_DELETE</autogen>
         <autogen>__KeyToKey__ KeyCode::BACKSLASH, ModifierFlag::NONE, KeyCode::DELETE</autogen>
       </item>
       
@@ -198,9 +205,11 @@
       
     </item>
     
-    <item>
-      <name>ISO keyboard fixes</name>
-    </item>item>
+    <include path="hyper.xml" />
+
+    <!-- <item> -->
+    <!--   <name>ISO keyboard fixes</name> -->
+    <!-- </item>item> -->
 
     <item>
       <name>Swedish characters mapped from keypad</name>

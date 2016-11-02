@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<root>
+
+  <modifierdef>NAV_MOD</modifierdef>
+  <modifierdef>PAREN_MOD</modifierdef>
+  <modifierdef>SUBSPACE_MOD</modifierdef>
+  <modifierdef>SYMBOL_MOD</modifierdef>
+  <modifierdef>SHIFT</modifierdef>
+
+  <item>
+    <name>virtual.xml - Virtual Keys</name>
+
+    <item>
+      <name>Any SHIFT to VK_SHIFT</name>
+      <identifier>private.virtual.shift</identifier>
+      <autogen>__KeyToKey__ KeyCode::SHIFT_L, KeyCode::VK_MODIFIER_SHIFT</autogen>
+      <autogen>__KeyToKey__ KeyCode::SHIFT_R, KeyCode::VK_MODIFIER_SHIFT</autogen>
+    </item>
+
+  </item>
+
+</root>

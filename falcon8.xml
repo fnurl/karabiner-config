@@ -8,6 +8,7 @@
       <name>Arrow keys and modifiers</name>
       <appendix>Map buttons (set to F1-F8 via ControllerMate) to arrows and modifiers.</appendix>
       <appendix>Arrows on right side. Top right is SHIFT_L, bottom left is OPT, top left is COMMAND_L</appendix>
+    <device_only>DeviceVendor::RawValue::0xc251, DeviceProduct::RawValue::0x1fa6</device_only>
       <identifier>private.falcon8.arrows_and_modifiers</identifier>
 
       <autogen>__KeyToKey__ KeyCode::F1, KeyCode::COMMAND_L</autogen>
@@ -23,6 +24,7 @@
     <item>
       <name>Arrow keys, navigate by word, switch tabs </name>
       <appendix>Map buttons (set to F1-F8 via ControllerMate) to arrows, OPT+L/R and tab switching.</appendix>
+      <device_only>DeviceVendor::RawValue::0xc251, DeviceProduct::RawValue::0x1fa6</device_only>
       <identifier>private.falcon8.arrows_words_tabs</identifier>
 
       <autogen>__KeyToKey__ KeyCode::F1, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L</autogen>

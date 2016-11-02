@@ -2,7 +2,7 @@
 <root>
   
   <item>
-    <name>chordy-us.xml: Chordy</name>
+    <name>chordy.xml: Chordy</name>
 
     <item>
       <name>Non-symmetric chords for single keys</name>
@@ -127,6 +127,14 @@
       </item>
       
       <item>
+        <name>Delete (Backspace) GH</name>
+        <identifier>chordy.single_key.delete_gh</identifier>
+        <autogen>
+          __SimultaneousKeyPresses__ KeyCode::G, KeyCode::H, KeyCode::DELETE
+        </autogen>
+      </item>
+
+      <item>
         <name>Delete (Backspace) FJ</name>
         <identifier>chordy.single_key.delete_fj</identifier>
         <autogen>
@@ -202,11 +210,18 @@
       <name>Mirrored, two-finger, modfifier chords</name>
       <appendix>Modifier chords are mirrored, one hand, two finger chords (every chord has a twin for each hand)</appendix>
 
-      <item>
-        <name>Control: DF and JK</name>
-        <identifier>private.chordy.control</identifier>
-        <autogen>__SimultaneousKeyPresses__ KeyCode::F, KeyCode::D, KeyCode::CONTROL_L</autogen>
-        <autogen>__SimultaneousKeyPresses__ KeyCode::J, KeyCode::K, KeyCode::CONTROL_L</autogen>
+       <item>
+        <name>Control: FS and JL to Amethyst mod1</name>
+        <identifier>private.chordy.amethyst_mod1</identifier>
+        <autogen>__SimultaneousKeyPresses__ KeyCode::F, KeyCode::S, KeyCode::OPTION_L, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__SimultaneousKeyPresses__ KeyCode::J, KeyCode::L, KeyCode::OPTION_L, ModifierFlag::SHIFT_L</autogen>
+      </item>
+
+       <item>
+        <name>Control: DA and KÖ (K;) to Amethyst mod2</name>
+        <identifier>private.chordy.amethyst_mod2</identifier>
+        <autogen>__SimultaneousKeyPresses__ KeyCode::D, KeyCode::A, KeyCode::CONTROL_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L</autogen>
+        <autogen>__SimultaneousKeyPresses__ KeyCode::K, KeyCode::SEMICOLON, KeyCode::CONTROL_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L</autogen>
       </item>
 
       <item>

@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <root>
   
-  <modifierdef>PAREN_MOD</modifierdef>
-
   <item>
     <name>parens.xml: Paren layer (using PAREN modifier)</name>
 
@@ -80,7 +78,7 @@
 
     <item>
       <name>QWERTY row: ty to '" (tilde, backtick)</name>
-      <identifier>private.parenmod.quotes</identifier>
+      <identifier>private.parenmod.quotes1</identifier>
       <autogen>__KeyToKey__ KeyCode::T, ModifierFlag::PAREN_MOD, KeyCode::QUOTE</autogen> 
       <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::PAREN_MOD, KeyCode::QUOTE, ModifierFlag::SHIFT_L</autogen>
     </item>
@@ -93,17 +91,46 @@
     </item>
 
     <item>
-      <name>QWERTY row: Slash and Backslash on W and O</name>
+      <name>QWERTY row: wo to /\</name>
       <identifier>private.parenmod.slashes</identifier>
       <autogen>__KeyToKey__ KeyCode::W, ModifierFlag::PAREN_MOD, KeyCode::SLASH</autogen>
       <autogen>__KeyToKey__ KeyCode::O, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH</autogen>
     </item>
     
     <item>
-      <name>ZXCVB row: slashes</name>
+      <name>ZXCVB row: bn to /\</name>
       <identifier>private.parenmod.qmark</identifier>
       <autogen>__KeyToKey__ KeyCode::B, ModifierFlag::PAREN_MOD, KeyCode::SLASH</autogen>> 
       <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH</autogen>> 
+    </item>
+
+    <item>
+      <name>ZXCVB Row: cv to _- (underscore, dash)</name>
+      <identifier>private.parenmod.dashes</identifier>
+      <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::PAREN_MOD, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::PAREN_MOD, KeyCode::MINUS</autogen>
+    </item>
+
+    <item>
+      <name>ZXCVB Row: nm to '"</name>
+      <identifier>private.parenmod.quotes2</identifier>
+      <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::PAREN_MOD, KeyCode::QUOTE</autogen>
+      <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::PAREN_MOD, KeyCode::QUOTE, ModifierFlag::SHIFT_L</autogen>
+    </item>
+
+    <item>
+      <name>ZXCVB Row: ./ to |\</name>
+      <identifier>private.parenmod.pipe_backslash1</identifier>
+      <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH</autogen>
+    </item>
+
+    <item>
+      <name>ZXCVB Row:  nm/ to |\\ (pipe, and backslash)</name>
+      <identifier>private.parenmod.pipe_backslash2</identifier>
+      <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH</autogen>
+      <autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH</autogen>
     </item>
 
     <item>

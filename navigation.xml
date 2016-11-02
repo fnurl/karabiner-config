@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<root>
+
+  <item>
+    <name>navigation.xml defines a navigation layer</name>
+
+    <item>
+      <name>navigation mod keys</name>
+    
+      <item>
+        <name>Use overloaded BACKQUOTE as NAV_MOD</name>
+        <identifier>private.nav.backtick_as_mod</identifier>
+        <autogen>__KeyOverlaidModifier__
+        KeyCode::BACKQUOTE,
+        KeyCode::VK_MODIFIER_NAV_MOD,
+        KeyCode::BACKQUOTE
+        </autogen>
+      </item>
+
+      <item>
+        <name>Use overloaded DANISH_DOLLAR as NAV_MOD</name>
+        <identifier>private.nav.danishdollar_as_mod</identifier>
+        <autogen>__KeyOverlaidModifier__
+        KeyCode::DANISH_DOLLAR,
+        KeyCode::VK_MODIFIER_NAV_MOD,
+        KeyCode::DANISH_DOLLAR
+        </autogen>
+      </item>
+
+    </item>
+
+    <item>
+      <name>Cursor keys</name>
+
+      <item>
+        <name>HJKL</name>
+        <identifier>private.nav.hjkl</identifier>
+        <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::NAV_MOD, KeyCode::CURSOR_LEFT</autogen>
+        <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::NAV_MOD, KeyCode::CURSOR_DOWN</autogen>
+        <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::NAV_MOD, KeyCode::CURSOR_UP</autogen>
+        <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::NAV_MOD, KeyCode::CURSOR_RIGHT</autogen>
+      </item>
+
+    </item>
+    
+  </item>
+
+</root>

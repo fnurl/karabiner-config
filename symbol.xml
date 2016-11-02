@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+
+<root>
+
+  <!-- <replacementdef> -->
+  <!--   <replacementname>SYMBOL_MOD</replacementname> -->
+  <!--   <replacementvalue>KeyCode::OPTION_R, ModifierFlag::NONE</replacementvalue> -->
+  <!-- </replacementdef> -->
+
+  <item>
+    <name>symbol.xml puts symbols under a symbol modifier key</name>
+
+    <item>
+      <name>symbol modifier keys</name>
+    
+      <item>
+        <name>Use OPTION_R as SYMBOL_MOD</name>
+        <identifier>private.symbol.use_optr_as_mod</identifier>
+        <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::VK_MODIFIER_SYMBOL_MOD</autogen>
+      </item>
+    
+      <item>
+        <name>Use COMMAND_R as SYMBOL_MOD</name>
+        <identifier>private.symbol.use_cmdr_as_mod</identifier>
+        <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::VK_MODIFIER_SYMBOL_MOD</autogen>
+      </item>
+
+    </item>>
+    
+    <item>
+      <name>QWERTY row: ui to :; (colon, semicolon)</name>
+      <identifier>private.symbol.colons</identifier>
+      <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::SYMBOL_MOD, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::SYMBOL_MOD, KeyCode::SEMICOLON</autogen>
+    </item>
+
+    <item>
+      <name>ZXCVB Row: cv to _- (underscore, dash)</name>
+      <identifier>private.symbol.dashes</identifier>
+      <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::SYMBOL_MOD, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>>
+      <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::SYMBOL_MOD, KeyCode::MINUS</autogen>
+    </item>
+    
+    <item>
+      <name>ZXCVB Row: nm to '"</name>
+      <identifier>private.symbol.quotes</identifier>
+      <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::SYMBOL_MOD, KeyCode::QUOTE</autogen>
+      <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::SYMBOL_MOD, KeyCode::QUOTE, ModifierFlag::SHIFT_L</autogen>>
+    </item>
+    
+    <item>
+      <name>ZXCVB Row: ./ to |\</name>
+      <identifier>private.symbol.pipe_backslash1</identifier>
+      <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::SYMBOL_MOD, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>n>
+      <autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::SYMBOL_MOD, KeyCode::BACKSLASH</autogen>
+    </item>
+
+  </item>
+
+</root>

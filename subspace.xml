@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <root>
   
-  <modifierdef notify="true">SUBSPACE_MOD</modifierdef>
-  
     <item>
       <name>subspace.xml: Subspace layer (use SPACE as modifier)</name>
       
@@ -18,8 +16,26 @@
       </item>
 
       <item>
-        <name>QWERTY Row [Numbers]</name>
-        <appendix>Activate SUBSPACE modifier followed by a QWERTY row key for numbers.</appendix>
+        <name>Function keys (F1-F12) as number keys</name>
+        <appendix>SUBSPACE modifier + F-row key to number keys.</appendix>
+        <identifier>private.subspace.functionkeys_numbers</identifier>
+        <autogen>__KeyToKey__ KeyCode::F1, ModifierFlag::SUBSPACE_MOD, KeyCode::1</autogen>
+        <autogen>__KeyToKey__ KeyCode::F2, ModifierFlag::SUBSPACE_MOD, KeyCode::2</autogen>
+        <autogen>__KeyToKey__ KeyCode::F3, ModifierFlag::SUBSPACE_MOD, KeyCode::3</autogen>
+        <autogen>__KeyToKey__ KeyCode::F4, ModifierFlag::SUBSPACE_MOD, KeyCode::4</autogen>
+        <autogen>__KeyToKey__ KeyCode::F5, ModifierFlag::SUBSPACE_MOD, KeyCode::5</autogen>
+        <autogen>__KeyToKey__ KeyCode::F6, ModifierFlag::SUBSPACE_MOD, KeyCode::6</autogen>
+        <autogen>__KeyToKey__ KeyCode::F7, ModifierFlag::SUBSPACE_MOD, KeyCode::7</autogen>
+        <autogen>__KeyToKey__ KeyCode::F8, ModifierFlag::SUBSPACE_MOD, KeyCode::8</autogen>
+        <autogen>__KeyToKey__ KeyCode::F9, ModifierFlag::SUBSPACE_MOD, KeyCode::9</autogen>
+        <autogen>__KeyToKey__ KeyCode::F10, ModifierFlag::SUBSPACE_MOD, KeyCode::0</autogen>
+        <autogen>__KeyToKey__ KeyCode::F11, ModifierFlag::SUBSPACE_MOD, KeyCode::MINUS</autogen>
+        <autogen>__KeyToKey__ KeyCode::F12, ModifierFlag::SUBSPACE_MOD, KeyCode::EQUAL</autogen>
+      </item>
+      
+      <item>
+        <name>QWERTY Row to numbers</name>
+        <appendix>SUBSPACE modifier + QWERTY row key to numbers.</appendix>
         <identifier>private.subspace.qwerty_numbers</identifier>
         <autogen>__KeyToKey__ KeyCode::Q, ModifierFlag::SUBSPACE_MOD, KeyCode::1 </autogen>
         <autogen>__KeyToKey__ KeyCode::W, ModifierFlag::SUBSPACE_MOD, KeyCode::2 </autogen>
@@ -50,21 +66,21 @@
       </item>
 
       <item>
-        <name>ZXCVB Row: cv for _- (underscore, dash)</name>
+        <name>ZXCVB Row: cv to _- (underscore, dash)</name>
         <identifier>private.subspace.dashes</identifier>
         <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::SUBSPACE_MOD, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
         <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::SUBSPACE_MOD, KeyCode::MINUS</autogen>
       </item>
 
       <item>
-        <name>ZXCVB Row: nm for '"</name>
+        <name>ZXCVB Row: nm to '"</name>
         <identifier>private.subspace.quotes</identifier>
         <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::SUBSPACE_MOD, KeyCode::QUOTE</autogen>
         <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::SUBSPACE_MOD, KeyCode::QUOTE, ModifierFlag::SHIFT_L</autogen>
       </item>
 
       <item>
-        <name>ZXCVB Row: ./ for |\</name>
+        <name>ZXCVB Row: ./ to |\</name>
         <identifier>private.subspace.pipe_backslash1</identifier>
         <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::SUBSPACE_MOD, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
         <autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::SUBSPACE_MOD, KeyCode::BACKSLASH</autogen>

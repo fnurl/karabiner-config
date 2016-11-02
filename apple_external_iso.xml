@@ -3,11 +3,11 @@
 
   <item>
     <name>apple_external_iso.xml: Apple External ISO Keyboard</name>
-    <device_only>DeviceVendor::RawValue::0x05ac, DeviceProduct::RawValue::0x020c</device_only>
 
     <item>
       <name>ANSIfy all: § to ` \ to Return, &lt;&gt; to DELETE</name>
       <identifier>private.apple.external.iso.all</identifier>
+      <device_only>DeviceVendor::RawValue::0x05ac, DeviceProduct::RawValue::0x020c</device_only>
 
       <autogen>__KeyToKey__ KeyCode::DANISH_DOLLAR, KeyCode::BACKQUOTE</autogen>
       <!-- <autogen>__KeyToKey__ KeyCode::BACKQUOTE, KeyCode::DANISH_DOLLAR</autogen> -->

@@ -22,5 +22,13 @@
       <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::COMMAND_R</autogen>
       <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
     </item>
+
+    <item>
+      <name>DK4C PC Application key to OPTION_R</name>
+      <identifier>private.dk4c.pcapp_to_optr</identifier>
+      <device_only> DeviceVendor::RawValue::0x24f0, DeviceProduct::RawValue::0x0142</device_only>
+      <autogen>__KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::OPTION_R</autogen>
+    </item>
+
   </item>
 </root>
