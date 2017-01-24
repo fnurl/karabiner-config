@@ -8,7 +8,7 @@
   <modifierdef>SYMBOL_MOD</modifierdef>
   <modifierdef>SHIFT</modifierdef>
 
-  <item>
+  <item hidden="true">
     <name>virtual.xml - Virtual Keys</name>
 
     <item>

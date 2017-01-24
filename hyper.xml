@@ -11,18 +11,6 @@
     <name>hyper.xml: Hyper and meh</name>
 
     <item>
-      <name>SPACE to HYPER and SPACE</name>
-      <appendix>SPACE to HYPER and SPACE</appendix>
-      <identifier>private.hyper.space_to_hyper_space</identifier>
-      <autogen>
-        __KeyOverlaidModifier__
-        KeyCode::SPACE, ModifierFlag::NONE,
-        {{ HYPER_MOD }},
-        KeyCode::SPACE
-      </autogen>
-    </item>
-
-    <item>
       <name>Esc to Hyper</name>
       <appendix>Esc to Hyper (ctrl+shift+cmd+opt)</appendix>
       <identifier>private.hyper.esc_to_hyper</identifier>
@@ -42,18 +30,6 @@
         KeyCode::ESCAPE,
         KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE,
         KeyCode::ESCAPE
-      </autogen>
-    </item>
-
-    <item>
-      <name>Esc to Hyper and F18</name>
-      <appendix>Esc to Hyper (ctrl+shift+cmd+opt), Esc only to F18 (for notification)</appendix>
-      <identifier>private.hyper.esc_to_hyper_f18</identifier>
-      <autogen>
-        __KeyOverlaidModifier__
-        KeyCode::ESCAPE,
-        KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE,
-        KeyCode::F18
       </autogen>
     </item>
 
@@ -114,28 +90,6 @@
     </item>
 
     <item>
-      <name>Tab to Hyper and Tab</name>
-      <identifier>private.hyper.tab_to_hyper_and_tab</identifier>
-      <autogen>
-        __KeyOverlaidModifier__
-        KeyCode::TAB,
-        KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE,
-        KeyCode::TAB
-      </autogen>
-    </item>
-
-    <item>
-      <name>SPACE to HYPER and SPACE</name>
-      <identifier>chordy.hyperspace</identifier>
-      <autogen>
-        __KeyOverlaidModifier__
-        KeyCode::SPACE,
-        {{ HYPER_MOD }}, 
-        KeyCode::SPACE
-      </autogen>
-    </item>
-    
-    <item>
       <name>Left Control to Hyper and Escape</name>
       <identifier>private.hyper.ctrl_to_hyper_and_esc</identifier>
       <autogen>
@@ -143,6 +97,17 @@
         KeyCode::CONTROL_L,
         KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE,
         KeyCode::ESCAPE
+      </autogen>
+    </item>
+
+    <item>
+      <name>Tab to Hyper and Tab</name>
+      <identifier>private.hyper.tab_to_hyper_and_tab</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::TAB,
+        KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+        KeyCode::TAB
       </autogen>
     </item>
 
