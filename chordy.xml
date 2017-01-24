@@ -36,6 +36,14 @@
       </item>
       
       <item>
+        <name>Return: JI</name>
+        <identifier>chordy.single_key.return_ji</identifier>
+        <autogen>
+          __SimultaneousKeyPresses__ KeyCode::I, KeyCode::J, KeyCode::RETURN
+        </autogen>
+      </item>
+
+      <item>
         <name>Return DOT COMMA</name>
         <identifier>chordy.single_key.backspace_dotcomma</identifier>
         <autogen>
@@ -48,6 +56,14 @@
         <identifier>chordy.single_key.delete_er</identifier>
         <autogen>
           __SimultaneousKeyPresses__ KeyCode::E, KeyCode::R, KeyCode::DELETE
+        </autogen>
+      </item>
+
+      <item>
+        <name>Delete: EF</name>
+        <identifier>chordy.single_key.delete_ef</identifier>
+        <autogen>
+          __SimultaneousKeyPresses__ KeyCode::E, KeyCode::F, KeyCode::DELETE
         </autogen>
       </item>
 

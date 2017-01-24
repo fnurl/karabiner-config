@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<root>
+
+  <!-- Left side -->
+  <item>
+    <name>terminus.xml: Terminus Mini 2</name>
+    <item>
+      <name>Application to Opt</name>
+      <appendix>(swap right Application/Option_R on Terminus)</appendix>
+      <identifier>private.terminus.application_optr.swap</identifier>
+      <device_only> DeviceVendor::RawValue::0x2341, DeviceProduct::RawValue::0x8036</device_only>
+      <autogen>__KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::OPTION_R</autogen>
+    </item>
+
+  </item>
+
+</root>

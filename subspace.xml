@@ -60,9 +60,22 @@
         <autogen>__KeyToKey__ KeyCode::G, ModifierFlag::SUBSPACE_MOD, KeyCode::EQUAL, ModifierFlag::SHIFT_L</autogen>
         <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::SUBSPACE_MOD, KeyCode::8, ModifierFlag::SHIFT_L</autogen>
         <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::SUBSPACE_MOD, KeyCode::4, ModifierFlag::SHIFT_L</autogen>
-        <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::SUBSPACE_MOD, KeyCode::7, ModifierFlag::SHIFT_L</autogen>
-        <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::SUBSPACE_MOD, KeyCode::EQUAL</autogen>
+        <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::SUBSPACE_MOD, KeyCode::EQUAL</autogen>
+        <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::SUBSPACE_MOD, KeyCode::7, ModifierFlag::SHIFT_L</autogen>
         <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::SUBSPACE_MOD, KeyCode::5, ModifierFlag::SHIFT_L</autogen>
+      </item>
+
+      <item>
+        <name>ZXCVB Row: like the terminus</name>
+        <identifier>private.subspace.terminus</identifier>
+        <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::SUBSPACE_MOD, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::SUBSPACE_MOD, KeyCode::MINUS</autogen>
+        <autogen>__KeyToKey__ KeyCode::B, ModifierFlag::SUBSPACE_MOD, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::SUBSPACE_MOD, KeyCode::SEMICOLON</autogen>
+        <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::SUBSPACE_MOD, KeyCode::QUOTE, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::COMMA, ModifierFlag::SUBSPACE_MOD, KeyCode::QUOTE</autogen>
+        <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::SUBSPACE_MOD, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::SUBSPACE_MOD, KeyCode::BACKSLASH</autogen>
       </item>
 
       <item>

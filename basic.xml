@@ -10,7 +10,7 @@
 
       <!-- needs to be first so it takes precedence over other tab key modification -->
       <item>
-        <name>OPT-TAB window switching. Use shift to change direction.</name>
+        <name>OPT-TAB window switching. Use shift to change direction. (Cmd-` and Cmd-Shift-`)</name>
         <identifier>private.opttab_for_window_switching</identifier>
         <autogen>__KeyToKey__ KeyCode::TAB, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L</autogen>
         <autogen>__KeyToKey__ KeyCode::TAB, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
@@ -46,11 +46,76 @@
       </item>
     
       <item>
+        <name>CTRL L to ESC and CONTROL</name>
+        <identifier>private.ctrll_to_esc_and_ctrll</identifier>
+        <autogen>
+          __KeyOverlaidModifier__
+          KeyCode::CONTROL_L, ModifierFlag::CONTROL_L,
+          KeyCode::CONTROL_L,
+          KeyCode::ESCAPE
+        </autogen>
+      </item>
+    
+      <item>
+        <name>CTRL R to CTRL L</name>
+        <identifier>private.ctrlr_to_ctrll</identifier>
+        <autogen>
+          __KeyToKey__
+          KeyCode::CONTROL_R, ModifierFlag::CONTROL_R,
+          KeyCode::CONTROL_L, ModifierFlag::CONTROL_L
+        </autogen>
+      </item>
+    
+      <item>
+        <name>F16 to SPACE</name>
+        <appendix>CTRL_L (remapped to F16 via Seil) to SPACE</appendix>
+        <identifier>private.f16_to_space</identifier>
+        <autogen>__KeyToKey__ KeyCode::F16, KeyCode::SPACE</autogen>
+      </item>
+      
+      <item>
+        <name>F15 to SPACE</name>
+        <appendix>F15 (e.g. Pok3r ctrll) to SPACE</appendix>
+        <identifier>private.f15_to_space</identifier>
+        <autogen>__KeyToKey__ KeyCode::F15, KeyCode::SPACE</autogen>
+      </item>
+
+      <item>
+        <name>Shift ESCAPE to tilde</name>
+        <appendix>Shift ESCAPE to tilde</appendix>
+        <identifier>private.shift_escape_to_tilde</identifier>
+        <autogen>__KeyToKey__ KeyCode::ESCAPE, ModifierFlag::SHIFT_R, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_R</autogen>
+      </item>
+
+
+      <item>
+        <name>ESC to ESC and CONTROL</name>
+        <identifier>private.esc_to_esc_and_ctrll</identifier>
+        <autogen>
+          __KeyOverlaidModifier__
+          KeyCode::ESCAPE, ModifierFlag::NONE,
+          KeyCode::CONTROL_L,
+          KeyCode::ESCAPE
+        </autogen>
+      </item>
+    
+      <item>
         <name>TAB to CONTROL</name>
         <identifier>private.tab_to_ctrl</identifier>
         <autogen>__KeyToKey__ KeyCode::TAB, KeyCode::CONTROL_L</autogen>
       </item>
       
+      <item>
+        <name>TAB (unmodified) to ESC and CONTROL</name>
+        <identifier>private.tab_to_esc_and_ctrll</identifier>
+        <autogen>
+          __KeyOverlaidModifier__
+          KeyCode::TAB, ModifierFlag::NONE,
+          KeyCode::CONTROL_L,
+          KeyCode::ESCAPE
+        </autogen>
+      </item>
+    
       <item>
         <name>TAB to TAB and CONTROL</name>
         <identifier>private.tab_to_tab_and_ctrll</identifier>
@@ -86,6 +151,12 @@
       </item>
     
       <item>
+        <name>Left CTRL to SPACE</name>
+        <identifier>private.ctrll_to_space</identifier>
+        <autogen>__KeyToKey__ KeyCode::CONTROL_L, KeyCode::SPACE</autogen>
+      </item>
+    
+      <item>
         <name>Backslash is CTRL and vim mode toggle</name>
         <appendix>(+ When you type BACKSLASH only, toggles Normal Mode)</appendix>
         <identifier>private.vimnormal_toggle_controlR</identifier>
@@ -114,6 +185,12 @@
       </item>
       
       <item>
+        <name>Right bracket to Backquote</name>
+        <identifier>private.bracketl_to_backquote</identifier>
+        <autogen>__KeyToKey__ KeyCode::BRACKET_RIGHT, KeyCode::BACKQUOTE</autogen>
+      </item>
+      
+      <item>
         <name>DOT to DELETE, SLASH to RETURN</name>
         <appendix>Alt 40% layout</appendix>
         <identifier>private.basic.return_and_backspace</identifier>
@@ -128,6 +205,24 @@
         <autogen>__KeyToKey__ KeyCode::BACKSLASH, ModifierFlag::NONE, KeyCode::DELETE</autogen>
       </item>
       
+      <item>
+        <name>BACKSLASH to ESC</name>
+        <identifier>private.backslash_to_escape</identifier>
+        <autogen>__KeyToKey__ KeyCode::BACKSLASH, KeyCode::ESCAPE</autogen>
+      </item>
+
+      <item>
+          <name>Shift Backslash to F10</name>
+          <identifier>private.shift_backslash_to_F10</identifier>
+          <autogen>__KeyToKey__ KeyCode::BACKSLASH, ModifierFlag::SHIFT_R, KeyCode::F10</autogen>
+      </item>
+
+      <item>
+        <name>BACKSLASH to F14</name>
+        <identifier>private.backslash_to_F14</identifier>
+        <autogen>__KeyToKey__ KeyCode::BACKSLASH, KeyCode::F14</autogen>
+      </item>
+
       <item>
         <name>Left SHIFT to DELETE and SHIFT</name>
         <identifier>private.shiftl_to_shiftl_and_delete</identifier>
@@ -212,8 +307,52 @@
     <!-- </item>item> -->
 
     <item>
-      <name>Swedish characters mapped from keypad</name>
-      <identifier>private.basic.swe_keypad</identifier>
+      <name>Swedish characters mapped from keypad for terminus mini (F17-F19)</name>
+      <identifier>private.basic.terminus.swe_keypad</identifier>
+      <autogen>__KeyToKey__ KeyCode::F19, ModifierFlag::NONE, KeyCode::KEYPAD_7, ModifierFlag::NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::F19, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::KEYPAD_7, ModifierFlag::SHIFT_L | ModifierFlag::NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::F19, ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::KEYPAD_7, ModifierFlag::SHIFT_R | ModifierFlag::NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::F18, ModifierFlag::NONE, KeyCode::KEYPAD_8, ModifierFlag::NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::F18, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::KEYPAD_8, ModifierFlag::SHIFT_L | ModifierFlag::NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::F18, ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::KEYPAD_8, ModifierFlag::SHIFT_R | ModifierFlag::NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::F17, ModifierFlag::NONE, KeyCode::KEYPAD_9, ModifierFlag::NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::F17, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::KEYPAD_9, ModifierFlag::SHIFT_L | ModifierFlag::NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::F17, ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::KEYPAD_9, ModifierFlag::SHIFT_R | ModifierFlag::NONE</autogen>
+    </item>
+
+    <item>
+        <name>Toggle ÅÄÖ mode using left-command + backslash</name>
+        <identifier>private.mode_example</identifier>
+        <autogen>
+            __KeyToKey__
+            KeyCode::BACKSLASH, ModifierFlag::COMMAND_L,
+            KeyCode::VK_CONFIG_TOGGLE_private_basic_swe_keypad,
+        </autogen>
+</item>
+
+
+    <item hidden="true">
+      <name>Swedish characters mapped to ['; from keypad</name>
+      <identifier vk_config="true">private.basic.swe_keypad</identifier>
+      <autogen>__ShowStatusMessage__ ÅÄÖ Active</autogen>
+      <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, ModifierFlag::NONE, KeyCode::KEYPAD_7, ModifierFlag::NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::KEYPAD_7, ModifierFlag::SHIFT_L | ModifierFlag::NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::QUOTE, ModifierFlag::NONE, KeyCode::KEYPAD_8, ModifierFlag::NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::QUOTE, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::KEYPAD_8, ModifierFlag::SHIFT_L | ModifierFlag::NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::NONE, KeyCode::KEYPAD_9, ModifierFlag::NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::KEYPAD_9, ModifierFlag::SHIFT_L | ModifierFlag::NONE</autogen>
+      
+      <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, ModifierFlag::NONE, KeyCode::KEYPAD_7, ModifierFlag::NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::KEYPAD_7, ModifierFlag::SHIFT_R | ModifierFlag::NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::QUOTE, ModifierFlag::NONE, KeyCode::KEYPAD_8, ModifierFlag::NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::QUOTE, ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::KEYPAD_8, ModifierFlag::SHIFT_R | ModifierFlag::NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::NONE, KeyCode::KEYPAD_9, ModifierFlag::NONE</autogen>
+      <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::KEYPAD_9, ModifierFlag::SHIFT_R | ModifierFlag::NONE</autogen>
+    </item>
+
+    <item>
+      <name>Swedish characters mapped to ['; from keypad</name>
+      <identifier>private.basic.swe_keypad_to_rightsidekeys</identifier>
       <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, ModifierFlag::NONE, KeyCode::KEYPAD_7, ModifierFlag::NONE</autogen>
       <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::KEYPAD_7, ModifierFlag::SHIFT_L | ModifierFlag::NONE</autogen>
       <autogen>__KeyToKey__ KeyCode::QUOTE, ModifierFlag::NONE, KeyCode::KEYPAD_8, ModifierFlag::NONE</autogen>

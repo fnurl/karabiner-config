@@ -12,9 +12,28 @@
   <include path="virtual.xml" />
 
   <item>
+      <name>private.xml: pointer stuff</name>
+
+      <item>
+          <name>Disable button5</name>
+          <identifier>private.pointer.disable_button5</identifier>
+          <autogen>__PointingButtonToKey__ PointingButton::BUTTON5, KeyCode::VK_NONE</autogen>
+      </item>
+
+      <item>
+          <name>Trackball scroll with button5</name>
+          <identifier>private.pointer.scroll</identifier>
+          <autogen>__PointingRelativeToScroll__ PointingButton::BUTTON5</autogen>
+      </item>
+
+  </item>
+
+
+  <item>
     <appendix>private.xml: Keybord specific fixes</appendix>
     <include path="apple_internal_iso.xml" />
     <include path="apple_external_iso.xml" />
+    <include path="terminus.xml" />
     <include path="rapoo_v500.xml" />
     <include path="daskeyboard4c.xml" />
     <include path="falcon8.xml" />
@@ -25,6 +44,30 @@
     <name>private.xml: Non-general mappings and configs</name>
     
     <item>
+      <name>roblox ijkl swapped with wasd </name>
+      <identifier>private.roblox.ijkl</identifier>
+      <autogen>__KeyToKey__ KeyCode::I, KeyCode::W</autogen>
+      <autogen>__KeyToKey__ KeyCode::J, KeyCode::A</autogen>
+      <autogen>__KeyToKey__ KeyCode::K, KeyCode::S</autogen>
+      <autogen>__KeyToKey__ KeyCode::L, KeyCode::D</autogen>
+
+      <autogen>--KeyToKey__ KeyCode::U, KeyCode::Q</autogen>
+      <autogen>--KeyToKey__ KeyCode::O, KeyCode::E</autogen>
+      <autogen>__KeyToKey__ KeyCode::H, KeyCode::F</autogen>
+      
+      <autogen>__KeyToKey__ KeyCode::W, KeyCode::I</autogen>
+      <autogen>__KeyToKey__ KeyCode::A, KeyCode::J</autogen>
+      <autogen>__KeyToKey__ KeyCode::S, KeyCode::K</autogen>
+      <autogen>__KeyToKey__ KeyCode::D, KeyCode::L</autogen>
+
+      <autogen>__KeyToKey__ KeyCode::Q, KeyCode::U</autogen>
+      <autogen>__KeyToKey__ KeyCode::E, KeyCode::O</autogen>
+      <autogen>__KeyToKey__ KeyCode::F, KeyCode::H</autogen>
+      
+      <autogen>__KeyToKey__ KeyCode::SHIFT_R, KeyCode::SHIFT_L</autogen>
+    </item>
+    
+    <item>
       <name>roblox okl; swapped with wasd </name>
       <identifier>private.roblox</identifier>
       <autogen>__KeyToKey__ KeyCode::O, KeyCode::W</autogen>
@@ -32,11 +75,19 @@
       <autogen>__KeyToKey__ KeyCode::L, KeyCode::S</autogen>
       <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::D</autogen>
       
+      <autogen>--KeyToKey__ KeyCode::I, KeyCode::Q</autogen>
+      <autogen>--KeyToKey__ KeyCode::P, KeyCode::E</autogen>
+      <autogen>__KeyToKey__ KeyCode::J, KeyCode::F</autogen>
+
       <autogen>__KeyToKey__ KeyCode::W, KeyCode::O</autogen>
       <autogen>__KeyToKey__ KeyCode::A, KeyCode::K</autogen>
       <autogen>__KeyToKey__ KeyCode::S, KeyCode::L</autogen>
       <autogen>__KeyToKey__ KeyCode::D, KeyCode::SEMICOLON</autogen>
       
+      <autogen>--KeyToKey__ KeyCode::Q, KeyCode::I</autogen>
+      <autogen>--KeyToKey__ KeyCode::K, KeyCode::P</autogen>
+      <autogen>__KeyToKey__ KeyCode::H, KeyCode::J</autogen>
+
       <autogen>__KeyToKey__ KeyCode::SHIFT_R, KeyCode::SHIFT_L</autogen>
     </item>
     

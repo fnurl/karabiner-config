@@ -8,6 +8,17 @@
       <name>Paren modifier</name>
 
       <item>
+        <name>SPACE as PAREN_MOD</name>
+        <appendix>Use SPACE as modifier</appendix>
+        <identifier>private.parenmod.paren_mod.space</identifier>
+        <autogen>
+            __KeyOverlaidModifier__
+            KeyCode::SPACE, ModifierFlag::NONE, KeyCode::VK_MODIFIER_PAREN_MOD,
+            KeyCode::SPACE
+        </autogen>
+      </item>
+
+      <item>
         <name>FD and JK chords as PAREN_MOD</name>
         <appendix>Use chord as modifier as not to block keyrepeat</appendix>
         <identifier>private.parenmod.paren_mod.fd_jk</identifier>
@@ -97,6 +108,21 @@
       <autogen>__KeyToKey__ KeyCode::O, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH</autogen>
     </item>
     
+    <item>
+      <name>ZXCVB Row: like terminus</name>
+      <identifier>private.parenmod.terminus</identifier>
+      <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::PAREN_MOD, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::PAREN_MOD, KeyCode::MINUS</autogen>
+      <autogen>__KeyToKey__ KeyCode::B, ModifierFlag::PAREN_MOD, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::PAREN_MOD, KeyCode::SEMICOLON</autogen>
+      <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::PAREN_MOD, KeyCode::QUOTE, ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::COMMA, ModifierFlag::PAREN_MOD, KeyCode::QUOTE</autogen>
+      <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH</autogen>
+      <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::PAREN_MOD, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::PAREN_MOD, KeyCode::MINUS</autogen>
+    </item>
+
     <item>
       <name>ZXCVB row: bn to /\</name>
       <identifier>private.parenmod.qmark</identifier>

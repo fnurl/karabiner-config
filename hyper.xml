@@ -23,6 +23,29 @@
     </item>
 
     <item>
+      <name>Esc to Hyper</name>
+      <appendix>Esc to Hyper (ctrl+shift+cmd+opt)</appendix>
+      <identifier>private.hyper.esc_to_hyper</identifier>
+      <autogen>
+          __KeyToKey__ 
+        KeyCode::ESCAPE,
+        KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE
+      </autogen>
+    </item>
+
+    <item>
+      <name>Esc to Hyper and Esc</name>
+      <appendix>Esc to Hyper (ctrl+shift+cmd+opt), Esc only to Esc</appendix>
+      <identifier>private.hyper.esc_to_hyper_esc</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::ESCAPE,
+        KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+        KeyCode::ESCAPE
+      </autogen>
+    </item>
+
+    <item>
       <name>Esc to Hyper and F18</name>
       <appendix>Esc to Hyper (ctrl+shift+cmd+opt), Esc only to F18 (for notification)</appendix>
       <identifier>private.hyper.esc_to_hyper_f18</identifier>
@@ -31,6 +54,18 @@
         KeyCode::ESCAPE,
         KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE,
         KeyCode::F18
+      </autogen>
+    </item>
+
+    <item>
+      <name>Esc to Hyper and Backquote</name>
+      <appendix>Esc to Hyper (ctrl+shift+cmd+opt), Esc only to tilde</appendix>
+      <identifier>private.hyper.esc_to_hyper_backquote</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::ESCAPE,
+        KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+        KeyCode::BACKQUOTE
       </autogen>
     </item>
 
