@@ -6,121 +6,151 @@
     <replacementname>HYPER_MOD</replacementname>
     <replacementvalue>KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L</replacementvalue>
   </replacementdef>
-  
+
   <item>
     <name>hyper.xml: Hyper and meh</name>
 
     <item>
-      <name>Esc to Hyper</name>
-      <appendix>Esc to Hyper (ctrl+shift+cmd+opt)</appendix>
-      <identifier>private.hyper.esc_to_hyper</identifier>
-      <autogen>
+      <name>Hyper</name>
+
+      <item>
+        <name>Esc to Hyper</name>
+        <appendix>Esc to Hyper (ctrl+shift+cmd+opt)</appendix>
+        <identifier>private.hyper.esc_to_hyper</identifier>
+        <autogen>
           __KeyToKey__ 
-        KeyCode::ESCAPE,
-        KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE
-      </autogen>
+          KeyCode::ESCAPE,
+          KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE
+        </autogen>
+      </item>
+
+      <item>
+        <name>Esc to Hyper and Esc</name>
+        <appendix>Esc to Hyper (ctrl+shift+cmd+opt), Esc only to Esc</appendix>
+        <identifier>private.hyper.esc_to_hyper_esc</identifier>
+        <autogen>
+          __KeyOverlaidModifier__
+          KeyCode::ESCAPE,
+          KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+          KeyCode::ESCAPE
+        </autogen>
+      </item>
+
+      <item>
+        <name>Esc to Hyper and Backquote</name>
+        <appendix>Esc to Hyper (ctrl+shift+cmd+opt), Esc only to tilde</appendix>
+        <identifier>private.hyper.esc_to_hyper_backquote</identifier>
+        <autogen>
+          __KeyOverlaidModifier__
+          KeyCode::ESCAPE,
+          KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+          KeyCode::BACKQUOTE
+        </autogen>
+      </item>
+
+      <item>
+        <name>F19 to Hyper and Esc</name>
+        <appendix>(F19 to Hyper (ctrl+shift+cmd+opt), F19 Only to Escape)</appendix>
+        <identifier>private.hyper.f19_to_hyper_escape</identifier>
+        <autogen>
+          __KeyOverlaidModifier__
+          KeyCode::F19,
+          KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+          KeyCode::ESCAPE
+        </autogen>
+      </item>
+
+      <item>
+        <name>F19 to only Hyper</name>
+        <appendix>Just Hyper, no overlaid modifier</appendix>
+        <identifier>private.hyper.f19_to_only_hyper</identifier>
+        <autogen>
+          __KeyToKey__
+          KeyCode::F19,
+          KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE
+        </autogen>
+      </item>
+
+      <item>
+        <name>Backquote to only Hyper</name>
+        <identifier>private.hyper.backquote_to_hyper</identifier>
+        <autogen>
+          __KeyToKey__
+          KeyCode::BACKQUOTE,
+          KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE
+        </autogen>
+      </item>
+
+      <item>
+        <name>Backquote to Hyper and Backquote</name>
+        <identifier>private.hyper.backquote_to_hyper_backquote</identifier>
+        <autogen>
+          __KeyOverlaidModifier__
+          KeyCode::BACKQUOTE,
+          KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+          KeyCode::BACKQUOTE
+        </autogen>
+      </item>
+
+      <item>
+        <name>Left Control to Hyper</name>
+        <identifier>private.hyper.ctrl_to_hyper</identifier>
+        <autogen>
+          __KeyToKey__
+          KeyCode::CONTROL_L,
+          KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE
+        </autogen>
+      </item>
+
+      <item>
+        <name>Left Control to Hyper and Escape</name>
+        <identifier>private.hyper.ctrl_to_hyper_and_esc</identifier>
+        <autogen>
+          __KeyOverlaidModifier__
+          KeyCode::CONTROL_L,
+          KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+          KeyCode::ESCAPE
+        </autogen>
+      </item>
+
+      <item>
+        <name>Tab to Hyper and Tab</name>
+        <identifier>private.hyper.tab_to_hyper_and_tab</identifier>
+        <autogen>
+          __KeyOverlaidModifier__
+          KeyCode::TAB,
+          KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+          KeyCode::TAB
+        </autogen>
+      </item>
+
     </item>
 
     <item>
-      <name>Esc to Hyper and Esc</name>
-      <appendix>Esc to Hyper (ctrl+shift+cmd+opt), Esc only to Esc</appendix>
-      <identifier>private.hyper.esc_to_hyper_esc</identifier>
-      <autogen>
-        __KeyOverlaidModifier__
-        KeyCode::ESCAPE,
-        KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE,
-        KeyCode::ESCAPE
-      </autogen>
-    </item>
+      <name>meh (CTRL+SHIFT+OPT)</name>
 
-    <item>
-      <name>Esc to Hyper and Backquote</name>
-      <appendix>Esc to Hyper (ctrl+shift+cmd+opt), Esc only to tilde</appendix>
-      <identifier>private.hyper.esc_to_hyper_backquote</identifier>
-      <autogen>
-        __KeyOverlaidModifier__
-        KeyCode::ESCAPE,
-        KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE,
-        KeyCode::BACKQUOTE
-      </autogen>
-    </item>
+      <item>
+        <name>RETURN to meh and RETURN</name>
+        <appendix>(RETURN to meh, RETURN only to RETURN)</appendix>
+        <identifier>private.hyper.return_to_meh_return</identifier>
+        <autogen>
+          __KeyOverlaidModifier__
+          KeyCode::RETURN,
+          KeyCode::CONTROL_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+          KeyCode::RETURN
+        </autogen>
+      </item>
 
-    <item>
-      <name>F19 to Hyper and Esc</name>
-      <appendix>(F19 to Hyper (ctrl+shift+cmd+opt), F19 Only to Escape)</appendix>
-      <identifier>private.hyper.f19_to_hyper_escape</identifier>
-      <autogen>
-        __KeyOverlaidModifier__
-        KeyCode::F19,
-        KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE,
-        KeyCode::ESCAPE
-      </autogen>
-    </item>
+      <item>
+        <name>ESCAPE to meh</name>
+        <identifier>private.hyper.esc_to_meh</identifier>
+        <autogen>
+          __KeyToKey__
+          KeyCode::ESCAPE,
+          KeyCode::CONTROL_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::NONE
+        </autogen>
+      </item>
 
-    <item>
-      <name>F19 to only Hyper</name>
-      <appendix>Just Hyper, no overlaid modifier</appendix>
-      <identifier>private.hyper.f19_to_only_hyper</identifier>
-      <autogen>
-        __KeyToKey__
-        KeyCode::F19,
-        KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE
-      </autogen>
-    </item>
-
-    <item>
-      <name>ISO Backquote to only Hyper</name>
-      <appendix>Just Hyper, no overlaid modifier</appendix>
-      <identifier>private.hyper.backquote_to_only_hyper</identifier>
-      <autogen>
-        __KeyToKey__
-        KeyCode::BACKQUOTE,
-        KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE
-      </autogen>
-    </item>
-
-    <item>
-      <name>Left Control to Hyper</name>
-      <identifier>private.hyper.ctrl_to_hyper</identifier>
-      <autogen>
-        __KeyToKey__
-        KeyCode::CONTROL_L,
-        KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE
-      </autogen>
-    </item>
-
-    <item>
-      <name>Left Control to Hyper and Escape</name>
-      <identifier>private.hyper.ctrl_to_hyper_and_esc</identifier>
-      <autogen>
-        __KeyOverlaidModifier__
-        KeyCode::CONTROL_L,
-        KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE,
-        KeyCode::ESCAPE
-      </autogen>
-    </item>
-
-    <item>
-      <name>Tab to Hyper and Tab</name>
-      <identifier>private.hyper.tab_to_hyper_and_tab</identifier>
-      <autogen>
-        __KeyOverlaidModifier__
-        KeyCode::TAB,
-        KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE,
-        KeyCode::TAB
-      </autogen>
-    </item>
-
-    <item>
-      <name>RETURN to meh and RETURN</name>
-      <appendix>(RETURN to meh (ctrl+shift+opt), RETURN only to RETURN)</appendix>
-      <identifier>private.hyper.return_to_meh_return</identifier>
-      <autogen>
-        __KeyOverlaidModifier__
-        KeyCode::RETURN,
-        KeyCode::CONTROL_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
-        KeyCode::RETURN
-      </autogen>
     </item>
 
   </item>

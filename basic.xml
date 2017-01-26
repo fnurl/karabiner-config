@@ -18,6 +18,24 @@
       <name>F-keys</name>
 
       <item>
+          <name>F13 to F12</name>
+          <identifier>private.f13_to_12</identifier>
+          <autogen>__KeyToKey__ KeyCode::F13, KeyCode::F12</autogen>
+      </item>
+
+      <item>
+          <name>F14 to F13</name>
+          <identifier>private.f14_to_13</identifier>
+          <autogen>__KeyToKey__ KeyCode::F14, KeyCode::F13</autogen>
+      </item>
+
+      <item>
+          <name>F15 to F14</name>
+          <identifier>private.f15_to_14</identifier>
+          <autogen>__KeyToKey__ KeyCode::F15, KeyCode::F14</autogen>
+      </item>
+
+      <item>
         <name>F15 to SPACE</name>
         <appendix>F15 (e.g. Pok3r ctrll) to SPACE</appendix>
         <identifier>private.f15_to_space</identifier>
@@ -47,6 +65,12 @@
           KeyCode::CONTROL_L | ModifierFlag::NONE,
           KeyCode::ESCAPE
         </autogen>
+      </item>
+
+      <item>
+          <name>INS to FN</name>
+          <identifier>private.help_to_fn</identifier>
+          <autogen>__KeyToKey__ KeyCode::HELP, KeyCode::FN</autogen>
       </item>
 
     </item>
@@ -234,6 +258,19 @@
       
     </item>
     
+
+    <item>
+        <name>Opt</name>
+
+        <item>
+            <name>Opt left to Space</name>
+            <identifier>private.optl_to_space</identifier>
+            <autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::SPACE</autogen>
+        </item>
+
+    </item>
+
+
      <item>
        <name>SWEDISH ÅÄÖ</name>
 
