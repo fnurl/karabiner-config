@@ -11,6 +11,7 @@
 
   <include path="virtual.xml" />
 
+  <!--
   <item>
       <name>private.xml: pointer stuff</name>
 
@@ -27,20 +28,27 @@
       </item>
 
   </item>
+  -->
 
+  <include path="game_mod.xml" />
 
+  <!--
   <item>
     <appendix>private.xml: Keybord specific fixes</appendix>
     <include path="apple_internal_iso.xml" />
-    <!--<include path="apple_external_iso.xml" />-->
+    <include path="apple_external_iso.xml" />
     <include path="terminus.xml" />
     <include path="falcon8.xml" />
     <include path="bt_accessories.xml" />
   </item> 
+  -->
   
-  <include path="hyper.xml" />
+  <!--<include path="hyper.xml" />-->
   <include path="basic.xml" />
   <include path="parens.xml" />
+  <include path="symbol.xml" />
+  <!--<include path="split.xml" />-->
+  <include path="navigation.xml" />
   
   <item><name>────── end private.xml ────────</name></item>
 

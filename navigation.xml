@@ -6,15 +6,27 @@
     <name>navigation.xml defines a navigation layer</name>
 
     <item>
-      <name>navigation mod keys</name>
-    
+      <name>NAV_MOD key</name>
+
+      <item>
+        <name>COMMAND_R as NAV_MOD</name>
+        <identifier>private.navmod.nav_mod.cmdr</identifier>
+        <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::VK_MODIFIER_NAV_MOD</autogen>
+      </item>
+
+      <item>
+        <name>OPTION_R as NAV_MOD</name>
+        <identifier>private.navmod.nav_mod.optr</identifier>
+        <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::VK_MODIFIER_NAV_MOD</autogen>
+      </item>
+
       <item>
         <name>Use overloaded BACKQUOTE as NAV_MOD</name>
         <identifier>private.nav.backtick_as_mod</identifier>
         <autogen>__KeyOverlaidModifier__
-        KeyCode::BACKQUOTE,
-        KeyCode::VK_MODIFIER_NAV_MOD,
-        KeyCode::BACKQUOTE
+          KeyCode::BACKQUOTE,
+          KeyCode::VK_MODIFIER_NAV_MOD,
+          KeyCode::BACKQUOTE
         </autogen>
       </item>
 
@@ -22,9 +34,9 @@
         <name>Use overloaded DANISH_DOLLAR as NAV_MOD</name>
         <identifier>private.nav.danishdollar_as_mod</identifier>
         <autogen>__KeyOverlaidModifier__
-        KeyCode::DANISH_DOLLAR,
-        KeyCode::VK_MODIFIER_NAV_MOD,
-        KeyCode::DANISH_DOLLAR
+          KeyCode::DANISH_DOLLAR,
+          KeyCode::VK_MODIFIER_NAV_MOD,
+          KeyCode::DANISH_DOLLAR
         </autogen>
       </item>
 
@@ -34,7 +46,7 @@
       <name>Cursor keys</name>
 
       <item>
-        <name>HJKL</name>
+        <name>use HJKL</name>
         <identifier>private.nav.hjkl</identifier>
         <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::NAV_MOD, KeyCode::CURSOR_LEFT</autogen>
         <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::NAV_MOD, KeyCode::CURSOR_DOWN</autogen>
@@ -42,8 +54,17 @@
         <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::NAV_MOD, KeyCode::CURSOR_RIGHT</autogen>
       </item>
 
+      <item>
+        <name>use pl;"</name>
+        <identifier>private.navmod.arrows_plöä</identifier>
+        <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::NAV_MOD, KeyCode::CURSOR_UP</autogen>
+        <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::NAV_MOD, KeyCode::CURSOR_LEFT</autogen>
+        <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::NAV_MOD, KeyCode::CURSOR_DOWN</autogen>
+        <autogen>__KeyToKey__ KeyCode::QUOTE, ModifierFlag::NAV_MOD, KeyCode::CURSOR_RIGHT</autogen>
+      </item>
+
     </item>
-    
+
   </item>
 
 </root>

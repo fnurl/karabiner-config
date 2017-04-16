@@ -6,6 +6,8 @@
   <modifierdef>PAREN_MOD</modifierdef>
   <modifierdef>SUBSPACE_MOD</modifierdef>
   <modifierdef>SYMBOL_MOD</modifierdef>
+  <modifierdef>L1_MOD</modifierdef>
+  <modifierdef>L2_MOD</modifierdef>
   <modifierdef>SHIFT</modifierdef>
 
   <item hidden="true">

@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<root>
+
+  <item>
+    <name>game_mod.xml: Gaming mode overrides</name>
+
+    <modifierdef>GAME_MOD</modifierdef>
+
+    <item>
+      <name>Game Mode Locking keys</name>
+
+      <item>
+        <name>GAME_MOD lock: help key</name>
+        <identifier>private.game_mod_lock_help</identifier>
+        <autogen>__KeyToKey__ KeyCode::HELP, KeyCode::VK_LOCK_GAME_MOD</autogen>
+      </item>
+
+      <item>
+        <name>GAME_MOD lock: opt+opt</name>
+        <identifier>private.game_mod_lock_opt</identifier>
+        <autogen>
+          __SimultaneousKeyPresses__
+          KeyCode::OPTION_L, KeyCode::OPTION_R,
+          KeyCode::VK_LOCK_GAME_MOD
+        </autogen>
+      </item>
+
+      <item>
+        <name>GAME_MOD lock: fn</name>
+        <identifier>private.game_mod_lock_fn</identifier>
+        <autogen>
+          __KeyOverlaidModifier__
+          KeyCode::FN,
+          KeyCode::FN,
+          KeyCode::VK_LOCK_GAME_MOD
+        </autogen>
+      </item>
+
+      <item>
+        <name>GAME_MOD lock: esc</name>
+        <identifier>private.game_mod_lock_esc</identifier>
+        <autogen>
+          __DoublePressModifier__
+          KeyCode::ESCAPE,
+          KeyCode::ESCAPE,
+          KeyCode::VK_LOCK_GAME_MOD
+        </autogen>
+      </item>
+
+    </item>
+
+
+    <item>
+      <name>GAME_MOD mappings</name>
+
+      <item>
+        <name>CTRL_L is SPACE</name>
+        <identifier>private.game_mod.ctrll_space</identifier>
+        <autogen>
+          __KeyToKey__
+          KeyCode::CONTROL_L, ModifierFlag::GAME_MOD,
+          KeyCode::SPACE
+        </autogen>
+      </item>
+
+      <item>
+        <name>F15 (Pok3r CTRL_L) is SPACE</name>
+        <identifier>private.game_mod.f15_space</identifier>
+        <autogen>
+          __KeyToKey__
+          KeyCode::F15, ModifierFlag::GAME_MOD,
+          KeyCode::SPACE
+        </autogen>
+      </item>
+
+    </item> <!-- end GAME_MOD mappings -->
+
+  </item> <!-- end GAME_MOD group -->
+
+</root>

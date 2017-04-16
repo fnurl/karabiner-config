@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<root>
+
+  <item>
+    <name>split.xml: split modifiers</name>
+
+    <item>
+      <name>enter and backspace</name>
+      <appendix>Must be before modifier definitions</appendix>
+      <identifier>private.split.enter_backspace</identifier>
+      <autogen>__KeyToKey__ KeyCode::OPTION_R, ModifierFlag::L1_MOD, KeyCode::RETURN</autogen>
+      <autogen>__KeyToKey__ KeyCode::BACKQUOTE, ModifierFlag::L2_MOD, KeyCode::DELETE</autogen>
+    </item>
+
+    <item>
+      <name>Split Mod Key</name>
+
+      <item>
+        <name>Backquote as L1_MOD</name>
+        <identifier>private.split.backquote_to_l1</identifier>
+        <autogen>
+          __KeyToKey__
+          KeyCode::BACKQUOTE,
+          KeyCode::VK_MODIFIER_L1_MOD
+        </autogen>
+      </item>
+
+      <item>
+        <name>R OPT as L2_MOD</name>
+        <identifier>private.split.optr_to_l2</identifier>
+        <autogen>
+          __KeyToKey__
+          KeyCode::OPTION_R,
+          KeyCode::VK_MODIFIER_L2_MOD
+        </autogen>
+      </item>
+
+    </item>
+
+
+    <item>
+      <name>L1</name>
+
+      <item>
+        <name>Left parens and left symbols</name>
+        <identifier>private.split_left</identifier>
+        <autogen>__KeyToKey__ KeyCode::G, ModifierFlag::L1_MOD, KeyCode::BRACKET_LEFT</autogen> 
+        <autogen>__KeyToKey__ KeyCode::F, ModifierFlag::L1_MOD, KeyCode::9, ModifierFlag::SHIFT_L</autogen> 
+        <autogen>__KeyToKey__ KeyCode::D, ModifierFlag::L1_MOD, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::S, ModifierFlag::L1_MOD, KeyCode::COMMA, ModifierFlag::SHIFT_L</autogen> 
+
+        <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::L1_MOD, KeyCode::8, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::L1_MOD, KeyCode::4, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::L1_MOD, KeyCode::EQUAL</autogen>
+        <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::L1_MOD, KeyCode::7, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::L1_MOD, KeyCode::5, ModifierFlag::SHIFT_L</autogen>
+      </item>
+
+      <item>
+        <name>QWERTY Row to numbers</name>
+        <appendix>L1_MOD modifier + QWERTY row key to numbers.</appendix>
+        <identifier>private.split_l1.qwerty_numbers</identifier>
+        <autogen>__KeyToKey__ KeyCode::Q, ModifierFlag::L1_MOD, KeyCode::1 </autogen>
+        <autogen>__KeyToKey__ KeyCode::W, ModifierFlag::L1_MOD, KeyCode::2 </autogen>
+        <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::L1_MOD, KeyCode::3 </autogen>
+        <autogen>__KeyToKey__ KeyCode::R, ModifierFlag::L1_MOD, KeyCode::4 </autogen>
+        <autogen>__KeyToKey__ KeyCode::T, ModifierFlag::L1_MOD, KeyCode::5 </autogen>
+        <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::L1_MOD, KeyCode::6 </autogen>
+        <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::L1_MOD, KeyCode::7 </autogen>
+        <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::L1_MOD, KeyCode::8 </autogen>
+        <autogen>__KeyToKey__ KeyCode::O, ModifierFlag::L1_MOD, KeyCode::9 </autogen>
+        <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::L1_MOD, KeyCode::0 </autogen>
+      </item>
+
+      <item>
+        <name>ZXCVB Row: like terminus</name>
+        <identifier>private.split_l1.terminus</identifier>
+        <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::L1_MOD, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::L1_MOD, KeyCode::MINUS</autogen>
+        <autogen>__KeyToKey__ KeyCode::B, ModifierFlag::L1_MOD, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::L1_MOD, KeyCode::SEMICOLON</autogen>
+        <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::L1_MOD, KeyCode::QUOTE, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::COMMA, ModifierFlag::L1_MOD, KeyCode::QUOTE</autogen>
+        <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::L1_MOD, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::L1_MOD, KeyCode::BACKSLASH</autogen>
+        <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::L1_MOD, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::L1_MOD, KeyCode::MINUS</autogen>
+      </item>
+
+    </item>
+
+
+    <item>
+      <name>L2</name>
+
+      <item>
+        <name>Right parens and symbols</name>
+        <identifier>private.split_right</identifier>
+        <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::L2_MOD, KeyCode::BRACKET_RIGHT</autogen>>
+        <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::L2_MOD, KeyCode::0, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::L2_MOD, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::L2_MOD, KeyCode::DOT, ModifierFlag::SHIFT_L</autogen>
+
+        <autogen>__KeyToKey__ KeyCode::A, ModifierFlag::L2_MOD, KeyCode::1, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::S, ModifierFlag::L2_MOD, KeyCode::2, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::D, ModifierFlag::L2_MOD, KeyCode::3, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::F, ModifierFlag::L2_MOD, KeyCode::6, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::G, ModifierFlag::L2_MOD, KeyCode::EQUAL, ModifierFlag::SHIFT_L</autogen>
+      </item>
+       
+      <item>
+        <name>QWERTY Row to numbers</name>
+        <appendix>L2 modifier + QWERTY row key to numbers.</appendix>
+        <identifier>private.split_l2.qwerty_numbers</identifier>
+        <autogen>__KeyToKey__ KeyCode::Q, ModifierFlag::L2_MOD, KeyCode::1 </autogen>
+        <autogen>__KeyToKey__ KeyCode::W, ModifierFlag::L2_MOD, KeyCode::2 </autogen>
+        <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::L2_MOD, KeyCode::3 </autogen>
+        <autogen>__KeyToKey__ KeyCode::R, ModifierFlag::L2_MOD, KeyCode::4 </autogen>
+        <autogen>__KeyToKey__ KeyCode::T, ModifierFlag::L2_MOD, KeyCode::5 </autogen>
+        <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::L2_MOD, KeyCode::6 </autogen>
+        <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::L2_MOD, KeyCode::7 </autogen>
+        <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::L2_MOD, KeyCode::8 </autogen>
+        <autogen>__KeyToKey__ KeyCode::O, ModifierFlag::L2_MOD, KeyCode::9 </autogen>
+        <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::L2_MOD, KeyCode::0 </autogen>
+      </item>
+
+      <item>
+        <name>ZXCVB Row: like terminus</name>
+        <identifier>private.split_l2.terminus</identifier>
+        <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::L2_MOD, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::L2_MOD, KeyCode::MINUS</autogen>
+        <autogen>__KeyToKey__ KeyCode::B, ModifierFlag::L2_MOD, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::L2_MOD, KeyCode::SEMICOLON</autogen>
+        <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::L2_MOD, KeyCode::QUOTE, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::COMMA, ModifierFlag::L2_MOD, KeyCode::QUOTE</autogen>
+        <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::L2_MOD, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::L2_MOD, KeyCode::BACKSLASH</autogen>
+        <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::L2_MOD, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::L2_MOD, KeyCode::MINUS</autogen>
+      </item>
+
+    </item>
+
+  </item>
+
+</root>

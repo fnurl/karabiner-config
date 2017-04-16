@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <root>
-  
+
   <item>
-    <name>parens.xml: Paren layer (using PAREN modifier)</name>
+    <name>parens.xml: paren layer (using PAREN modifier)</name>
 
     <item>
       <name>Paren modifier</name>
@@ -12,9 +12,9 @@
         <appendix>Use SPACE as modifier</appendix>
         <identifier>private.parenmod.paren_mod.space</identifier>
         <autogen>
-            __KeyOverlaidModifier__
-            KeyCode::SPACE, ModifierFlag::NONE, KeyCode::VK_MODIFIER_PAREN_MOD,
-            KeyCode::SPACE
+          __KeyOverlaidModifier__
+          KeyCode::SPACE, ModifierFlag::NONE, KeyCode::VK_MODIFIER_PAREN_MOD,
+          KeyCode::SPACE
         </autogen>
       </item>
 
@@ -35,7 +35,7 @@
           KeyCode::VK_MODIFIER_PAREN_MOD,
           KeyCode::F
         </autogen>
-        
+
         <autogen>
           __KeyOverlaidModifier__
           KeyCode::J, ModifierFlag::NONE,
@@ -43,7 +43,7 @@
           KeyCode::J, ModifierFlag::NONE
         </autogen>
       </item>
-      
+
       <item>
         <name>RETURN to PAREN_MOD and RETURN</name>
         <identifier>private.parenmod.paren_mod.return</identifier>
@@ -54,109 +54,138 @@
           KeyCode::RETURN
         </autogen>
       </item>
-      
+
       <item>
         <name>Right command as PAREN_MOD</name>
         <identifier>parenmod.paren_mod.commandr</identifier>
         <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::VK_MODIFIER_PAREN_MOD</autogen>
       </item>
+
+    </item>
+
+    <item>
+      <name>QWERTY row</name>
+      <item>
+        <name>QWERTY row: er to ~` (tilde, backtick)</name>
+        <identifier>private.parenmod.tilde_backtick</identifier>
+        <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::PAREN_MOD, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>> 
+        <autogen>__KeyToKey__ KeyCode::R, ModifierFlag::PAREN_MOD, KeyCode::BACKQUOTE</autogen>
+      </item>
+
+      <item>
+        <name>QWERTY row: ty to '" (tilde, backtick)</name>
+        <identifier>private.parenmod.quotes1</identifier>
+        <autogen>__KeyToKey__ KeyCode::T, ModifierFlag::PAREN_MOD, KeyCode::QUOTE</autogen> 
+        <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::PAREN_MOD, KeyCode::QUOTE, ModifierFlag::SHIFT_L</autogen>
+      </item>
+
+      <item>
+        <name>QWERTY row: ui to :; (colon, semicolon)</name>
+        <identifier>private.parenmod.colons</identifier>
+        <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::PAREN_MOD, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::PAREN_MOD, KeyCode::SEMICOLON</autogen>
+      </item>
+
+      <item>
+        <name>QWERTY row: wo to /\</name>
+        <identifier>private.parenmod.slashes</identifier>
+        <autogen>__KeyToKey__ KeyCode::W, ModifierFlag::PAREN_MOD, KeyCode::SLASH</autogen>
+        <autogen>__KeyToKey__ KeyCode::O, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH</autogen>
+      </item>
+
+      <item>
+        <name>QWERTY Row to numbers</name>
+        <appendix>PAREN modifier + QWERTY row key to numbers.</appendix>
+        <identifier>private.subspace.qwerty_numbers</identifier>
+        <autogen>__KeyToKey__ KeyCode::Q, ModifierFlag::PAREN_MOD, KeyCode::1 </autogen>
+        <autogen>__KeyToKey__ KeyCode::W, ModifierFlag::PAREN_MOD, KeyCode::2 </autogen>
+        <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::PAREN_MOD, KeyCode::3 </autogen>
+        <autogen>__KeyToKey__ KeyCode::R, ModifierFlag::PAREN_MOD, KeyCode::4 </autogen>
+        <autogen>__KeyToKey__ KeyCode::T, ModifierFlag::PAREN_MOD, KeyCode::5 </autogen>
+        <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::PAREN_MOD, KeyCode::6 </autogen>
+        <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::PAREN_MOD, KeyCode::7 </autogen>
+        <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::PAREN_MOD, KeyCode::8 </autogen>
+        <autogen>__KeyToKey__ KeyCode::O, ModifierFlag::PAREN_MOD, KeyCode::9 </autogen>
+        <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::PAREN_MOD, KeyCode::0 </autogen>
+      </item>
       
     </item>
-      
+
     <item>
-      <name>ASDF row: Main parens</name>
-      <appendix>sdfghjkl to  &lt;{([])}&gt;</appendix>
-      <identifier>private.parenmod.parens</identifier>
-      <autogen>__KeyToKey__ KeyCode::G, ModifierFlag::PAREN_MOD, KeyCode::BRACKET_LEFT</autogen>> 
-      <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::PAREN_MOD, KeyCode::BRACKET_RIGHT</autogen>n>
-      
-      <autogen>__KeyToKey__ KeyCode::F, ModifierFlag::PAREN_MOD, KeyCode::9, ModifierFlag::SHIFT_L</autogen> 
-      <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::PAREN_MOD, KeyCode::0, ModifierFlag::SHIFT_L</autogen>
-      
-      <autogen>__KeyToKey__ KeyCode::D, ModifierFlag::PAREN_MOD, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L</autogen>
-      <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::PAREN_MOD, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L</autogen>
-      
-      <autogen>__KeyToKey__ KeyCode::S, ModifierFlag::PAREN_MOD, KeyCode::COMMA, ModifierFlag::SHIFT_L</autogen> 
-      <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::PAREN_MOD, KeyCode::DOT, ModifierFlag::SHIFT_L</autogen>
+      <name>ASDF row</name>
+      <item>
+        <name>ASDF row: Main parens</name>
+        <appendix>sdfghjkl to  &lt;{([])}&gt;</appendix>
+        <identifier>private.parenmod.parens</identifier>
+        <autogen>__KeyToKey__ KeyCode::G, ModifierFlag::PAREN_MOD, KeyCode::BRACKET_LEFT</autogen>> 
+        <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::PAREN_MOD, KeyCode::BRACKET_RIGHT</autogen>n>
+
+        <autogen>__KeyToKey__ KeyCode::F, ModifierFlag::PAREN_MOD, KeyCode::9, ModifierFlag::SHIFT_L</autogen> 
+        <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::PAREN_MOD, KeyCode::0, ModifierFlag::SHIFT_L</autogen>
+
+        <autogen>__KeyToKey__ KeyCode::D, ModifierFlag::PAREN_MOD, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::PAREN_MOD, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L</autogen>
+
+        <autogen>__KeyToKey__ KeyCode::S, ModifierFlag::PAREN_MOD, KeyCode::COMMA, ModifierFlag::SHIFT_L</autogen> 
+        <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::PAREN_MOD, KeyCode::DOT, ModifierFlag::SHIFT_L</autogen>
+      </item>
     </item>
 
     <item>
-      <name>QWERTY row: er to ~` (tilde, backtick)</name>
-      <identifier>private.parenmod.tilde_backtick</identifier>
-      <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::PAREN_MOD, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>> 
-      <autogen>__KeyToKey__ KeyCode::R, ModifierFlag::PAREN_MOD, KeyCode::BACKQUOTE</autogen>
-    </item>
+      <name>ZXCVB row</name>
+      <item>
+        <name>ZXCVB Row: like terminus</name>
+        <identifier>private.parenmod.terminus</identifier>
+        <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::PAREN_MOD, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::PAREN_MOD, KeyCode::MINUS</autogen>
+        <autogen>__KeyToKey__ KeyCode::B, ModifierFlag::PAREN_MOD, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::PAREN_MOD, KeyCode::SEMICOLON</autogen>
+        <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::PAREN_MOD, KeyCode::QUOTE, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::COMMA, ModifierFlag::PAREN_MOD, KeyCode::QUOTE</autogen>
+        <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH</autogen>
+        <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::PAREN_MOD, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::PAREN_MOD, KeyCode::MINUS</autogen>
+        <autogen>__KeyToKey__ KeyCode::X, ModifierFlag::PAREN_MOD, KeyCode::BACKQUOTE</autogen>
+        <autogen>__KeyToKey__ KeyCode::Z, ModifierFlag::PAREN_MOD, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>
+      </item>
 
-    <item>
-      <name>QWERTY row: ty to '" (tilde, backtick)</name>
-      <identifier>private.parenmod.quotes1</identifier>
-      <autogen>__KeyToKey__ KeyCode::T, ModifierFlag::PAREN_MOD, KeyCode::QUOTE</autogen> 
-      <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::PAREN_MOD, KeyCode::QUOTE, ModifierFlag::SHIFT_L</autogen>
-    </item>
+      <item>
+        <name>ZXCVB row: bn to /\</name>
+        <identifier>private.parenmod.qmark</identifier>
+        <autogen>__KeyToKey__ KeyCode::B, ModifierFlag::PAREN_MOD, KeyCode::SLASH</autogen>> 
+        <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH</autogen>> 
+      </item>
 
-    <item>
-      <name>QWERTY row: ui to :; (colon, semicolon)</name>
-      <identifier>private.parenmod.colons</identifier>
-      <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::PAREN_MOD, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen>
-      <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::PAREN_MOD, KeyCode::SEMICOLON</autogen>
-    </item>
+      <item>
+        <name>ZXCVB Row: cv to _- (underscore, dash)</name>
+        <identifier>private.parenmod.dashes</identifier>
+        <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::PAREN_MOD, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::PAREN_MOD, KeyCode::MINUS</autogen>
+      </item>
 
-    <item>
-      <name>QWERTY row: wo to /\</name>
-      <identifier>private.parenmod.slashes</identifier>
-      <autogen>__KeyToKey__ KeyCode::W, ModifierFlag::PAREN_MOD, KeyCode::SLASH</autogen>
-      <autogen>__KeyToKey__ KeyCode::O, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH</autogen>
-    </item>
-    
-    <item>
-      <name>ZXCVB Row: like terminus</name>
-      <identifier>private.parenmod.terminus</identifier>
-      <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::PAREN_MOD, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
-      <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::PAREN_MOD, KeyCode::MINUS</autogen>
-      <autogen>__KeyToKey__ KeyCode::B, ModifierFlag::PAREN_MOD, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen>
-      <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::PAREN_MOD, KeyCode::SEMICOLON</autogen>
-      <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::PAREN_MOD, KeyCode::QUOTE, ModifierFlag::SHIFT_L</autogen>
-      <autogen>__KeyToKey__ KeyCode::COMMA, ModifierFlag::PAREN_MOD, KeyCode::QUOTE</autogen>
-      <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
-      <autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH</autogen>
-      <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::PAREN_MOD, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
-      <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::PAREN_MOD, KeyCode::MINUS</autogen>
-    </item>
+      <item>
+        <name>ZXCVB Row: nm to '"</name>
+        <identifier>private.parenmod.quotes2</identifier>
+        <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::PAREN_MOD, KeyCode::QUOTE</autogen>
+        <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::PAREN_MOD, KeyCode::QUOTE, ModifierFlag::SHIFT_L</autogen>
+      </item>
 
-    <item>
-      <name>ZXCVB row: bn to /\</name>
-      <identifier>private.parenmod.qmark</identifier>
-      <autogen>__KeyToKey__ KeyCode::B, ModifierFlag::PAREN_MOD, KeyCode::SLASH</autogen>> 
-      <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH</autogen>> 
-    </item>
+      <item>
+        <name>ZXCVB Row: ./ to |\</name>
+        <identifier>private.parenmod.pipe_backslash1</identifier>
+        <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH</autogen>
+      </item>
 
-    <item>
-      <name>ZXCVB Row: cv to _- (underscore, dash)</name>
-      <identifier>private.parenmod.dashes</identifier>
-      <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::PAREN_MOD, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
-      <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::PAREN_MOD, KeyCode::MINUS</autogen>
-    </item>
+      <item>
+        <name>ZXCVB Row:  nm/ to |\\ (pipe, and backslash)</name>
+        <identifier>private.parenmod.pipe_backslash2</identifier>
+        <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH</autogen>
+        <autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH</autogen>
+      </item>
 
-    <item>
-      <name>ZXCVB Row: nm to '"</name>
-      <identifier>private.parenmod.quotes2</identifier>
-      <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::PAREN_MOD, KeyCode::QUOTE</autogen>
-      <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::PAREN_MOD, KeyCode::QUOTE, ModifierFlag::SHIFT_L</autogen>
-    </item>
-
-    <item>
-      <name>ZXCVB Row: ./ to |\</name>
-      <identifier>private.parenmod.pipe_backslash1</identifier>
-      <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
-      <autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH</autogen>
-    </item>
-
-    <item>
-      <name>ZXCVB Row:  nm/ to |\\ (pipe, and backslash)</name>
-      <identifier>private.parenmod.pipe_backslash2</identifier>
-      <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
-      <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH</autogen>
-      <autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::PAREN_MOD, KeyCode::BACKSLASH</autogen>
     </item>
 
     <item>
@@ -172,7 +201,7 @@
       <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::PAREN_MOD, KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L</autogen>
 
     </item>
-    
+
   </item>
-  
+
 </root>

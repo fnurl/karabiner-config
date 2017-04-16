@@ -3,30 +3,44 @@
 <root>
 
   <!-- <replacementdef> -->
-  <!--   <replacementname>SYMBOL_MOD</replacementname> -->
-  <!--   <replacementvalue>KeyCode::OPTION_R, ModifierFlag::NONE</replacementvalue> -->
-  <!-- </replacementdef> -->
+    <!--   <replacementname>SYMBOL_MOD</replacementname> -->
+    <!--   <replacementvalue>KeyCode::OPTION_R, ModifierFlag::NONE</replacementvalue> -->
+    <!-- </replacementdef> -->
 
   <item>
     <name>symbol.xml puts symbols under a symbol modifier key</name>
 
     <item>
       <name>symbol modifier keys</name>
-    
+
       <item>
         <name>Use OPTION_R as SYMBOL_MOD</name>
         <identifier>private.symbol.use_optr_as_mod</identifier>
         <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::VK_MODIFIER_SYMBOL_MOD</autogen>
       </item>
-    
+
       <item>
         <name>Use COMMAND_R as SYMBOL_MOD</name>
         <identifier>private.symbol.use_cmdr_as_mod</identifier>
         <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::VK_MODIFIER_SYMBOL_MOD</autogen>
       </item>
 
+      <item>
+        <name>Use F18 as SYMBOL_MOD</name>
+        <identifier>private.symbol.use_f18_as_mod</identifier>
+        <autogen>__KeyToKey__ KeyCode::F18, KeyCode::VK_MODIFIER_SYMBOL_MOD</autogen>
+      </item>
+
+      <item>
+        <name>FD and JK chords as SYMBOL_MOD</name>
+        <appendix>Use chord as modifier as not to block keyrepeat</appendix>
+        <identifier>private.symbol.use_fd_jk_as_mod</identifier>
+        <autogen>__SimultaneousKeyPresses__ KeyCode::F, KeyCode::D, KeyCode::VK_MODIFIER_SYMBOL_MOD</autogen>
+        <autogen>__SimultaneousKeyPresses__ KeyCode::J, KeyCode::K, KeyCode::VK_MODIFIER_SYMBOL_MOD</autogen>
+      </item>
+
     </item>>
-    
+
     <item>
       <name>QWERTY row: ui to :; (colon, semicolon)</name>
       <identifier>private.symbol.colons</identifier>
@@ -35,19 +49,50 @@
     </item>
 
     <item>
+      <name>QWERTY Row: Numbers (usually found on shifted number keys).</name>
+      <identifier>private.symbol.qwerty_numbers</identifier>
+      <autogen>__KeyToKey__ KeyCode::Q, ModifierFlag::SYMBOL_MOD, KeyCode::1</autogen>
+      <autogen>__KeyToKey__ KeyCode::W, ModifierFlag::SYMBOL_MOD, KeyCode::2</autogen>
+      <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::SYMBOL_MOD, KeyCode::3</autogen>
+      <autogen>__KeyToKey__ KeyCode::R, ModifierFlag::SYMBOL_MOD, KeyCode::6</autogen>
+      <autogen>__KeyToKey__ KeyCode::T, ModifierFlag::SYMBOL_MOD, KeyCode::5</autogen>
+      <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::SYMBOL_MOD, KeyCode::6</autogen>
+      <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::SYMBOL_MOD, KeyCode::7</autogen>
+      <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::SYMBOL_MOD, KeyCode::8</autogen>
+      <autogen>__KeyToKey__ KeyCode::O, ModifierFlag::SYMBOL_MOD, KeyCode::9</autogen>
+      <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::SYMBOL_MOD, KeyCode::0</autogen>
+    </item>
+
+    <item>
+      <name>ASDF Row: Symbols (usually found on shifted number keys).</name>
+      <identifier>private.symbol.asdf_symbols</identifier>
+      <appendix>Activate SYMBOL to activate symbols on home row: asdfghjklö to !@#^+*$=% and </appendix>
+      <autogen>__KeyToKey__ KeyCode::A, ModifierFlag::SYMBOL_MOD, KeyCode::1, ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::S, ModifierFlag::SYMBOL_MOD, KeyCode::2, ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::D, ModifierFlag::SYMBOL_MOD, KeyCode::3, ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::F, ModifierFlag::SYMBOL_MOD, KeyCode::6, ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::G, ModifierFlag::SYMBOL_MOD, KeyCode::EQUAL, ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::SYMBOL_MOD, KeyCode::8, ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::SYMBOL_MOD, KeyCode::4, ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::SYMBOL_MOD, KeyCode::EQUAL</autogen>
+      <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::SYMBOL_MOD, KeyCode::7, ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::SYMBOL_MOD, KeyCode::5, ModifierFlag::SHIFT_L</autogen>
+    </item>
+
+    <item>
       <name>ZXCVB Row: cv to _- (underscore, dash)</name>
       <identifier>private.symbol.dashes</identifier>
       <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::SYMBOL_MOD, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>>
       <autogen>__KeyToKey__ KeyCode::V, ModifierFlag::SYMBOL_MOD, KeyCode::MINUS</autogen>
     </item>
-    
+
     <item>
       <name>ZXCVB Row: nm to '"</name>
       <identifier>private.symbol.quotes</identifier>
       <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::SYMBOL_MOD, KeyCode::QUOTE</autogen>
       <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::SYMBOL_MOD, KeyCode::QUOTE, ModifierFlag::SHIFT_L</autogen>>
     </item>
-    
+
     <item>
       <name>ZXCVB Row: ./ to |\</name>
       <identifier>private.symbol.pipe_backslash1</identifier>
